@@ -1,0 +1,445 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Base
+        {% endblock %}
+    </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+        /* font-family: 'Montserrat', sans-serif; */
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+        /* font-family: 'Open Sans', sans-serif; */
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+        /* font-family: 'Poppins', sans-serif; */
+
+        @import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+        /* font-family: 'Gabriela', serif; */
+
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+        /* font-family: 'Dancing Script', cursive; */
+
+        :root{
+            --main-color: orange;
+            --underline-color: red;
+        }
+        html{
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 9rem;
+        }
+        html::-webkit-scrollbar{
+            width: .8rem;
+        }
+        html::-webkit-scrollbar-track{
+            background: transparent;
+        }
+        html::-webkit-scrollbar-thumb{
+            background: red;
+            border-radius: 5rem;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: .2s linear;
+        }
+        /* header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 7%;
+        } */
+        .navbar{
+            padding: 0.5rem 1%;
+            background-color: transparent;
+        }
+        .navbar .navbar-brand img{
+          width: 240px;
+          margin-right: 20px;
+        }
+        .basenav{
+            display: flex;
+            gap: 30px;
+        }
+        .basenav li{
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        .basenav a{
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 500;
+        }
+        .basenav li.nav-item.active a{
+           color: var(--main-color);
+        }
+        .basenav li.nav-item a:hover{
+            color: var(--main-color);
+            transition: .5s all linear;
+
+        }
+        /* .nav-item.active a{
+          color: rgb(73, 110, 149);
+        } */
+        .active a{
+          font-weight: bold;
+          color: rgb(15, 70, 129);
+        }
+        .dropdown-menu{
+          background-color: rgba(38, 38, 38, 0.9);
+        }
+        .dropdown-menu a{
+          color: white;
+        }
+        .dropdown-menu a:hover{
+          background-color: white;
+          color: black;
+        }
+        .dropdown-menu li.active a{
+          background-color: white;
+          color: black;
+        }
+
+        .dropdown .dropdown-menu{
+          display: none;
+        }
+        .dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+          display: block;
+          margin-top: .05em;
+          margin-left: .11em;
+        }
+        footer{
+          background: fixed;
+          background-size: cover;
+          background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.466)),url("{% static '/images/footer-bg.jpg' %}");
+          font-family: 'Poppins', sans-serif;
+
+        }
+
+        footer .top-section{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        footer .top-section .logo{
+          margin-top: 20px;
+          grid-column: 2;
+          display: flex;
+          justify-content: center;
+        }
+        footer .top-section .logo img{
+          width: 300px;
+          height: 100px;
+        }
+        footer .top-section .social-medias{
+          margin-top: 20px;
+          grid-column: 3;
+          display: flex;
+          gap: 20px;
+          flex-direction: column;
+          align-items: center;
+        }
+        footer .top-section .social-medias .footer-email a{
+          text-decoration: none;
+          color: white;
+          font-size: 2.5rem;
+          transition: .7s all linear;
+        }
+        footer .top-section .social-medias .footer-email a:hover{
+          color: red;
+        }
+        footer .top-section .social-medias .social-media-icons {
+          display: flex;
+          gap: 20px;
+        }
+        footer .top-section .social-medias .social-media-icons a{
+          text-decoration: none;
+          font-size: 4rem;
+          transition: .7s all linear;
+        }
+        footer .top-section .social-medias .social-media-icons a .bxl-facebook-circle{
+          color: rgb(45, 114, 243);
+          transition: .7s all linear;
+        }
+        footer .top-section .social-medias .social-media-icons a .bxl-instagram{
+          color: rgb(219, 20, 53);
+          transition: .7s all linear;
+        }
+        footer .top-section .social-medias .social-media-icons a .bxl-instagram:hover,
+        footer .top-section .social-medias .social-media-icons a .bxl-facebook-circle:hover{
+          color: white;
+        }
+
+        footer .grid-container{
+          padding: 20px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        footer .underline{
+          width: 60%;
+          margin: 12px 0px;
+          border: 2px solid red;
+        }
+        footer .grid-container .left-grid{
+          grid-column: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        footer .grid-container .left-grid .left-heading h3{
+          font-size: 2.5rem;
+          color: white;
+        }
+        footer .grid-container .left-grid .footer-link{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        footer .grid-container .left-grid .footer-link a{
+          text-decoration: none;
+          color: white;
+          font-size: 1.8rem;
+        }
+
+        footer .grid-container .middle-grid{
+          grid-column: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        footer .grid-container .middle-grid .middle-heading h3{
+          font-size: 2.5rem;
+          color: white;
+        }
+        footer .grid-container .middle-grid .footer-link{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        footer .grid-container .middle-grid .footer-link a{
+          text-decoration: none;
+          color: white;
+          font-size: 1.8rem;
+        }
+
+        footer .grid-container .right-grid{
+          grid-column: 3;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        footer .grid-container .right-grid .corporate-office-heading h3{
+          font-size: 2.5rem;
+          color: white;
+        }
+        footer .grid-container .right-grid .corporate-office-address p{
+          color: white;
+          font-size: 1.9rem;
+          line-height: 35px;
+        }
+
+        footer .copyright{
+          text-align: center;
+        }
+        footer .copyright p{
+          font-size: 1.8rem;
+          color: white;
+        }
+
+
+
+
+    </style>
+    {% block style %}
+    {% endblock %}
+    
+</head>
+<body>
+    <header>
+        {% block nav-fixed-top %}
+            <nav class="navbar navbar-expand-lg fixed-top">
+        {% endblock %}
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}" id="brandname">
+              <img src="{% static '/images/yumyum-logo.png' %}" alt="">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto basenav">
+              <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Yumyumcloud
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item {% if request.path == 'about-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'home' %}">About Yumyumcloud</a></li>
+                    <li class="nav-item {% if request.path == '/why-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'home' %}">Why Yumyumcloud</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Gallery
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item {% if request.path == 'team' %}active{% endif %}">
+                        <a class="dropdown-item" href="{% url 'home' %}">Team</a>
+                    </li>
+                      <li class="nav-item {% if request.path == 'photo' %}active{% endif %}"><a class="dropdown-item" href="{% url 'home' %}">Photo</a>
+                    </li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item {% if request.path == 'catering' %}active{% endif %}"><a class="dropdown-item" href="{% url 'home' %}">Catering</a></li>
+                </ul>
+              </li>
+              <li class="nav-item {% if request.path == 'menu' %}active{% endif %}">
+                <a class="nav-link " href="{% url 'home' %}">Menu</a>
+              </li>
+              <li class="nav-item {% if request.path == 'outlets' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'home' %}">Outlets</a>
+              </li>
+              <li class="nav-item {% if request.path == 'contact' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'home' %}">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer id="footer">
+      <div class="footer-card">
+        <div class="top-section">
+          <div class="logo">
+            <img src="{% static '/images/yumyum-logo.png' %}" alt="">
+          </div>
+          <div class="social-medias">
+            <div class="footer-email">
+              <a href="mailto:yumyumcloud0@gmail.com">yumyumcloud0@gmail.com</a>
+            </div>
+            <div class="social-media-icons">
+              <a href="">
+                <i class='bx bxl-facebook-circle'></i>
+              </a>
+              <a href="">
+                <i class='bx bxl-instagram' ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div class="left-grid">
+            <div class="left-heading">
+              <h3>Quick Links</h3>
+            </div>
+            <div class="underline"></div>
+            <div class="footer-link">
+              <a href="{% url 'home' %}">Home</a>
+              <a href="{% url 'home' %}">About</a>
+              <a href="{% url 'home' %}">Menu</a>
+              <a href="{% url 'home' %}">Outlets</a>
+              <a href="{% url 'home' %}">Contact</a>
+            </div>
+          </div>
+
+          <div class="middle-grid">
+            <div class="middle-heading">
+              <h3>Quick links</h3>
+            </div>
+            <div class="underline"></div>
+            <div class="footer-link">
+              <a href="{% url 'home' %}">Home</a>
+              <a href="{% url 'home' %}">Home</a>
+              <a href="{% url 'home' %}">Home</a>
+              <a href="{% url 'home' %}">Home</a>
+              <a href="{% url 'home' %}">Home</a>
+            </div>
+          </div>
+
+          <div class="right-grid">
+            <div class="corporate-office-heading">
+              <h3>Corporate Office</h3>
+            </div>
+            <div class="underline"></div>
+            <div class="corporate-office-address">
+              <p>YumYumCloud Private Limited <br>
+                Near MES College, Marampilly, <br>
+                Marampilly P O, East Chalakkal, <br>
+                Ernakulam, Kerala - 683105 <br>
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="copyright">
+          <p>
+          <script>document.write(new Date().getFullYear())</script> ©  Yumyumcloud - All Rights Reserved
+        </p>
+        </div>
+      </div>
+    </footer>
+
+    
+  <!-- <script>
+    function reveal(){
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++){
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible){
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
+    }
+}
+  </script> -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="{% static '/js/index.js' %}"></script>
+
+  <script>
+    let prevScrollPos = window.pageYOffset;
+
+window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        document.querySelector('.navbar').style.top = '0';
+    } else {
+        document.querySelector('.navbar').style.top = '-100px'; /* Set the height of your navbar */
+    }
+
+    prevScrollPos = currentScrollPos;
+}
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,976 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block style %}
+<style>
+    #homebody{
+        background: black;
+    }
+    #home-intro{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.493)),url("{% static '/images/home-title-bg.jpg' %}");
+        height: 120vh;
+    }
+    #home-intro .home-title {
+        padding: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Gabriela', serif;
+    }
+    #home-intro .home-title .welcome{
+        margin-top: 120px;
+        font-size: 5.5rem;
+        color: white;
+        font-weight: 500;
+    }
+    #home-intro .home-title .animate-character{
+        font-weight: bolder;
+        font-size: 11rem;
+        background-image: linear-gradient(
+          -225deg,
+          #f3b610 0%,
+          #faba09 29%,
+          #ff5613 67%,
+          #ff8800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+    }
+    #home-intro .home-title .kitchen{
+        font-size: 5.5rem;
+        color: white;
+    }
+    @keyframes textclip {
+    to {
+        background-position: 200% center;
+     }
+    }
+    #home-intro .home-title .underline-title{
+        margin: 20px 0;
+        border: 1px solid gray;
+        width: 45%;
+    }
+    #home-intro .home-title .home-title-para h3{
+        font-style: italic;
+        color: red;
+        text-shadow: .25px .25px .4px white;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    #home-about{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.778)),url("{% static '/images/home-about-intro-bg.jpg' %}");
+    }
+    #home-about .home-about-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 60px;
+    }
+    #home-about .home-about-grid .left-grid{
+        grid-column: 1;
+    }
+    #home-about .home-about-grid .left-grid img{
+        width: 90%;
+        height: 70%;
+        object-fit: cover;
+        border-radius: 8px;
+        border-left: 15px solid red;
+        border-left-style: double;
+        border-top: 15px solid red;
+        border-top-style: double;
+        clip-path: circle(65%);
+        transition: .8s all linear; 
+        transform: perspective(1000px)
+        rotateX(10deg)
+        scale(.9);
+    }
+    #home-about .home-about-grid .left-grid img:hover{
+        transform: scale(.95);
+        margin-top: 30px;
+    }
+
+    #home-about .home-about-grid .right-grid{
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    #home-about .home-about-grid .right-grid .home-about-title h1{
+        margin-top: 70px;
+        font-family: 'Gabriela', serif;
+        color: white;
+        text-shadow: 2px 2px 1px gray;
+        font-size: 5.4rem;
+    }
+    #home-about .home-about-grid .right-grid .home-about-para p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        opacity: .9;
+        letter-spacing: 1px;
+        line-height: 42px;
+    }
+
+    #signature-dishes{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0.877)),url("{% static '/images/signature-dishes-bg.jpg' %}");
+    }
+    #signature-dishes .signature-dishes-main-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #signature-dishes .signature-dishes-main-title h1{
+        font-family: 'Dancing Script', cursive;
+        margin-top: 100px;
+        color: white;
+        text-shadow: 2.5px 2.5px 1px gray;
+        font-size: 11rem;
+    }
+
+    #signature-dishes .signature-dishes-contents{
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        /* flex: 1 1 auto; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slider{
+        width: 500px;
+        height: 570px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slides{
+        width: 500%;
+        height: 570px;
+        display: flex;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slides input{
+        display: none;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide{
+        width: 20%;
+        transition: 1s;
+        position: relative;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide img{
+        width: 500px;
+        height: 570px;
+        border-left: 20px solid red;
+        border-left-style: ridge;
+        clip-path: circle(65%);
+        filter: grayscale(30%);
+        transform: perspective(1000px)
+        rotateY(7deg)
+        scale(.985);
+        transition: .5s all linear;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 25vh;
+        width: 100%;
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        background-color: rgba(24, 23, 23, 0.614);
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text h4{
+        font-family: 'Gabriela', serif;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-size: 6rem;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual{
+        position: absolute;
+        width: 500px;
+        margin-top: -70px;
+        display: flex;
+        justify-content: center;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn:hover{
+        background: red;
+    }
+     #food1radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food1radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food1radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+     #food1radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        margin-top: 500px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+    #food1radio1:checked ~ .navigation-auto .food1-auto-btn1{
+        background: red;
+    }
+    #food1radio2:checked ~ .navigation-auto .food1-auto-btn2{
+        background: red;
+    }
+    #food1radio3:checked ~ .navigation-auto .food1-auto-btn3{
+        background: red;
+    }
+    #food1radio4:checked ~ .navigation-auto .food1-auto-btn4{
+        background: red;
+    }
+
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slider{
+        width: 500px;
+        height: 570px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slides{
+        width: 500%;
+        height: 570px;
+        display: flex;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slides input{
+        display: none;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide{
+        width: 20%;
+        transition: 1s;
+        position: relative;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide img{
+        width: 500px;
+        height: 570px;
+        border-right: 20px solid red;
+        border-right-style: ridge;
+        clip-path: circle(65%);filter: grayscale(30%);
+        transform: perspective(1000px)
+        rotateY(-7deg)
+        scale(.985);
+        transition: .5s all linear;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 25vh;
+        width: 100%;
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        background-color: rgba(24, 23, 23, 0.614);
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text h4{
+        font-family: 'Gabriela', serif;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-size: 6rem;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual{
+        position: absolute;
+        width: 500px;
+        margin-top: -70px;
+        display: flex;
+        justify-content: center;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn:hover{
+        background: red;
+    }
+   #food2radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food2radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food2radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food2radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        margin-top: 500px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+    #food2radio1:checked ~ .navigation-auto .food2-auto-btn1{
+        background: red;
+    }
+    #food2radio2:checked ~ .navigation-auto .food2-auto-btn2{
+        background: red;
+    }
+    #food2radio3:checked ~ .navigation-auto .food2-auto-btn3{
+        background: red;
+    }
+    #food2radio4:checked ~ .navigation-auto .food2-auto-btn4{
+        background: red;
+    }
+
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slider{
+        width: 500px;
+        height: 570px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slides{
+        width: 500%;
+        height: 570px;
+        display: flex;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slides input{
+        display: none;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide{
+        width: 20%;
+        transition: 1s;
+        position: relative;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide img{
+        width: 500px;
+        height: 570px;
+        border-left: 20px solid red;
+        border-left-style: ridge;
+        clip-path: circle(65%);
+        filter: grayscale(30%);
+        transform: perspective(1000px)
+        rotateY(7deg)
+        scale(.985);
+        transition: .5s all linear;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 25vh;
+        width: 100%;
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        background-color: rgba(24, 23, 23, 0.614);
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text h4{
+        font-family: 'Gabriela', serif;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-size: 6rem;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual{
+        position: absolute;
+        width: 500px;
+        margin-top: -70px;
+        display: flex;
+        justify-content: center;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn:hover{
+        background: red;
+    }
+    #food3radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food3radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food3radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food3radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        margin-top: 500px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+    #food3radio1:checked ~ .navigation-auto .food3-auto-btn1{
+        background: red;
+    }
+    #food3radio2:checked ~ .navigation-auto .food3-auto-btn2{
+        background: red;
+    }
+    #food3radio3:checked ~ .navigation-auto .food3-auto-btn3{
+        background: red;
+    }
+    #food3radio4:checked ~ .navigation-auto .food3-auto-btn4{
+        background: red;
+    }
+
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slider{
+        width: 500px;
+        height: 570px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slides{
+        width: 500%;
+        height: 570px;
+        display: flex;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slides input{
+        display: none;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide{
+        width: 20%;
+        transition: 1s;
+        position: relative;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide img{
+        width: 500px;
+        height: 570px;
+        border-right: 20px solid red;
+        border-right-style: ridge;
+        clip-path: circle(65%);
+        filter: grayscale(30%);
+        transform: perspective(1000px)
+        rotateY(-7deg)
+        scale(.985);
+        transition: .5s all linear;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide img:hover{
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text{
+        min-height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        /* padding-right: 20px; */
+        background-color: rgba(24, 23, 23, 0.614);
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text h4{
+        font-family: 'Gabriela', serif;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-size: 6rem;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual{
+        position: absolute;
+        width: 500px;
+        margin-top: -70px;
+        display: flex;
+        justify-content: center;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn:hover{
+        background: red;
+    }
+    #food4radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food4radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food4radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food4radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        margin-top: 500px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div{
+        border: 5px solid red;
+        padding: 8px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+    #food4radio1:checked ~ .navigation-auto .food4-auto-btn1{
+        background: red;
+    }
+    #food4radio2:checked ~ .navigation-auto .food4-auto-btn2{
+        background: red;
+    }
+    #food4radio3:checked ~ .navigation-auto .food4-auto-btn3{
+        background: red;
+    }
+    #food4radio4:checked ~ .navigation-auto .food4-auto-btn4{
+        background: red;
+    }
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<body id="homebody">
+    <section id="home-intro">
+        <div class="home-title">
+            <div class="home-title-main">
+                <h2 class="welcome">Welcome to</h2>
+                <h1 class="animate-character">YumYumCloud</h1>
+                <h1 class="kitchen">Kitchen</h1>
+            </div>
+            <div class="underline-title"></div>
+            <div class="home-title-para">
+                <h3>Discover the Art of Deliciousness</h3>
+            </div>
+        </div>
+    </section>
+    <section id="home-about">
+        <div class="home-about-grid">
+            <div class="left-grid">
+                <img src="{% static '/images/home-about-intro.jpeg' %}" alt="">
+            </div>
+            <div class="right-grid">
+                <div class="home-about-title">
+                    <h1>Experience the timeless flavors at YumYumCloud</h1>
+                </div>
+                <div class="home-about-para">
+                    <p>YumYumCloud kitchen echoes a flavorful tradition, making us the preferred choice for food enthusiasts. In our expansive setting, we offer both vegetarian and non-vegetarian delicacies. We strongly uphold the belief that a restaurant's quality originates in its kitchen. Maintaining a hygenic atmosphere fosters systematic and leisurely culinary processes, resulting in exceptional flavors.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="signature-dishes">
+        <div class="signature-dishes-main-title">
+            <h1>Signature Dishes</h1>
+        </div>
+            
+        <div class="signature-dishes-contents">
+                <!-- image slider start -->
+            <div class="best-dishes-1">
+                <div class="slider">
+                    <div class="slides">
+                    
+                        <input type="radio" name="radio-btn" id="food1radio1">
+                        <input type="radio" name="radio-btn" id="food1radio2">
+                        <input type="radio" name="radio-btn" id="food1radio3">
+                        <input type="radio" name="radio-btn" id="food1radio4">
+                        
+                        <div class="slide first">
+                            <img src="{% static '/images/chefspecial-chicken-burger.jpg' %}" alt="">    
+                            <div class="image-text">
+                                <h4>Chef Special Chicken Burger</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/alabama-cheese-burger.jpg' %}" alt="">
+                            <div class="image-text">
+                                <h4>Alabama Cheese Burger</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/sriracha-chicken-burger.jpg' %}" alt=""> 
+                            <div class="image-text">
+                                <h4>Sriracha Chicken Burger</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/newyork-cheese-burger.jpg' %}" alt="">
+                             <div class="image-text">
+                                <h4>New York Cheese Burger</h4>
+                            </div>
+                        </div>
+                    
+                        <!-- slide images end -->
+                        <!-- automatic navigation -->
+                        <div class="navigation-auto">
+                            <div class="food1-auto-btn1"></div>
+                            <div class="food1-auto-btn2"></div>
+                            <div class="food1-auto-btn3"></div>
+                            <div class="food1-auto-btn4"></div>
+                        </div>
+                        <!-- automatic navigation end -->
+                    </div>
+                    <!-- manual navigation start -->
+                    <div class="navigation-manual">
+                        <label for="food1radio1" class="manual-btn"></label>
+                        <label for="food1radio2" class="manual-btn"></label>
+                        <label for="food1radio3" class="manual-btn"></label>
+                        <label for="food1radio4" class="manual-btn"></label>
+                    </div>
+                    <!-- image slider end -->
+                </div>
+            </div>
+
+
+            <div class="best-dishes-2">
+                <div class="slider">
+                    <div class="slides">
+                    
+                        <input type="radio" name="radio-btn" id="food2radio1">
+                        <input type="radio" name="radio-btn" id="food2radio2">
+                        <input type="radio" name="radio-btn" id="food2radio3">
+                        <input type="radio" name="radio-btn" id="food2radio4">
+                        
+                        <div class="slide first">
+                            <img src="{% static '/images/arrabiata-chicken-pasta.png' %}" alt="">    
+                            <div class="image-text">
+                                <h4>Arrabiata Chicken Pasta</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/arrabiata-veg-pasta.png' %}" alt="">
+                            <div class="image-text">
+                                <h4>Arrabiata Veg Pasta</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/alfredo-veg-pasta.jpg' %}" alt=""> 
+                            <div class="image-text">
+                                <h4>Alfredo Veg Pasta</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/pomodoro-chicken-pasta.png' %}" alt="">
+                             <div class="image-text">
+                                <h4>Pomodoro Chicken Pasta</h4>
+                            </div>
+                        </div>
+                    
+                        <!-- slide images end -->
+                        <!-- automatic navigation -->
+                        <div class="navigation-auto">
+                            <div class="food2-auto-btn1"></div>
+                            <div class="food2-auto-btn2"></div>
+                            <div class="food2-auto-btn3"></div>
+                            <div class="food2-auto-btn4"></div>
+                        </div>
+                        <!-- automatic navigation end -->
+                    </div>
+                    <!-- manual navigation start -->
+                    <div class="navigation-manual">
+                        <label for="food2radio1" class="manual-btn"></label>
+                        <label for="food2radio2" class="manual-btn"></label>
+                        <label for="food2radio3" class="manual-btn"></label>
+                        <label for="food2radio4" class="manual-btn"></label>
+                    </div>
+                    <!-- image slider end -->
+                </div>
+            </div>
+
+            <div class="best-dishes-3">
+                <div class="slider">
+                    <div class="slides">
+                    
+                        <input type="radio" name="radio-btn" id="food3radio1">
+                        <input type="radio" name="radio-btn" id="food3radio2">
+                        <input type="radio" name="radio-btn" id="food3radio3">
+                        <input type="radio" name="radio-btn" id="food3radio4">
+                        
+                        <div class="slide first">
+                            <img src="{% static '/images/biriyani.jpg' %}" alt="">    
+                            <div class="image-text">
+                                <h4>Biriyani</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/nadan-chicken-curry.png' %}" alt="">
+                            <div class="image-text">
+                                <h4>Nadan Chicken Curry</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/fish-tawa-fry.png' %}" alt=""> 
+                            <div class="image-text">
+                                <h4>Fish Tawa Fry</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/chicken-65.png' %}" alt="">
+                             <div class="image-text">
+                                <h4>Chicken 65</h4>
+                            </div>
+                        </div>
+                    
+                        <!-- slide images end -->
+                        <!-- automatic navigation -->
+                        <div class="navigation-auto">
+                            <div class="food3-auto-btn1"></div>
+                            <div class="food3-auto-btn2"></div>
+                            <div class="food3-auto-btn3"></div>
+                            <div class="food3-auto-btn4"></div>
+                        </div>
+                        <!-- automatic navigation end -->
+                    </div>
+                    <!-- manual navigation start -->
+                    <div class="navigation-manual">
+                        <label for="food3radio1" class="manual-btn"></label>
+                        <label for="food3radio2" class="manual-btn"></label>
+                        <label for="food3radio3" class="manual-btn"></label>
+                        <label for="food3radio4" class="manual-btn"></label>
+                    </div>
+                    <!-- image slider end -->
+                </div>
+            </div>
+
+            <div class="best-dishes-4">
+                <div class="slider">
+                    <div class="slides">
+                    
+                        <input type="radio" name="radio-btn" id="food4radio1">
+                        <input type="radio" name="radio-btn" id="food4radio2">
+                        <input type="radio" name="radio-btn" id="food4radio3">
+                        <input type="radio" name="radio-btn" id="food4radio4">
+                        
+                        <div class="slide first">
+                            <img src="{% static '/images/falooda.png' %}" alt="">    
+                            <div class="image-text">
+                                <h4>Falooda</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/sundae.jpg' %}" alt="">
+                            <div class="image-text">
+                                <h4>Sundae</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/fish-tawa-fry.png' %}" alt=""> 
+                            <div class="image-text">
+                                <h4>Mojito</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="{% static '/images/chicken-65.png' %}" alt="">
+                             <div class="image-text">
+                                <h4>Fresh Juice</h4>
+                            </div>
+                        </div>
+                    
+                        <!-- slide images end -->
+                        <!-- automatic navigation -->
+                        <div class="navigation-auto">
+                            <div class="food4-auto-btn1"></div>
+                            <div class="food4-auto-btn2"></div>
+                            <div class="food4-auto-btn3"></div>
+                            <div class="food4-auto-btn4"></div>
+                        </div>
+                        <!-- automatic navigation end -->
+                    </div>
+                    <!-- manual navigation start -->
+                    <div class="navigation-manual">
+                        <label for="food4radio1" class="manual-btn"></label>
+                        <label for="food4radio2" class="manual-btn"></label>
+                        <label for="food4radio3" class="manual-btn"></label>
+                        <label for="food4radio4" class="manual-btn"></label>
+                    </div>
+                    <!-- image slider end -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- <script type="text/javascript">
+        var counter1 = 1;
+        var counter2 = 1;
+    
+        setInterval(function(){
+            document.getElementById('food1radio' + counter1).checked = true;
+            document.getElementById('food2radio' + counter2).checked = true;
+            
+            counter1++;
+            counter2++;
+            
+            if(counter1 > 4){
+                counter1 = 1;
+            }
+            if(counter2 > 4){
+                counter2 = 1;
+            }
+        }, 3500);
+    </script> -->
+
+    <script type="text/javascript">
+        var counter1 = 1;
+        setInterval(function(){
+            document.getElementById('food1radio' + counter1).checked = true;
+            counter1++;
+            if(counter1 > 4){
+                counter1 = 1;
+            }
+        }, 3500);
+
+        var counter2 = 1;
+        setInterval(function(){
+            document.getElementById('food2radio' + counter2).checked = true;
+            counter2++;
+            if(counter2 > 4){
+                counter2 = 1;
+            }
+        }, 3500);
+
+        var counter3 = 1;
+        setInterval(function(){
+            document.getElementById('food3radio' + counter3).checked = true;
+            counter3++;
+            if(counter3 > 4){
+                counter3 = 1;
+            }
+        }, 3500);
+
+        var counter4 = 1;
+        setInterval(function(){
+            document.getElementById('food4radio' + counter4).checked = true;
+            counter4++;
+            if(counter4 > 4){
+                counter4 = 1;
+            }
+        }, 3500);
+    </script>
+</body>
+
+{% endblock %}
