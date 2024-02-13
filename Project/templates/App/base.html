@@ -257,6 +257,16 @@
           color: white;
         }
 
+        .reveal{
+          position: relative;
+          transform: translateX(-50px);
+          opacity: 0;
+          transition: 1s all ease;
+        }
+        .reveal.active{
+          transform: translateX(0);
+          opacity: 1;
+        }
 
 
 
@@ -428,7 +438,7 @@
   <script>
     let prevScrollPos = window.pageYOffset;
 
-window.onscroll = function () {
+  window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
 
     if (prevScrollPos > currentScrollPos) {
@@ -438,7 +448,25 @@ window.onscroll = function () {
     }
 
     prevScrollPos = currentScrollPos;
-}
+  }
+
+  function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+          } else {
+          reveals[i].classList.remove("active");
+          }
+          }
+      }
+      window.addEventListener("scroll", reveal);
+      reveal();
   </script>
   
 </body>
