@@ -1,0 +1,597 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Why YumYumCloud
+{% endblock %}
+
+{% block style %}
+<style>
+    #whybody{
+        background-color: white;
+    }
+    #why-yumyum{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.493)),url("{% static '/images/home-title-bg.jpg' %}");
+        height: 120vh;
+    }
+    #why-yumyum .why-yumyum-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #why-yumyum .why-yumyum-title .why h1{
+        margin-top: 200px;
+        font-size: 11rem;
+        color: white;
+        font-family: "Dancing Script", cursive;
+    }
+    #why-yumyum .why-yumyum-title .yumyum h1{
+        font-family: 'Gabriela', serif;
+        font-size: 11rem;
+        background-image: linear-gradient(
+          -225deg,
+          #f3b610 0%,
+          #faba09 29%,
+          #ff5613 67%,
+          #ff8800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+    }
+    @keyframes textclip {
+    to {
+        background-position: 200% center;
+     }
+    }
+
+    #why-section .why-yumyum-container .cooking-excellence{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 70px;
+        font-family: "Gabriela", serif;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-title{
+        grid-column: 1;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-title h1{
+        color: black;
+        font-weight: bold;
+        font-size: 6.5rem;
+        text-shadow: .5px .5px 1px red;
+    }
+
+    #why-section .why-yumyum-container .cooking-excellence .why-para{
+        grid-column: 2;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-para p{
+        color: black;
+        text-transform: capitalize;
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+        line-height: 40px;
+        margin-bottom: 30px;
+        opacity: .9;
+        text-shadow: .1px .1px .5px black;
+        word-spacing: 1.5px;
+    }
+
+    #why-section .why-yumyum-container .cooking-excellence-points{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.493)),url("{% static '/images/cooking-excellence-bg.jpg' %}");
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container{
+        padding: 100px 150px;
+        display: flex;
+        flex-direction: column;
+        font-family: "Dancing Script", cursive;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1 h3{
+        background-color: rgba(255, 0, 0, 0.783);
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 5%;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-weight: bold;
+        font-size: 5.5rem;
+        padding: 50px;
+    }
+
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2 h3{
+        background-color: rgba(255, 68, 0, 0.783);
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 5%;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-weight: bold;
+        font-size: 5.5rem;
+        padding: 50px;
+    }
+
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3 h3{
+        background-color: rgba(255, 123, 0, 0.783);
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 5%;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-weight: bold;
+        font-size: 5.5rem;
+        padding: 50px;
+    }
+
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4 h3{
+        background-color: rgba(255, 187, 0, 0.783);
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 5%;
+        color: white;
+        text-shadow: 2px 2px 1px red;
+        font-weight: bold;
+        font-size: 5.5rem;
+        padding: 50px;
+    }
+
+    #why-section .why-yumyum-container .ambience{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px;
+        font-family: "Gabriela", serif;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-title h1{
+        font-size: 6.5rem;
+        color: black;
+        font-weight: bold;
+        text-shadow: .5px .5px 1px red;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-para p{
+        text-transform: capitalize;
+        color: black;
+        margin-top: 40px;
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+        line-height: 40px;
+        opacity: .9;
+        text-shadow: .1px .1px .5px black;
+        word-spacing: 1.5px;
+    }
+    
+    #why-section .why-yumyum-container .ambience-points-container{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.493)),url("{% static '/images/ambience-bg.jpg' %}");
+    }
+    #why-section .why-yumyum-container .ambience-points{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+        padding: 80px;
+        font-family: "Dancing Script", cursive;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-1 h1{
+        font-size: 6rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 1px red;
+        color: white;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-2 h1{
+        font-size: 6rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 1px red;
+        color: white;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-3 h1{
+        font-size: 6rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 1px red;
+        color: white;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-4 h1{
+        font-size: 6rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 1px red;
+        color: white;
+    }
+
+    #why-section .why-yumyum-container .unique-menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 50px;
+        font-family: "Gabriela", serif;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-title{
+        grid-column: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-title h1{
+        color: black;
+        font-weight: bold;
+        font-size: 6.5rem;
+        text-shadow: .5px .5px 1px red;
+    }
+
+    #why-section .why-yumyum-container .unique-menu .unique-menu-para{
+        grid-column: 2;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-para p{
+        color: black;
+        text-transform: capitalize;
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+        line-height: 40px;
+        margin-bottom: 30px;
+        opacity: .9;
+        text-shadow: .1px .1px .5px black;
+        word-spacing: 1.5px;
+    }
+    
+    #why-section .why-yumyum-container .unique-menu-points-container{
+        padding: 30px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points{
+        background-color: rgba(179, 175, 175, 0.753);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        font-family: "Dancing Script", cursive;
+        padding: 40px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1{
+        font-size: 4.3rem;
+        color: black;
+        text-shadow: .6px .6px 1px red;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1{
+        font-size: 4.3rem;
+        color: black;
+        text-shadow: .6px .6px 1px red;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-3 h1{
+        font-size: 4.3rem;
+        color: black;
+        text-shadow: .6px .6px 1px red;
+    }
+
+    #why-section .why-yumyum-container .family-friendly{
+        display: grid;
+        grid-template-columns: 1fr 1.12fr;
+        padding: 60px;
+        gap: 15px;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents{
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: "Gabriela", serif;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-title h1{
+        color: black;
+        font-weight: bold;
+        font-size: 6.3rem;
+        text-shadow: .5px .5px 1px red;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-para p{
+        margin-top: 30px;
+        color: black;
+        text-transform: capitalize;
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+        line-height: 40px;
+        margin-bottom: 30px;
+        opacity: .9;
+        text-shadow: .1px .1px .5px black;
+        word-spacing: 1.5px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container{
+        display: flex;
+        align-items: center;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        background-color: rgba(179, 175, 175, 0.753);
+        border-radius: 5px;
+        font-family: "Dancing Script", cursive;
+        padding: 60px 20px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1{
+        font-size: 3.2rem;
+        color: black;
+        text-shadow: .5px .5px 1px red;
+        font-weight: bold;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1{
+        font-size: 3.2rem;
+        color: black;
+        text-shadow: .5px .5px 1px red;
+        font-weight: bold;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1{
+        font-size: 3.2rem;
+        color: black;
+        text-shadow: .5px .5px 1px red;
+        font-weight: bold;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-4 h1{
+        font-size: 3.2rem;
+        color: black;
+        text-shadow: .5px .5px 1px red;
+        font-weight: bold;
+    }
+
+    #why-section .why-yumyum-container .community-engagement{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px;
+        font-family: "Gabriela", serif;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-title h1{
+        font-size: 6.5rem;
+        color: black;
+        font-weight: bold;
+        text-shadow: .5px .5px 1px red;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-para p{
+        text-transform: capitalize;
+        color: black;
+        margin-top: 40px;
+        font-size: 2.1rem;
+        letter-spacing: 1px;
+        line-height: 40px;
+        opacity: .9;
+        text-shadow: .1px .1px .5px black;
+        word-spacing: 1.5px;
+    }
+
+    #why-section .why-yumyum-container .underline{
+        border: 2px solid rgba(155, 151, 151, 0.568);
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+
+    
+
+
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+<body id="whybody">
+    <section id="why-yumyum">
+        <div class="why-yumyum-title">
+            <div class="why">
+                <h1>Why</h1>
+            </div>
+            
+            <div class="yumyum">
+                <h1>YumYumCloud ?</h1>
+            </div>
+        </div>
+    </section>
+    
+    <section id="why-section">
+        <div class="why-yumyum-container">
+            <div class="cooking-excellence">
+                <div class="why-title">
+                    <h1><i class='bx bxs-star'></i> Cooking Excellence And Exceptional Service</h1>
+                </div>
+                <div class="why-para">
+                    <p>Our Commitment To <b>Cooking Excellence</b> Goes Beyond Ordinary Dining. Our Skilled Chefs Meticulously Curate A Menu That Reflects A Dedication To Quality, Creativity, And A Passion For Gastronomy. Every Dish Is A Masterpiece, Presenting A Symphony Of Flavors That Tantalize The Taste Buds.</p>
+                    <p>Experience Dining As It Should Be With Our <b> Exceptional Service</b>. Our Staff Is Trained To Anticipate Your Needs, Providing Attentive And Courteous Service That Enhances Your Overall Enjoyment. From The Moment You Step In Until The Last Goodbye, We Prioritize Your Comfort And Satisfaction.</p>
+                </div>
+            </div>
+            <div class="cooking-excellence-points">
+                <div class="points-container">
+                    <div class="point point1">
+                        <h3>
+                            <i class='bx bxs-hand-right'></i>
+                            Exceptional Cuisine
+                        </h3>
+                    </div>
+                    <div class="point point2">
+                        <h3>
+                            Delicious Dishes
+                            <i class='bx bxs-hand-left'></i>
+                        </h3>
+                    </div>
+                    <div class="point point3">
+                        <h3>
+                            <i class='bx bxs-hand-right'></i>
+                            Attendive Staff
+                        </h3>
+                    </div>
+                    <div class="point point4">
+                        <h3>
+                            Customer-Centric
+                            <i class='bx bxs-hand-left'></i>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="ambience">
+                <div class="ambience-title">
+                    <h1>
+                        <i class='bx bxs-star'></i>
+                        Ambience And Affordable Luxury
+                    </h1>
+                </div>
+                <div class="ambience-para">
+                    <p>Immerse Yourself In An Ambiance That Transcends The Ordinary. Our Restaurant Is Meticulously Designed To Provide An Inviting Atmosphere Where Guests Can Unwind And Savor Their Dining Experience. The Elegant Decor. Complemented By Cozy Seating Arrangements, Creates The <b>Perfect Setting</b> For Memorable Moments.</p>
+                    <p>Our Commitment To <b>Affordable Luxury</b> Means That You Can Enjoy The Liner Things In Life Without Compromise. Each Visit Is An Invitation To A World Where High-Quality Dining Meets Budget-Friendly Sensibility. From Meticulously Prepared Dishes To The Elegant Ambience, We Invite You To Revel In An Affordable Yet Distinguished Dining Experience. Because At Our Restaurant, We Believe That Everyone Deserves A Taste Of Luxury. And We've Curated A Menu And An Atmosphere That Makes It Possible For You To Indulge Without Reservation. Welcome To A Place Where Luxury Meets Affordability, Creating A Culinary Haven For Connoisseurs Who Appreciate The Finer Nuances Of Life.</p>
+                </div>
+            </div>
+            <div class="ambience-points-container">
+                <div class="ambience-points">
+                    <div class="point-1">
+                        <h1>
+                            <i class='bx bxs-hot' ></i>
+                            Elegant Decor
+                        </h1>
+                    </div>
+                    <div class="point-2">
+                        <h1>
+                            <i class='bx bxs-hot'></i>
+                            Comfortable Setting
+                        </h1>
+                    </div>
+                    <div class="point-3">
+                        <h1>
+                            <i class='bx bxs-hot' ></i>
+                            High-Quality Dining
+                        </h1>
+                    </div>
+                    <div class="point-4">
+                        <h1>
+                            <i class='bx bxs-hot' ></i>
+                            Affordable Elegance
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="unique-menu">
+                <div class="unique-menu-title">
+                    <h1><i class='bx bxs-star'></i> Unique Menu And Locally Sourced Ingredients</h1>
+                </div>
+                <div class="unique-menu-para">
+                    <p>Our Commitment To A <b> Unique Menu</b>  Goes Beyond The Conventional, Offering A Symphony Of Tastes That Cater To The Adventurous Palate. Explore A Curated Selection That Transcends The Boundaries Of Traditional Dining, Embracing A Diversity Of Ingredients And Cooking Techniques That Redefine What It Means To Savor Each Bite.</p>
+                    <p>Our Commitment To <b>Quality</b> Extends To The Source. We Take Pride In Sourcing Fresh, Local Ingredients To Ensure Each Dish Is A Celebration Of Flavor And Sustainability. By Supporting Local Farmers And Producers, We Not Only Prioritize Taste But Also Contribute To The Well-Being Of Our Community.</p>
+                </div>
+            </div>
+            <div class="unique-menu-points-container">
+                <div class="unique-menu-points">
+                    <div class="point-1">
+                        <h1>
+                            <i class='bx bxs-hand-right'></i>
+                            Diverse Selection
+                        </h1>
+                    </div>
+                    <div class="point-2">
+                        <h1>
+                            <i class='bx bxs-hand-right'></i>
+                            Specialities
+                        </h1>
+                    </div>
+                    <div class="point-3">
+                        <h1>
+                            <i class='bx bxs-hand-right'></i>
+                            Fresh Produced
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="underline"></div>
+
+            <div class="family-friendly">
+                <div class="family-friendly-contents">
+                    <div class="family-friendly-title">
+                        <h1><i class="bx bxs-star"></i>
+                            Family Friendly
+                        </h1>
+                    </div>
+                    <div class="family-friendly-para">
+                        <p>At our establishment, we take great pride in creating an environment that warmly welcomes families of all shapes and size. Our Commitment to being <b> Family-Friendly</b> goes beyond providing a menu suitable for all ages - It's about fostering an atmosphere where every member of your family feels comfortable and valued.</p>
+                    </div>
+                </div>
+
+                <div class="family-friendly-points-container">
+                    <div class="family-friendly-points">
+                        <div class="point-1">
+                            <h1>
+                                <i class='bx bxs-hand-right'></i>
+                                Warm Hospitality
+                            </h1>
+                        </div>
+                        <div class="point-2">
+                            <h1>
+                                <i class='bx bxs-hand-right'></i>
+                                Engaging Environment
+                            </h1>
+                        </div>
+                        <div class="point-3">
+                            <h1>
+                                <i class='bx bxs-hand-right'></i>
+                                Kid-Friendly Menu
+                            </h1>
+                        </div>
+                        <div class="point-4">
+                            <h1>
+                                <i class='bx bxs-hand-right'></i>
+                                Comfortable Atmosphere
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="underline"></div>
+
+            <div class="community-engagement">
+                <div class="community-engagement-title">
+                    <h1>
+                        <i class='bx bxs-star'></i>
+                        Community Engagement
+                    </h1>
+                </div>
+                <div class="community-engagement-para">
+                    <p>At Our Establishment, Community Engagement Is Not Just A Buzzword; It's A Core Value That Reflects Our Commitment To Being An Integral Part Of The Neighborhoods We Serve. We Actively Seek Ways To Connect With And Contribute To The Well-Being Of Our Community.</p>
+                    <p><b>Sustainability Initiatives</b>: Our Commitment To The Environment Is Evident In Our Sustainability Initiatives. From Eco-Friendly Practices In Our Operations To Reducing Waste, We Strive To Be Environmentally Responsible, Contributing To A Healthier And More Sustainable Community.</p>
+                    <p><b>Community Feedback And Involvement</b>: We Value The Opinions And Feedback Of Our Community Members. Through Surveys, Forums, And Open Dialogues, We Encourage Active Participation. Ensuring That The Preferences And Needs Of Our Community Shape Our Offerings And Services.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+</body>
+{% endblock %}

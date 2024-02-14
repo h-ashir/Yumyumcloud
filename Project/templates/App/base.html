@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link type="image/png" rel="icon" href="{% static '/images/yumyum-logo.png' %}" >
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
         /* font-family: 'Montserrat', sans-serif; */
@@ -210,7 +211,12 @@
           text-decoration: none;
           color: white;
           font-size: 1.8rem;
+          transition: .7s all linear;
         }
+        footer .grid-container .left-grid .footer-link a:hover{
+          color: red;
+        }
+
 
         footer .grid-container .middle-grid{
           grid-column: 2;
@@ -231,7 +237,12 @@
           text-decoration: none;
           color: white;
           font-size: 1.8rem;
+          transition: .7s all linear;
         }
+        footer .grid-container .middle-grid .footer-link a:hover{
+          color: red;
+        }
+
 
         footer .grid-container .right-grid{
           grid-column: 3;
@@ -297,8 +308,8 @@
                   Yumyumcloud
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item {% if request.path == 'about-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'home' %}">About Yumyumcloud</a></li>
-                    <li class="nav-item {% if request.path == '/why-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'home' %}">Why Yumyumcloud</a></li>
+                    <li class="nav-item {% if request.path == 'about-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'about-yumyum' %}">About Yumyumcloud</a></li>
+                    <li class="nav-item {% if request.path == '/why-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'why-yumyum' %}">Why Yumyumcloud</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -370,7 +381,7 @@
             <div class="underline"></div>
             <div class="footer-link">
               <a href="{% url 'home' %}">Home</a>
-              <a href="{% url 'home' %}">About</a>
+              <a href="{% url 'about-yumyum' %}">About</a>
               <a href="{% url 'home' %}">Menu</a>
               <a href="{% url 'home' %}">Outlets</a>
               <a href="{% url 'home' %}">Contact</a>
@@ -467,6 +478,25 @@
       }
       window.addEventListener("scroll", reveal);
       reveal();
+
+
+  window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      const scrolled = window.scrollY;
+
+      if (prevScrollPos > currentScrollPos) {
+          document.querySelector('.navbar').style.top = '0';
+          document.querySelector('.navbar').style.backgroundColor = 'rgb(49, 49, 49)';
+          if (scrolled === 0) {
+            document.querySelector('.navbar').style.backgroundColor = 'transparent';
+          }
+      } else {
+          document.querySelector('.navbar').style.top = '-120px'; /* Set the height of your navbar */
+          // document.querySelector('.navbar').style.backgroundColor = 'transparent';
+      }
+      prevScrollPos = currentScrollPos;
+    }
+
   </script>
   
 </body>
