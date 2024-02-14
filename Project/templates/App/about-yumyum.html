@@ -1,0 +1,147 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+About YumYumCloud
+{% endblock %}
+
+{% block style %}
+<style>
+#aboutbody{
+    background-color: black;
+}
+#about-yumyum-head{
+    background: fixed;
+    background-size: cover;
+    background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.493)),url("{% static '/images/home-title-bg.jpg' %}");
+    height: 110vh;
+}
+#about-yumyum-head .about-yumyum-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about-yumyum-head .about-yumyum-title .about h1{
+    margin-top: 200px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 11rem; 
+    color: white;
+}
+#about-yumyum-head .about-yumyum-title .yumyum h1{
+    font-family: 'Gabriela', serif;
+        font-size: 11rem;
+        background-image: linear-gradient(
+          -225deg,
+          #f3b610 0%,
+          #faba09 29%,
+          #ff5613 67%,
+          #ff8800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+}
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+     }
+    }
+#about-yumyum{
+    background: fixed;
+    background-size: cover;
+    background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.900), rgba(0, 0, 0, 0.900)),url("{% static '/images/about-bg.jpg' %}");
+    position: relative;
+}
+#about-yumyum .underline{
+    border: 2px solid red;
+}
+
+#about-yumyum .about-desc{
+    padding: 20px 80px ;
+}
+#about-yumyum .about-desc p{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: .5px .5px .7px blue;
+    font-size: 2rem;
+    line-height: 50px;
+    margin-top: 30px;
+    word-spacing: 1.5px;
+}
+#about-yumyum .about-grid{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 35px;
+    padding: 50px;
+}
+#about-yumyum .about-grid .food-image img{
+    width: 100%;
+    height: 65rem;
+    object-fit: cover;
+    border-radius: 8px;
+    border-left: 25px solid red;
+    border-left-style: double;
+    border-top: 15px solid red;
+    border-top-style: double;
+    clip-path: circle(65%);
+    transition: .8s all linear; 
+    transform: perspective(1000px)
+    rotateX(10deg)
+    scale(.9);
+}
+#about-yumyum .about-grid .food-image img:hover{
+    transform: scale(.95);
+}
+
+#about-yumyum .about-grid .food-para p{
+    margin-top: 70px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: .5px .5px .7px blue;
+    font-size: 2rem;
+    line-height: 50px;
+    word-spacing: 1.5px;
+}
+#about-yumyum .about-grid span img{
+    width: 20%;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<body id="aboutbody">
+    <section id="about-yumyum-head">
+        <div class="about-yumyum-title">
+            <div class="about">
+                <h1>About</h1>
+            </div>
+            <div class="yumyum">
+                <h1>YumYumCloud !</h1>
+            </div>
+        </div>
+    </section>
+    <section id="about-yumyum"><br><br><br><br>
+        <div class="underline"></div>
+        <div class="about-desc">
+            <p>YumYumCloud was founded in the year 2023 in our God's own country Kerala by Nishaf (Founder & Chief Executive Officer) who graduated his Bachelors in Computer Science & Engineering and has many years of experience in the United States as Technology & Finance Specialist and in other countries as well. His passion is to serve the basic needs for the customers both Quality-wise & Price-wise and ambition is to employ & take care many families and enthusiasm is to expand the business with many outlets. He shared his dreams with his wife Fathima who impressed with the ideas and joined the company as Managing Director, with her complete support. She has Bachelors in Corporate Secretaryship and Masters in Finance & Marketing and is working as Teacher in the United States. They are blessed with two beautiful children Farah and Ryan who are students in the United States. They shared the ideas with Nishaf's parents, Abdul Majeed and Doulath. Parents were so happy with their kids' decision and supported completely, and also agreed to join the company as Board of Directors. With all your support, encouragement and positive attitude, we can make any impossible thing to possible!</p>
+        </div>
+        <div class="about-grid">
+            <div class="food-image">
+                <img src="{% static '/images/about-food.jpg' %}" alt="">
+            </div>
+            <div class="food-para">
+                <p>We carefully carved our Brand name <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> to provide the delicious, mouthwatering and aromatic food for our customers! Our professional and expert chefs can provide you the high quality food and drinks at very reasonable and affordable price and we are sure that we can beat any competitor in both Quality and Price! So, please stop by and experience our items on the menu and we are sure that you will be our Repeat Customer!
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}
