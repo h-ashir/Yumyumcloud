@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from App.forms import ContactForm
 from django.contrib import messages
 
 # Create your views here.
@@ -24,4 +25,29 @@ def menu(request):
     return render(request, 'App/menu.html')
 
 def contact(request):
-    return render(request, 'App/contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            mobile_number = form.cleaned_data['mobile_number']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            
+            if len(str(mobile_number)) < 10:
+                messages.warning(request, 'Please Enter a Valid Mobile Number !')
+                return redirect('contact-us')
+
+            elif len(str(message)) < 5:
+                messages.warning(request, 'Please Enter Some Message !')
+                return redirect('contact-us')
+            elif '.com' not in email:
+                messages.warning(request, "Please Provide a Valid Email Address")
+                return redirect('contact-us')
+            else:
+                form.save()
+                messages.success(request, 'Thank You ! Your Response Has Been Recorded 😊')
+                return redirect('contact-us')
+    else:
+        form = ContactForm()
+        context = {'form': form}
+    return render(request, 'App/contact.html', context)
