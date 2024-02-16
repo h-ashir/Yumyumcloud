@@ -24,6 +24,9 @@ def catering(request):
 def menu(request):
     return render(request, 'App/menu.html')
 
+def outlets(request):
+    return render(request, 'App/outlets.html')
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

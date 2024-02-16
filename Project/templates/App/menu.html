@@ -9,7 +9,7 @@ Menu
 <style>
     #menubody{
         background: rgb(25, 25, 26);
-        background: linear-gradient(140deg, rgb(22, 22, 22) 16%, rgb(15, 15, 15) 78%);
+        /* background: linear-gradient(140deg, rgb(22, 22, 22) 16%, rgb(15, 15, 15) 78%); */
     }
     #menu-header{
         background: fixed;
@@ -78,7 +78,7 @@ Menu
 
     #menu-section #starter{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #starter .image{
         background: fixed;
@@ -90,7 +90,7 @@ Menu
         align-items: center;
     }
     #menu-section #starter .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -106,7 +106,7 @@ Menu
         position: relative;
     }
     #menu-section #starter .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -153,88 +153,10 @@ Menu
     }
 
     /* burger */
-
-    #menu-section #burger{
-        display: grid;
-        grid-template-columns: .9fr 1fr;
-    }
-    #menu-section #burger .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/starter-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #burger .image h1{
-        font-size: 11rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #burger .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #burger .content .content-para p{
-        font-size: 2.4rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #burger .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #burger .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #burger .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
-    }
-    #menu-section #burger .round-1{
-        border-top-left-radius: 50%;
-        border-top-right-radius: 90%;
-        border-bottom-right-radius: 50%;
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    #menu-section #burger .round-2{
-        border-top-left-radius: 90%;
-        border-top-right-radius: 50%;
-        border-bottom-left-radius: 50%;
-        position: absolute;
-        top: 35%;
-        right: 5%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* burger */
     
     #menu-section #burger{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #burger .image{
         background: fixed;
@@ -246,7 +168,7 @@ Menu
         align-items: center;
     }
     #menu-section #burger .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -262,7 +184,7 @@ Menu
         position: relative;
     }
     #menu-section #burger .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -311,7 +233,7 @@ Menu
     /* sandwich */    
     #menu-section #sandwich{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #sandwich .image{
         background: fixed;
@@ -323,7 +245,7 @@ Menu
         align-items: center;
     }
     #menu-section #sandwich .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -339,7 +261,7 @@ Menu
         position: relative;
     }
     #menu-section #sandwich .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -389,7 +311,7 @@ Menu
     
     #menu-section #wrap{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #wrap .image{
         background: fixed;
@@ -401,7 +323,7 @@ Menu
         align-items: center;
     }
     #menu-section #wrap .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -417,7 +339,7 @@ Menu
         position: relative;
     }
     #menu-section #wrap .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -467,7 +389,7 @@ Menu
     
     #menu-section #pasta{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #pasta .image{
         background: fixed;
@@ -479,7 +401,7 @@ Menu
         align-items: center;
     }
     #menu-section #pasta .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -495,7 +417,7 @@ Menu
         position: relative;
     }
     #menu-section #pasta .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -544,7 +466,7 @@ Menu
     /* sundae */    
     #menu-section #sundae{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #sundae .image{
         background: fixed;
@@ -556,7 +478,7 @@ Menu
         align-items: center;
     }
     #menu-section #sundae .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -572,7 +494,7 @@ Menu
         position: relative;
     }
     #menu-section #sundae .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -621,7 +543,7 @@ Menu
     /* falooda */
     #menu-section #falooda{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #falooda .image{
         background: fixed;
@@ -633,7 +555,7 @@ Menu
         align-items: center;
     }
     #menu-section #falooda .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -649,7 +571,7 @@ Menu
         position: relative;
     }
     #menu-section #falooda .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -699,7 +621,7 @@ Menu
     
     #menu-section #freak-shake{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #freak-shake .image{
         background: fixed;
@@ -711,7 +633,7 @@ Menu
         align-items: center;
     }
     #menu-section #freak-shake .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -727,7 +649,7 @@ Menu
         position: relative;
     }
     #menu-section #freak-shake .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -776,7 +698,7 @@ Menu
     /* mojito */
     #menu-section #mojito{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #mojito .image{
         background: fixed;
@@ -788,7 +710,7 @@ Menu
         align-items: center;
     }
     #menu-section #mojito .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -804,7 +726,7 @@ Menu
         position: relative;
     }
     #menu-section #mojito .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -850,11 +772,11 @@ Menu
         transform: translate(-50%, -50%);
     }
 
-    /* burger */
+    /* fresh-juice */
     
     #menu-section #fresh-juice{
         display: grid;
-        grid-template-columns: .9fr 1fr;
+        grid-template-columns: .85fr 1fr;
     }
     #menu-section #fresh-juice .image{
         background: fixed;
@@ -866,7 +788,7 @@ Menu
         align-items: center;
     }
     #menu-section #fresh-juice .image h1{
-        font-size: 11rem;
+        font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
@@ -882,7 +804,7 @@ Menu
         position: relative;
     }
     #menu-section #fresh-juice .content .content-para p{
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
@@ -927,8 +849,678 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
+    
+    /* South indian food */
+    #south-indian-food-section .underline{
+        margin: 80px 0px;
+        border: 2px solid red;
+    }
 
+    #south-indian-food-header{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.644)),url("{% static '/images/south-indian-food-bg.png' %}");
+    }
+    #south-indian-food-header .title-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-header .title-container h1{
+        margin-top: 250px;
+        font-size: 13rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 5px 5px 1px black;
+        font-family: "Dancing Script", cursive;
+    }
+    #south-indian-food-header #display-south-indian-menu{
+        margin-top: 350px;
+        font-family: "Dancing Script", serif;
+        text-transform: capitalize;
+        padding: 50px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item{
+        margin-bottom: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 80px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li{
+        border-right: 4px solid red;
+        padding-right: 70px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li:last-child{
+        border-right: none;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a{
+        text-decoration: none;
+        color: yellow;
+        font-size: 4rem;
+        transition: .7s all linear;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a:hover{
+        color: orangered;
+    }
 
+    /* biriyani */
+    #south-indian-food-section #biriyani{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #biriyani .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/biriyani-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #biriyani .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #biriyani .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #biriyani .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #biriyani .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #biriyani .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #biriyani .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #biriyani .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #biriyani .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+        /* bread */
+    #south-indian-food-section #bread{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #bread .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/bread-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #bread .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #bread .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #bread .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #bread .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #bread .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #bread .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #bread .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #bread .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* beef */
+    #south-indian-food-section #beef{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #beef .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/beef-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #beef .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #beef .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #beef .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #beef .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #beef .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #beef .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #beef .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #beef .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* chicken */
+    #south-indian-food-section #chicken{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #chicken .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/chicken-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #chicken .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #chicken .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #chicken .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #chicken .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #chicken .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #chicken .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #chicken .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #chicken .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* fish */
+    #south-indian-food-section #fish{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #fish .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/fish-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #fish .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #fish .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #fish .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #fish .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #fish .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #fish .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #fish .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #fish .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* vegetarian */
+    #south-indian-food-section #vegetarian{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #vegetarian .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/vegetarian-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #vegetarian .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #vegetarian .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #vegetarian .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #vegetarian .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #vegetarian .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #vegetarian .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #vegetarian .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #vegetarian .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* waffle */
+    #south-indian-food-section #waffle{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #waffle .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/waffle-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #waffle .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #waffle .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #waffle .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #waffle .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #waffle .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #waffle .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #waffle .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #waffle .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* beverage */
+    #south-indian-food-section #beverage{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #beverage .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/beverage-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section #beverage .image h1{
+        font-size: 10rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #south-indian-food-section #beverage .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #south-indian-food-section #beverage .content .content-para p{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section #beverage .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section #beverage .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #south-indian-food-section #beverage .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #beverage .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #south-indian-food-section #beverage .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 {% endblock %}
 
@@ -937,10 +1529,10 @@ Menu
     <section id="menu-header">
         <div class="menu-title-container">
             <div class="menu-title">
-                <h1>Explore Our Menu</h1>
+                <h1 class="reveal">Explore Our Menu</h1>
             </div>
             <div class="menu-quote">
-                <p><q>Taste The Difference</q></p>
+                <p class="reveal"><q>Taste The Difference</q></p>
             </div>
         </div>
         <div id="display-menu">
@@ -976,7 +1568,7 @@ Menu
                     <a href="#fresh-juice">fresh juice</a>
                 </li>
                 <li>
-                    <a href="#south-india-food">south india food</a>
+                    <a href="#south-indian-food-header">south india food</a>
                 </li>
             </ul>
 
@@ -988,10 +1580,10 @@ Menu
                 <h1>Starter</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Enjoy Our Deliciuos Starters, Bursting With Flavor And Crafted To Perfection. From Crispy French Fries To Creamy Spinach Dip, Each Dish Promises A Delightful Beginning To Your Journey.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>french fries</li>
                     <li>Smiley</li>
                     <li>Garlic bread</li>
@@ -1013,10 +1605,10 @@ Menu
                 <h1>Burger</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Savor The Juicy Goodness Of Our Signature Burgers, Crafted With The Finest Ingredients And Grilled To Perfection. From Classic Cheeseburgers To Gourmet Creations, Each Bite Is A Burst Of Savory Satisfaction. Choose From A Variety Of Mouthwatering Options And Elevate Your Burger Experience Today.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Veg burger</li>
                     <li>Chicken burger</li>
                     <li>BBQ Chicken burger</li>
@@ -1037,10 +1629,10 @@ Menu
                 <h1>Sandwich</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Check Out Our Irresistible Selection Of Sandwiches, Where Every Bite Is A Symphony Of Flavors And Textures. From Classic Favorites To Innovative Twists, Each Sandwich Is Meticulously Crafted Using Premium Ingredients And Served With Love. Whether You Crave Something Comforting Or Crave-Worthy, Our Sandwiches Are Sure To Tantalize Your Taste Buds.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Veg club sandwich</li>
                     <li>Chicken club sandwich</li>
                     <li>American club sandwich</li>
@@ -1058,10 +1650,10 @@ Menu
                 <h1>Wrap</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Savor The Perfect Harmony Of Fresh Ingredients Wrapped In A Soft Tortilla, Delivering A Burst Of Flavors In Every Bite. Our Wraps Are A Delightful Fusion Of Wholesome Goodness, Offering A Portable Feast For Your Enjoyment. Whether You Prefer Classic Combinations Or Bold Innovations, Our Wraps Promise A Satisfying Experience That You'll Crave Again And Again.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Veg wrap</li>
                     <li>Italian wrap</li>
                     <li>Zinger wrap</li>
@@ -1079,10 +1671,10 @@ Menu
                 <h1>Pasta</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Check Out Our Perfectly Cooked Pasta, Generously Adorned with Rich, Savory Sauces That Tantalize Your Taste Buds. Our Pasta Dishes Are Meticulously Crafted With The Finest Ingredients, Creating A Symphony Of Flavors And Textures That Delight With Every Forkful. From Traditional Favorites To Inventive Twists, Each Plate Promises A Culinary Journey That Satisfies Both The Appetite And The Soul.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Alfredo chicken pasta</li>
                     <li>Alfredo veg pasta</li>
                     <li>Arrabiata chicken pasta</li>
@@ -1102,10 +1694,10 @@ Menu
                 <h1>Sundae</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Satisfy Your Sweet Cravings With Our Heavenly Sundaes, A Symphony Of Creamy Ice Cream, Decadent Toppings, And Irresistible Sauces. Each Spoonful Is A Delightful Explosion Of Flavor And Texture, Transporting You To A World Of Pure Indulgence. Whether You Crave Classic Combinations Or Crave Innovative Creations, Our Sundaes Promise A Blissful Treat For Your Taste Buds.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Green magic</li>
                     <li>Mountain lava</li>
                     <li>Babylon bliss</li>
@@ -1125,10 +1717,10 @@ Menu
                 <h1>Falooda</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Quench Your Thirst And Tantalize Your Taste Buds With Our Refreshing Falooda. A Delightful Fusion Of Silky Vermicelli, Velvety Ice Cream, Aromatic Rose Syrup, And Crunchy Nuts, Each Sip Is A Journey Through Layers Of Exotic Flavors And Textures. Perfect For A Hot Summer Day Or As A Sweet Ending To Any Meal, Our Falooda Is Sure To Leave You Feeling Refreshed And Satisfied.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Normal falooda</li>
                     <li>Mini falooda</li>
                     <li>Royal falooda</li>
@@ -1151,10 +1743,10 @@ Menu
                 <h1>Freak Shake</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Savor The Rich And Creamy Goodness Of Our Signature Shakes, Meticulously Concocted To Tantalize Your Taste Buds. From The Iconic Crunch Of Kitkat To The Decadent Swirls Of Oreo, Each Shake Is A Blissful Journey Through Layers Of Flavor And Indulgence. Elevate Your Dessert Experience With Our Lineup Of Handcrafted Shakes, Where Every Sip Is A Moment Of Pure Indulgence.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Kitkat Shake</li>
                     <li>Oreo Shake</li>
                     <li>Biscoff Shake</li>
@@ -1172,10 +1764,10 @@ Menu
                 <h1>Mojito</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Quench Your Thirst With Our Refreshing Mojitos, Bursting With Vibrant Flavors And Zesty Citrus Notes. Crafted With Care, Our Mojitos Are The Perfect Blend Of Sweetness, Tanginess, And Minty Freshness, Making Them An Ideal Companion For Any Occasion. Dive Into A Cool, Revitalizing Experience That Invigorates Your Senses With Every Sip.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Blue bee mojito</li>
                     <li>Blossom sea mojito</li>
                     <li>Green magic mojito</li>
@@ -1193,10 +1785,10 @@ Menu
                 <h1>Fresh Juice</h1>
             </div>
             <div class="content">
-                <div class="content-para">
+                <div class="content-para reveal">
                     <p>Indulge In The Pure Essence Of Nature With Our Freshly Squeezed Juices. Bursting With The Goodness Of Ripe Fruits And Vegetables, Each Sip Is A Revitalizing Journey That Invigorates Your Body And Soul. Our Juices Are A Celebration Of Freshness And Vitality, Providing A Delicious And Nutritious Boost To Your Day.</p>
                 </div>
-                <ul>
+                <ul class="reveal">
                     <li>Majic lime juice</li>
                     <li>Pineapple juice</li>
                     <li>Mango juice</li>
@@ -1208,8 +1800,218 @@ Menu
                 <div class="round round-2"></div>
             </div>
         </div>
+
+        <div class="underline"></div>
+
     </section>
 
-    
+    <section id="south-indian-food-header">
+        <div class="title-container">
+            <h1>South Indian Food</h1>
+        </div>
+        <div id="display-south-indian-menu">
+            <ul class="menu-item">
+                <li>
+                    <a href="#biriyani">biriyani</a>
+                </li>
+                <li>
+                    <a href="#bread">bread</a>
+                </li>
+                <li>
+                    <a href="#beef">beef</a>
+                </li>
+                <li>
+                    <a href="#chicken">chicken</a>
+                </li>
+                <li>
+                    <a href="#fish">fish</a>
+                </li>
+                <li>
+                    <a href="#vegetarian">vegetarian</a>
+                </li>
+                <li>
+                    <a href="#waffle">waffle</a>
+                </li>
+                <li>
+                    <a href="#beverage">beverage</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="south-indian-food-section">
+
+        <div id="biriyani">
+            <div class="image">
+                <h1>Biriyani</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Enjoy The Aromatic Delight Of Our Signature Biriyanis, Infused With A Symphony Of Spices And Succulent Meats Or Vegetables. Each Bite Is Rich In Flavor And Tradition, Transporting You To The Heart Of Authentic Indian Cuisine. Experience The Perfect Balance Of Texture And Taste, Crafted With Passion And Served With Love.</p>
+                </div>
+                <ul class="reveal">
+                    <li>Veg biriyani</li>
+                    <li>Chicken biriyani</li>
+                    <li>Beef biriyani</li>
+                    <li>Mutton biriyani</li>
+                    <li>Fish biriyani</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="bread">
+            <div class="image">
+                <h1>Bread</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Feel Yourself Immersed In The Warm Embrace Of Our Freshly Prepared Bread Selection, Featuring The Delicate Flakiness Of Varieties Of Porotta And The Wholesome Goodness Of Chapathi. Each Bite Embodies The Essence Of Comfort And Tradition, Offering A Delightful Accompaniment To Your Favorite Dishes. Experience The Perfect Blend Of Softness And Flavor, Lovingly Crafted To Elevate Your Dining Experience.</p>
+                </div>
+                <ul class="reveal">
+                    <li>Porotta</li>
+                    <li>Chapatti</li>
+                    <li>Nool Porotta</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="beef">
+            <div class="image">
+                <h1>Beef</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Savor The Rich And Savory Flavors Of Our Tender Beef Dishes, Meticulously Prepared To Perfection. From Beef Chukka To Many Different Varieties, Each Bite Is A Journey Through Bold And Robust Tastes That Will Tantalize Your Taste Buds. Delight In The Juiciness And Depth Of Flavor That Only Premium Cuts Of Beef Can Deliver, Promising A Satisfying Dining Experience Every Time.</p>
+                </div>
+                <ul class="reveal">
+                    <li>Beef dry fry</li>
+                    <li>Beef masala</li>
+                    <li>Beef perattu</li>
+                    <li>Beef Chukku</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="chicken">
+            <div class="image">
+                <h1>Chicken</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Relish The Delectable Flavor Of Our Chicken Delicacies, Crafted With Care And Seasoned To Perfection. From Crispy Fried Chicken To Juicy Grilled Offerings, Our Menu Boasts A Variety Of Delectable Options To Satisfy Every Craving. Whether You Prefer Classic Comfort Food Or Innovative Twists On Traditional Recipes, Our Chicken Dishes Promise A Mouthwatering Experience That Will Leave You Craving More.</p>
+                </div>
+                <ul class="reveal">
+                    <li>Chicken 65</li>
+                    <li>Nadan chicken curry</li>
+                    <li>Thalassery chicken masala</li>
+                    <li>kozhikodan chicken mappas</li>
+                    <li>Chicken chukka</li>
+                    <li>Chicken chettinad</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="fish">
+            <div class="image">
+                <h1>Fish</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Delight In The Rich Flavors Of Our Fresh Catch, Prepared With Care And Served Just For You. Dive Into A World Of Seafood Delight With Our Exquisite Fish Dishes, Expertly Crafted To Tantalize Your Taste Buds And Leave You Craving For More</p>
+                </div>
+                <ul class="reveal">
+                    <li>Fish curry</li>
+                    <li>Fish masala</li>
+                    <li>Fish tawa fry</li>
+                    <li>Prawns masala</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="vegetarian">
+            <div class="image">
+                <h1>Vegetarian</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Experience The Vibrant World Of Vegetarian Cuisine, Where Farm- Fresh Ingredients Are Transformed Into Delectable Dishes Bursting With Flavor. Explore A Diverse Array Of Plant-Based Delights That Cater To Every Palate, Offering A Wholesome And Satisfying Dining Experience.</p>
+                </div>
+                <ul class="reveal">
+                    <li>Veg masala</li>
+                    <li>Veg kurma</li>
+                    <li>Veg curry</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="waffle">
+            <div class="image">
+                <h1>Waffle</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Delight In The Irresistible Charm Of Freshly Made Waffles, Crafted To Perfection With Fluffy Interiors And Crispy Exteriors. Immerse Yourself In A Symphony Of Flavors As You Savor Every Bite Of These Delectable Treats, Whether Topped With Sweet Syrup, Succulent Fruits, Or Decadent Sauces.</p>
+                </div>
+                <ul class="reveal">
+                    <li>Banana waffle</li>
+                    <li>Creamy waffle</li>
+                    <li>Nutella waffle</li>
+                    <li>Ice cream waffle</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="beverage">
+            <div class="image">
+                <h1>Beverage</h1>
+            </div>
+            <div class="content">
+                <div class="content-para reveal">
+                    <p>Quench Your Thirst With Our Refreshing Range Of Beverages, Carefully Curated To Invigorate Your Senses With Every Sip. From Aromatic Coffees To Teas, Our Selection Caters To Every Craving And Occasion. Elevate Your Dining Experience With Our Delightful Beverages And Let Every Sip Be A Journey Of Pure Satisfaction.</p>
+                </div>
+                <ul class="reveal">
+                    <li>Vanilla tea</li>
+                    <li>Chocolate coffee</li>
+                    <li>Cinnamon Dolce Latte</li>
+                    <li>Iced tea</li>
+                    <li>Irish coffee</li>
+                    <li>Masala tea</li>
+                    <li>Assam tea</li>
+                    <li>Lemon crinkle tea</li>
+                    <li>Mint tea</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+        
+    </section>
 </body>
 {% endblock %}
