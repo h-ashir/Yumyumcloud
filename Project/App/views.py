@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from App.forms import ContactForm
 from django.contrib import messages
-
+from App.models import Photo
 # Create your views here.
 def home(request):
     return render(request, 'App/index.html')
@@ -13,7 +13,10 @@ def why_yumyum(request):
     return render(request, 'App/why-yumyum.html')
 
 def photo(request):
-    return render(request, 'App/photos.html')
+    dict_photo = {
+        'photos': Photo.objects.all()
+    }
+    return render(request, 'App/photo.html', dict_photo)
 
 def team(request):
     return render(request, 'App/team.html')

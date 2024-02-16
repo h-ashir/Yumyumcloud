@@ -1,0 +1,295 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Photos
+{% endblock %}
+
+{% block style %}
+<style>
+#photobody{
+    background-color: black;
+}
+
+#photobody #photo-head{
+    background: fixed;
+    background-size: cover;
+    background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.192), rgba(255, 255, 255, 0.199)),url("{% static '/images/photo-bg2.jpg' %}");
+    display: flex;
+    flex-direction: column;
+    padding: 170px 20px;
+}
+#photo-head .photo-title-container{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+#photo-head .photo-title-container .photo-title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#photo-head .photo-title-container .photo-title-empty{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#photo-head .photo-title-container .photo-title-empty img{
+    width: 100px;
+    color: white;
+    transform: rotate(-30deg);
+}
+
+#photo-head .photo-title-container .photo-title h1{
+    font-size: 6rem;
+    font-weight: bold;
+    font-family: "Gabriela", serif;
+    color: black;
+    text-shadow: 1px 1px 1px black;
+}
+
+#photo-head .photo-para-container{
+    display: flex;
+    justify-content: center;
+}
+#photo-head .photo-para-container .photo-para-empty{
+    width: 30%;
+}
+#photo-head .photo-para-container .photo-para{
+    position: relative;
+    padding: 20px 30px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+#photo-head .photo-para-container .photo-para p{
+    font-size: 2.1rem;
+    font-family: 'Poppins', sans-serif;   
+    color: black;
+    text-shadow: .1px .1px .5px black;
+    line-height: 55px;
+}
+#photo-head .photo-para-container .photo-para .top-1{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 4px;
+    width: 100px;
+    background-color: red;
+}
+#photo-head .photo-para-container .photo-para .top-2{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 4px;
+    height: 100px;
+    background-color: red;
+}
+
+#photo-head .photo-para-container .photo-para .bottom-1{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 4px;
+    width: 100px;
+    background-color: red;
+}
+#photo-head .photo-para-container .photo-para .bottom-2{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 4px;
+    height: 100px;
+    background-color: red;
+}
+
+
+
+
+
+
+
+#photobody .gallery-container{
+    background: rgb(24, 24, 24);
+    background: linear-gradient(125deg, rgb(22, 22, 22) 30%, rgb(15, 15, 15) 67%);
+    justify-content: center;
+    display: flex;
+    margin: 0px auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    /* padding-bottom: 100px; */
+}
+#photobody .gallery-item{
+    /* margin-top: 100px; */
+    height: 550px;
+    width: 350px;
+    border: 7px solid #860000;
+    flex: 0 1 30.7%;
+    margin-bottom: 6px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.7);
+    transition: .5s all ease-in-out;
+}
+#photobody .gallery-item:hover{
+    transform: scale(1.025);
+}
+#photobody .gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: .5s linear;
+    filter: brightness(85%);
+}
+#photobody .gallery-item img:hover{
+    filter: brightness(105%);
+}
+/* lightbox */
+.lightbox{
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 3%;
+    left: 0;
+}
+.lightbox-content{
+    position: relative;
+    width: 55%;
+    height: 80%;
+    margin: 5% auto;
+}
+.lightbox-content img{
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border: 6px solid #860000;
+}
+.lightbox-prev,
+.lightbox-next{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000;
+    padding: 9px;
+    top: 45%;
+    cursor: pointer;
+    font-size: 20px;
+}
+.lightbox-prev{
+    left: 0;
+}
+.lightbox-next{
+    right: 0;
+}
+
+</style>
+{%endblock%}
+
+{% block content %}
+<body id="photobody">
+    <section id="photo-head">
+    <div class="photo-title-container">
+        <div class="photo-title">
+            <h1>Explore Our Gallery</h1>
+        </div>
+        <div class="photo-title-empty">
+            <img src="{% static '/images/photo-icon.png' %}" alt="">
+        </div>
+    </div>
+    <div class="photo-para-container">
+        <div class="photo-para-empty"></div>
+        <div class="photo-para">
+            <p>Step into our virtual dining haven! Our gallery beckons with a vibrant array of images that capture the essence of our variety delights. Feast your eyes on a kaleidoscope of flavors, textures, and presentations that promise an unforgettable dining experience. From mouthwatering appetizers to succulent entrees, and from refreshing beverages to decadent desserts, each snapshot is a testament to our commitment to culinary excellence.</p>
+            <div class="top-1"></div>
+            <div class="top-2"></div>
+            <div class="bottom-1"></div>
+            <div class="bottom-2"></div>
+        </div>
+    </div>
+    </section>
+
+    <div class="gallery-container">
+        {% for p in photos %}
+        <div class="gallery-item" data-index="{{ forloop.counter }}"><img src="{{p.image.url}}" alt=""></div>
+        {% endfor %}
+    </div>
+
+<script>
+    
+const gallaryItem =  document.getElementsByClassName("gallery-item");
+// create element for lightbox
+const lightBoxContainer = document.createElement("div");
+// for basic area
+const lightBoxContent = document.createElement("div");
+// for images
+const lightBoxImg = document.createElement("img");
+// for prev buttom to change images
+const lightBoxPrev = document.createElement("div");
+// for next button
+const lightBoxNext = document.createElement("div");
+
+// create classlist
+lightBoxContainer.classList.add('lightbox');
+lightBoxContent.classList.add('lightbox-content');
+lightBoxPrev.classList.add("fa", "fa-angle-left", "lightbox-prev");
+lightBoxNext.classList.add("fa", "fa-angle-right", "lightbox-next");
+
+lightBoxContainer.appendChild(lightBoxContent);
+lightBoxContent.appendChild(lightBoxImg);
+lightBoxContent.appendChild(lightBoxPrev);
+lightBoxContent.appendChild(lightBoxNext);
+document.body.appendChild(lightBoxContainer);
+
+let index = 1;
+
+function showLightBox(n){
+    if (n > gallaryItem.length){
+        index = 1;
+    } else if (n < 1){
+        index = gallaryItem.length;
+    }
+
+    let imageLocation = gallaryItem[index-1].children[0].getAttribute("src");
+    lightBoxImg.setAttribute("src", imageLocation);
+}
+
+function currentImage(){
+    lightBoxContainer.style.display = "block";
+
+    let imageIndex = parseInt(this.getAttribute("data-index"));
+    showLightBox(index = imageIndex);
+}
+
+for (let i = 0; i < gallaryItem.length; i++){
+    gallaryItem[i].addEventListener("click", currentImage);
+}
+
+function slideImage(n){
+    showLightBox(index += n);
+}
+function prevImage(){
+    slideImage(-1);
+}
+function nextImage(){
+    slideImage(1);
+}
+
+lightBoxPrev.addEventListener("click", prevImage);
+lightBoxNext.addEventListener("click", nextImage);
+
+function closeLightBox(event){
+    if(this === event.target){
+        lightBoxContainer.style.display = "none";
+    }
+}
+lightBoxContainer.addEventListener("click", closeLightBox);
+
+</script>
+</body>
+{% endblock %}

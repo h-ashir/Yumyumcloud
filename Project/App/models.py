@@ -8,3 +8,8 @@ class Contact_Detail(models.Model):
     message = models.TextField()
     def __str__(self):
         return f"{self.name} - {self.email}"
+    
+class Photo(models.Model):
+    image = models.ImageField(upload_to='photos')
+    def __str__(self):
+        return f"{self.image}"
