@@ -1,0 +1,1215 @@
+{% extends 'App/base.html' %}
+{% load static %}
+
+{% block title %}
+Menu
+{% endblock %}
+
+{% block style %}
+<style>
+    #menubody{
+        background: rgb(25, 25, 26);
+        background: linear-gradient(140deg, rgb(22, 22, 22) 16%, rgb(15, 15, 15) 78%);
+    }
+    #menu-header{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(56, 51, 13, 0.637), rgba(0, 0, 0, 0.644)),url("{% static '/images/menu-bg.jpg' %}");
+    }
+
+    #menu-section .underline{
+        margin: 80px 0px;
+        border: 2px solid red;
+    }
+
+    #menu-header .menu-title-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+    }
+    #menu-header .menu-title-container .menu-title h1{
+        margin-top: 180px;
+        font-size: 13rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 5px 5px 1px black;
+        font-family: "Dancing Script", cursive;
+    }
+    #menu-header .menu-title-container .menu-quote p{
+        font-family: "Dancing Script", cursive;
+        font-size: 4.5rem;
+        font-style: italic;
+        font-weight: bold;
+        color: red;
+        text-shadow: 2px 2px 1px black;
+        letter-spacing: 1.5px;
+    }
+    #menu-header #display-menu{
+        margin-top: 250px;
+        font-family: "Dancing Script", serif;
+        text-transform: capitalize;
+        padding: 50px;
+    }
+    #menu-header #display-menu .menu-item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 80px;
+    }
+    #menu-header #display-menu .menu-item li{
+        border-right: 4px solid red;
+        padding-right: 70px;
+    }
+    #menu-header #display-menu .menu-item li:last-child{
+        border-right: none;
+    }
+    #menu-header #display-menu .menu-item a{
+        text-decoration: none;
+        color: yellow;
+        font-size: 4rem;
+        transition: .7s all linear;
+    }
+    #menu-header #display-menu .menu-item a:hover{
+        color: orangered;
+    }
+
+    #menu-section #starter{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #starter .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/starter-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #starter .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #starter .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #starter .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #starter .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #starter .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #starter .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #starter .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #starter .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* burger */
+
+    #menu-section #burger{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #burger .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/starter-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #burger .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #burger .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #burger .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #burger .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #burger .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #burger .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #burger .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #burger .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* burger */
+    
+    #menu-section #burger{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #burger .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/burger-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #burger .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #burger .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #burger .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #burger .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #burger .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #burger .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #burger .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #burger .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* sandwich */    
+    #menu-section #sandwich{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #sandwich .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/sandwich-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #sandwich .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #sandwich .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #sandwich .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #sandwich .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #sandwich .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #sandwich .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #sandwich .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #sandwich .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* wrap */
+    
+    #menu-section #wrap{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #wrap .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/wrap-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #wrap .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #wrap .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #wrap .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #wrap .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #wrap .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #wrap .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #wrap .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #wrap .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* pasta */
+    
+    #menu-section #pasta{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #pasta .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/pasta-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #pasta .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #pasta .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #pasta .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #pasta .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #pasta .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #pasta .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #pasta .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #pasta .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* sundae */    
+    #menu-section #sundae{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #sundae .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/sundae-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #sundae .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #sundae .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #sundae .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #sundae .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #sundae .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #sundae .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #sundae .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #sundae .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* falooda */
+    #menu-section #falooda{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #falooda .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/falooda-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #falooda .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #falooda .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #falooda .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #falooda .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #falooda .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #falooda .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #falooda .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #falooda .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* freak-shake */
+    
+    #menu-section #freak-shake{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #freak-shake .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/oreo-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #freak-shake .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #freak-shake .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #freak-shake .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #freak-shake .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #freak-shake .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #freak-shake .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #freak-shake .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #freak-shake .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* mojito */
+    #menu-section #mojito{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #mojito .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/mojito-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #mojito .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #mojito .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #mojito .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #mojito .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #mojito .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #mojito .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #mojito .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #mojito .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* burger */
+    
+    #menu-section #fresh-juice{
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+    }
+    #menu-section #fresh-juice .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/fresh-juice-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-section #fresh-juice .image h1{
+        font-size: 11rem;
+        color: yellow;
+        font-family: "Gabriela", serif;
+        text-shadow: 3px 3px 1px black;
+    }
+
+    #menu-section #fresh-juice .content{
+        background: rgb(27,27,26);
+        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
+        grid-column: 2;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        padding: 40px 25px;
+        position: relative;
+    }
+    #menu-section #fresh-juice .content .content-para p{
+        font-size: 2.4rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #menu-section #fresh-juice .content ul{
+        margin: 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #menu-section #fresh-juice .content ul li{
+        font-size: 2.2rem;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+        list-style: none;
+        padding-left: 40px;
+        background-image: url("{% static '/images/food-icon.png' %}");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: left center;
+    }
+    #menu-section #fresh-juice .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #menu-section #fresh-juice .round-1{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 90%;
+        border-bottom-right-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #menu-section #fresh-juice .round-2{
+        border-top-left-radius: 90%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        position: absolute;
+        top: 35%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+<body id=menubody>
+    <section id="menu-header">
+        <div class="menu-title-container">
+            <div class="menu-title">
+                <h1>Explore Our Menu</h1>
+            </div>
+            <div class="menu-quote">
+                <p><q>Taste The Difference</q></p>
+            </div>
+        </div>
+        <div id="display-menu">
+            <ul class="menu-item">
+                <li>
+                    <a href="#starter">starter</a>
+                </li>
+                <li>
+                    <a href="#burger">burger</a>
+                </li>
+                <li>
+                    <a href="#sandwich">sandwich</a>
+                </li>
+                <li>
+                    <a href="#wrap">wrap</a>
+                </li>
+                <li>
+                    <a href="#pasta">pasta</a>
+                </li>
+                <li>
+                    <a href="#sundae">sundae</a>
+                </li>
+                <li>
+                    <a href="#falooda">falooda</a>
+                </li>
+                <li>
+                    <a href="#freak-shake">freak shake</a>
+                </li>
+                <li>
+                    <a href="#mojito">mojito</a>
+                </li>
+                <li>
+                    <a href="#fresh-juice">fresh juice</a>
+                </li>
+                <li>
+                    <a href="#south-india-food">south india food</a>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <section id="menu-section">
+        <div id="starter">
+            <div class="image">
+                <h1>Starter</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Enjoy Our Deliciuos Starters, Bursting With Flavor And Crafted To Perfection. From Crispy French Fries To Creamy Spinach Dip, Each Dish Promises A Delightful Beginning To Your Journey.</p>
+                </div>
+                <ul>
+                    <li>french fries</li>
+                    <li>Smiley</li>
+                    <li>Garlic bread</li>
+                    <li>Cheese garlic bread</li>
+                    <li>Nuggets</li>
+                    <li>Chicken pop</li>
+                    <li>Momos chicken</li>
+                    <li>Chicken strips</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="burger">
+            <div class="image">
+                <h1>Burger</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Savor The Juicy Goodness Of Our Signature Burgers, Crafted With The Finest Ingredients And Grilled To Perfection. From Classic Cheeseburgers To Gourmet Creations, Each Bite Is A Burst Of Savory Satisfaction. Choose From A Variety Of Mouthwatering Options And Elevate Your Burger Experience Today.</p>
+                </div>
+                <ul>
+                    <li>Veg burger</li>
+                    <li>Chicken burger</li>
+                    <li>BBQ Chicken burger</li>
+                    <li>Sriracha Chicken burger</li>
+                    <li>Alabama cheese burger</li>
+                    <li>New york cheese burger</li>
+                    <li>Chef special secret burger</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="sandwich">
+            <div class="image">
+                <h1>Sandwich</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Check Out Our Irresistible Selection Of Sandwiches, Where Every Bite Is A Symphony Of Flavors And Textures. From Classic Favorites To Innovative Twists, Each Sandwich Is Meticulously Crafted Using Premium Ingredients And Served With Love. Whether You Crave Something Comforting Or Crave-Worthy, Our Sandwiches Are Sure To Tantalize Your Taste Buds.</p>
+                </div>
+                <ul>
+                    <li>Veg club sandwich</li>
+                    <li>Chicken club sandwich</li>
+                    <li>American club sandwich</li>
+                    <li>Legendary club sandwich</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="wrap">
+            <div class="image">
+                <h1>Wrap</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Savor The Perfect Harmony Of Fresh Ingredients Wrapped In A Soft Tortilla, Delivering A Burst Of Flavors In Every Bite. Our Wraps Are A Delightful Fusion Of Wholesome Goodness, Offering A Portable Feast For Your Enjoyment. Whether You Prefer Classic Combinations Or Bold Innovations, Our Wraps Promise A Satisfying Experience That You'll Crave Again And Again.</p>
+                </div>
+                <ul>
+                    <li>Veg wrap</li>
+                    <li>Italian wrap</li>
+                    <li>Zinger wrap</li>
+                    <li>Super wrap</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="pasta">
+            <div class="image">
+                <h1>Pasta</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Check Out Our Perfectly Cooked Pasta, Generously Adorned with Rich, Savory Sauces That Tantalize Your Taste Buds. Our Pasta Dishes Are Meticulously Crafted With The Finest Ingredients, Creating A Symphony Of Flavors And Textures That Delight With Every Forkful. From Traditional Favorites To Inventive Twists, Each Plate Promises A Culinary Journey That Satisfies Both The Appetite And The Soul.</p>
+                </div>
+                <ul>
+                    <li>Alfredo chicken pasta</li>
+                    <li>Alfredo veg pasta</li>
+                    <li>Arrabiata chicken pasta</li>
+                    <li>Arrabiata Veg pasta</li>
+                    <li>Pomodoro chicken pasta</li>
+                    <li>Pomodoro veg pasta</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="sundae">
+            <div class="image">
+                <h1>Sundae</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Satisfy Your Sweet Cravings With Our Heavenly Sundaes, A Symphony Of Creamy Ice Cream, Decadent Toppings, And Irresistible Sauces. Each Spoonful Is A Delightful Explosion Of Flavor And Texture, Transporting You To A World Of Pure Indulgence. Whether You Crave Classic Combinations Or Crave Innovative Creations, Our Sundaes Promise A Blissful Treat For Your Taste Buds.</p>
+                </div>
+                <ul>
+                    <li>Green magic</li>
+                    <li>Mountain lava</li>
+                    <li>Babylon bliss</li>
+                    <li>Clincher fix</li>
+                    <li>Brownies bliss</li>
+                    <li>Pinky boom</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="falooda">
+            <div class="image">
+                <h1>Falooda</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Quench Your Thirst And Tantalize Your Taste Buds With Our Refreshing Falooda. A Delightful Fusion Of Silky Vermicelli, Velvety Ice Cream, Aromatic Rose Syrup, And Crunchy Nuts, Each Sip Is A Journey Through Layers Of Exotic Flavors And Textures. Perfect For A Hot Summer Day Or As A Sweet Ending To Any Meal, Our Falooda Is Sure To Leave You Feeling Refreshed And Satisfied.</p>
+                </div>
+                <ul>
+                    <li>Normal falooda</li>
+                    <li>Mini falooda</li>
+                    <li>Royal falooda</li>
+                    <li>Tender coconut falooda</li>
+                    <li>Gulabi falooda</li>
+                    <li>Biriyani falooda</li>
+                    <li>Bucket falooda</li>
+                    <li>Tower falooda</li>
+                    <li>Shavarma ice cream falooda</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="freak-shake">
+            <div class="image">
+                <h1>Freak Shake</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Savor The Rich And Creamy Goodness Of Our Signature Shakes, Meticulously Concocted To Tantalize Your Taste Buds. From The Iconic Crunch Of Kitkat To The Decadent Swirls Of Oreo, Each Shake Is A Blissful Journey Through Layers Of Flavor And Indulgence. Elevate Your Dessert Experience With Our Lineup Of Handcrafted Shakes, Where Every Sip Is A Moment Of Pure Indulgence.</p>
+                </div>
+                <ul>
+                    <li>Kitkat Shake</li>
+                    <li>Oreo Shake</li>
+                    <li>Biscoff Shake</li>
+                    <li>Monster Shake</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="mojito">
+            <div class="image">
+                <h1>Mojito</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Quench Your Thirst With Our Refreshing Mojitos, Bursting With Vibrant Flavors And Zesty Citrus Notes. Crafted With Care, Our Mojitos Are The Perfect Blend Of Sweetness, Tanginess, And Minty Freshness, Making Them An Ideal Companion For Any Occasion. Dive Into A Cool, Revitalizing Experience That Invigorates Your Senses With Every Sip.</p>
+                </div>
+                <ul>
+                    <li>Blue bee mojito</li>
+                    <li>Blossom sea mojito</li>
+                    <li>Green magic mojito</li>
+                    <li>Pina colada mojito</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+
+        <div class="underline"></div>
+
+        <div id="fresh-juice">
+            <div class="image">
+                <h1>Fresh Juice</h1>
+            </div>
+            <div class="content">
+                <div class="content-para">
+                    <p>Indulge In The Pure Essence Of Nature With Our Freshly Squeezed Juices. Bursting With The Goodness Of Ripe Fruits And Vegetables, Each Sip Is A Revitalizing Journey That Invigorates Your Body And Soul. Our Juices Are A Celebration Of Freshness And Vitality, Providing A Delicious And Nutritious Boost To Your Day.</p>
+                </div>
+                <ul>
+                    <li>Majic lime juice</li>
+                    <li>Pineapple juice</li>
+                    <li>Mango juice</li>
+                    <li>Apple juice</li>
+                    <li>Watermelon juice</li>
+                    <li>Shamam juice</li>
+                </ul>
+                <div class="round round-1"></div>
+                <div class="round round-2"></div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+{% endblock %}

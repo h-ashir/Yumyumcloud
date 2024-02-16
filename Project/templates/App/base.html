@@ -333,7 +333,7 @@
                 </ul>
               </li>
               <li class="nav-item {% if request.path == 'menu' %}active{% endif %}">
-                <a class="nav-link " href="{% url 'home' %}">Menu</a>
+                <a class="nav-link " href="{% url 'menu' %}">Menu</a>
               </li>
               <li class="nav-item {% if request.path == 'outlets' %}active{% endif %}">
                 <a class="nav-link" href="{% url 'home' %}">Outlets</a>
@@ -486,7 +486,7 @@
 
       if (prevScrollPos > currentScrollPos) {
           document.querySelector('.navbar').style.top = '0';
-          document.querySelector('.navbar').style.backgroundColor = 'rgb(49, 49, 49)';
+          document.querySelector('.navbar').style.backgroundColor = 'rgb(49, 49, 49, 0.9)';
           if (scrolled === 0) {
             document.querySelector('.navbar').style.backgroundColor = 'transparent';
           }
