@@ -1,0 +1,151 @@
+{% extends 'App/base.html' %}
+{% load static %}
+
+{% block title %}
+Outlets
+{% endblock %}
+
+{% block style %}
+<style>
+    #outletbody{
+        background-color: black;
+    }
+    #outlet-header{
+        /* background: rgb(34,34,34);
+        background: linear-gradient(0deg, rgba(34,34,34,1) 15%, rgba(37,37,37,1) 38%, rgba(41,41,41,1) 63%, rgba(40,40,40,1) 83%); */
+        /* background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(3, 3, 3, 0.637), rgba(0, 0, 0, 0.644)),url("{% static '/images/outlet-bg1.jpg' %}"); */
+        height: 100vh;
+        position: relative;
+    }
+    #outlet-header .outlet-title{
+        padding: 100px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    #outlet-header .outlet-title h1{
+        margin-top: 150px;
+        font-size: 10rem;
+        color: white;
+        font-family: "Dancing Script", cursive;
+    }
+    #outlet-header .circle{
+        position: absolute;
+        bottom: 20%;
+        right: -15%;
+        width: 600px;
+        height: 300px;
+        border-radius: 300px 300px 0 0;
+        transform: rotate(-90deg);
+        background-color: gray;
+    }
+
+    .outlet-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    .outlets{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .outlets .outlet-1{
+        background-color: gray;
+        border-radius: 4px;
+        padding: 20px;
+        color: white;
+    }
+
+    .outlets .outlet-1 .outlet-number h1{
+        font-size: 2rem;
+    }
+
+    .outlets .outlet-1 .outlet-title h1{
+        font-size: 3rem;
+    }
+
+    .outlets .outlet-1 .outlet-address ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        line-height: 30px;
+        font-size: 2rem;   
+    }
+
+    .outlets .outlet-1 .outlet-number{
+        font-size: 2rem;
+    }
+    
+    .outlets .outlet-1 .outlet-email{
+        font-size: 2rem;
+    }
+
+
+
+
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+<body id="outletbody">
+    <section id="outlet-header">
+        <div class="outlet-title">
+            <h1>Outlets</h1>
+        </div>
+        <!-- <div class="circle"></div> -->
+    </section>
+    <div class="outlet-container">
+        <div class="outlets">
+            <div class="outlet-1">
+                <div class="outlet-number">
+                    <h1>Outlet 1</h1>
+                </div>
+                <div class="outlet-title">
+                    <h1>YumYumCloud Private Limited (Central Kitchen)
+                    </h1>
+                </div>
+                <div class="outlet-address">
+                    <ul>
+                        <li>Choorakottayil House,</li>
+                        <li>Edappally P O, Koonamthai,</li>
+                        <li>Ernakulam, Kerala - 682024</li>
+                    </ul>
+                </div>
+                <div class="outlet-number">
+                    <p>Land Line: +91 484 4859063</p>
+                </div>
+                <div class="outlet-email">
+                    <p>Email: yumyumcloud0@gmail.com</p>
+                </div>
+            </div>
+    
+            <div class="outlet-2">
+                <div class="outlet-number">
+                    <h1>Outlet 2</h1>
+                </div>
+                <div class="outlet-title">
+                    <h1>YumYumCloud Private Limited (Restaurant)</h1>
+                </div>
+                <div class="outlet-address">
+                    <p>Ground Floor, Below GlamorTrend Family Beauty Salon</p>
+                    <p>Petta Kundannoor Road,</p>
+                    <p>Ernakulam, Kerala - 682024</p>
+                    <p>Near ABAD Nucleus Mall Maradu</p>
+                    <p>Ernakulam, Kerala - 682304</p>
+                    <p>Land Line: None</p>
+                    <p>Email: yumyumcloud0@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="outlet-image">
+            <img src="{% static '/images/outlet-image.jpg' %}" alt="">
+        </div>
+    </div>
+</body>
+{% endblock %}
