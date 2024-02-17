@@ -8,7 +8,9 @@ Outlets
 {% block style %}
 <style>
     #outletbody{
-        background-color: black;
+        /* background-color: black; */
+        background: rgb(19,19,19);
+        background: linear-gradient(145deg, rgb(14, 13, 13) 20%, rgb(31, 31, 31) 80%, rgb(31, 31, 31) 98%);
     }
     #outlet-header{
         /* background: rgb(34,34,34);
@@ -41,49 +43,188 @@ Outlets
         background-color: gray;
     }
 
+
     .outlet-container{
+        margin: 150px 0;
+        background: rgb(19,19,19);
+        background: linear-gradient(145deg, rgb(14, 13, 13) 20%, rgb(31, 31, 31) 80%, rgb(31, 31, 31) 98%);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        padding: 20px;
+        gap: 30px;
+        padding: 40px;
     }
     .outlets{
+        grid-column: 1;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
     .outlets .outlet-1{
-        background-color: gray;
+        background: rgb(19,19,19);
+        background: linear-gradient(145deg, rgb(14, 13, 13) 20%, rgb(24, 24, 24) 80%, rgb(27, 27, 27) 98%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         border-radius: 4px;
-        padding: 20px;
+        padding: 30px;
         color: white;
+        position: relative;
+        font-family: 'Poppins', sans-serif;
+        transition: .3s all linear;
+    }
+    .outlets .outlet-1:hover{
+        transform: scale(1.03);
+        box-shadow: 6px 6px 25px red;
     }
 
     .outlets .outlet-1 .outlet-number h1{
         font-size: 2rem;
     }
-
     .outlets .outlet-1 .outlet-title h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-shadow: 2px 2px 1px rgb(5, 5, 87);
     }
-
     .outlets .outlet-1 .outlet-address ul{
         list-style: none;
         margin: 0;
         padding: 0;
-        line-height: 30px;
-        font-size: 2rem;   
+        line-height: 35px;
+        font-size: 2rem;
+        opacity: .65;
     }
 
-    .outlets .outlet-1 .outlet-number{
+    .outlets .outlet-1 .outlet-contact a{
+        font-size: 2rem;
+        text-decoration: none;
+        color: white;
+        transition: .7s all linear;
+        opacity: .65;
+    }
+    .outlets .outlet-1 .outlet-contact a:hover{
+        color: red;
+    }
+    .outlets .outlet-1 .margin-top1{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 4px;
+        height: 80px;
+        background-color: red;
+    }
+    .outlets .outlet-1 .margin-top2{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 80px;
+        height: 4px;
+        background-color: red;
+    }
+    .outlets .outlet-1 .margin-bottom1{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        width: 80px;
+        height: 4px;
+        background-color: red;
+    }
+    .outlets .outlet-1 .margin-bottom2{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        width: 4px;
+        height: 80px;
+        background-color: red;
+    }
+
+    .outlets .outlet-2{
+        background: rgb(19,19,19);
+        background: linear-gradient(145deg, rgb(14, 13, 13) 20%, rgb(24, 24, 24) 80%, rgb(27, 27, 27) 98%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 4px;
+        padding: 30px;
+        color: white;
+        position: relative;
+        font-family: 'Poppins', sans-serif;
+        transition: .3s all linear;
+    }
+    .outlets .outlet-2:hover{
+        transform: scale(1.03);
+        box-shadow: 6px 6px 25px red;
+    }
+
+    .outlets .outlet-2 .outlet-number h1{
         font-size: 2rem;
     }
-    
-    .outlets .outlet-1 .outlet-email{
+    .outlets .outlet-2 .outlet-title h1{
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-shadow: 2px 2px 1px rgb(5, 5, 87);
+    }
+    .outlets .outlet-2 .outlet-address ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        line-height: 35px;
         font-size: 2rem;
+        opacity: .65;
     }
 
+    .outlets .outlet-2 .outlet-contact a{
+        font-size: 2rem;
+        text-decoration: none;
+        color: white;
+        transition: .7s all linear;
+        opacity: .65;
+    }
+    .outlets .outlet-2 .outlet-contact a:hover{
+        color: red;
+    }
+    .outlets .outlet-2 .margin-top1{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 4px;
+        height: 80px;
+        background-color: red;
+    }
+    .outlets .outlet-2 .margin-top2{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 80px;
+        height: 4px;
+        background-color: red;
+    }
+    .outlets .outlet-2 .margin-bottom1{
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 80px;
+        height: 4px;
+        background-color: red;
+    }
+    .outlets .outlet-2 .margin-bottom2{
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 4px;
+        height: 80px;
+        background-color: red;
+    }
 
+    .outlet-container img{
+        width: 95%;
+        filter: grayscale(30%);
+        border-radius: 6px 6px 6px 6px;
+    }
+    .outlet-container img:hover{
+        filter: grayscale(0%);
+    }
 
 
 
@@ -93,12 +234,11 @@ Outlets
 
 {% block content %}
 <body id="outletbody">
-    <section id="outlet-header">
+    <!-- <section id="outlet-header">
         <div class="outlet-title">
             <h1>Outlets</h1>
         </div>
-        <!-- <div class="circle"></div> -->
-    </section>
+    </section> -->
     <div class="outlet-container">
         <div class="outlets">
             <div class="outlet-1">
@@ -111,19 +251,25 @@ Outlets
                 </div>
                 <div class="outlet-address">
                     <ul>
-                        <li>Choorakottayil House,</li>
-                        <li>Edappally P O, Koonamthai,</li>
-                        <li>Ernakulam, Kerala - 682024</li>
+                        <li class="line-1">Choorakottayil House,</li>
+                        <li class="line-2">Edappally P O, Koonamthai,</li>
+                        <li class="line-3">Ernakulam, Kerala - 682024</li>
                     </ul>
                 </div>
-                <div class="outlet-number">
-                    <p>Land Line: +91 484 4859063</p>
+                <div class="outlet-contact">
+                    <p>
+                        <a href="">Land Line: +91 484 4859063</a>
+                    </p>
+                    <p>
+                        <a href="">Email: yumyumcloud0@gmail.com</a>
+                    </p>
                 </div>
-                <div class="outlet-email">
-                    <p>Email: yumyumcloud0@gmail.com</p>
-                </div>
+                <div class="margin-top1"></div>
+                <div class="margin-top2"></div>
+                <div class="margin-bottom1"></div>
+                <div class="margin-bottom2"></div>
             </div>
-    
+
             <div class="outlet-2">
                 <div class="outlet-number">
                     <h1>Outlet 2</h1>
@@ -132,15 +278,28 @@ Outlets
                     <h1>YumYumCloud Private Limited (Restaurant)</h1>
                 </div>
                 <div class="outlet-address">
-                    <p>Ground Floor, Below GlamorTrend Family Beauty Salon</p>
-                    <p>Petta Kundannoor Road,</p>
-                    <p>Ernakulam, Kerala - 682024</p>
-                    <p>Near ABAD Nucleus Mall Maradu</p>
-                    <p>Ernakulam, Kerala - 682304</p>
-                    <p>Land Line: None</p>
-                    <p>Email: yumyumcloud0@gmail.com</p>
+                    <ul>
+                        <li>Ground Floor, Below GlamorTrend Family Beauty Salon</li>
+                        <li>Petta Kundannoor Road,</li>
+                        <li>Ernakulam, Kerala - 682024</li>
+                        <li>Near ABAD Nucleus Mall Maradu</li>
+                        <li>Ernakulam, Kerala - 682304</li>
+                    </ul>
                 </div>
+                <div class="outlet-contact">
+                    <p>
+                        <a href="">Land Line: +91 484 4859063</a>
+                    </p>
+                    <p>
+                        <a href="">Email: yumyumcloud0@gmail.com</a>
+                    </p>
+                </div>
+                <div class="margin-top1"></div>
+                <div class="margin-top2"></div>
+                <div class="margin-bottom1"></div>
+                <div class="margin-bottom2"></div>
             </div>
+    
         </div>
         
         <div class="outlet-image">
