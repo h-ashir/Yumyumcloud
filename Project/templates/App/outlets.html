@@ -95,6 +95,11 @@ Outlets
         opacity: .65;
     }
 
+    .outlets .outlet-1 .outlet-contact p{
+        font-size: 2rem;
+        color: white;
+        opacity: .65;
+    }
     .outlets .outlet-1 .outlet-contact a{
         font-size: 2rem;
         text-decoration: none;
@@ -241,27 +246,27 @@ Outlets
     </section> -->
     <div class="outlet-container">
         <div class="outlets">
+            {% for o in Outlets %}
             <div class="outlet-1">
                 <div class="outlet-number">
-                    <h1>Outlet 1</h1>
+                    <h1>{{o.outlet_main_title}}</h1>
                 </div>
                 <div class="outlet-title">
-                    <h1>YumYumCloud Private Limited (Central Kitchen)
-                    </h1>
+                    <h1>{{o.outlet_name}}</h1>
                 </div>
                 <div class="outlet-address">
                     <ul>
-                        <li class="line-1">Choorakottayil House,</li>
-                        <li class="line-2">Edappally P O, Koonamthai,</li>
-                        <li class="line-3">Ernakulam, Kerala - 682024</li>
+                        <li class="line-1">{{o.address_line_1}}</li>
+                        <li class="line-2">{{o.address_line_2}}</li>
+                        <li class="line-3">{{o.address_line_3}}</li>
                     </ul>
                 </div>
                 <div class="outlet-contact">
-                    <p>
-                        <a href="">Land Line: +91 484 4859063</a>
+                    <p>Land Line: 
+                        <a href="tel:{{o.outlet_landline}}">{{o.outlet_landline}}</a>
                     </p>
-                    <p>
-                        <a href="">Email: yumyumcloud0@gmail.com</a>
+                    <p>Email: 
+                        <a href="mailto:{{o.outlet_email}}">{{o.outlet_email}}</a>
                     </p>
                 </div>
                 <div class="margin-top1"></div>
@@ -269,36 +274,7 @@ Outlets
                 <div class="margin-bottom1"></div>
                 <div class="margin-bottom2"></div>
             </div>
-
-            <div class="outlet-2">
-                <div class="outlet-number">
-                    <h1>Outlet 2</h1>
-                </div>
-                <div class="outlet-title">
-                    <h1>YumYumCloud Private Limited (Restaurant)</h1>
-                </div>
-                <div class="outlet-address">
-                    <ul>
-                        <li>Ground Floor, Below GlamorTrend Family Beauty Salon</li>
-                        <li>Petta Kundannoor Road,</li>
-                        <li>Ernakulam, Kerala - 682024</li>
-                        <li>Near ABAD Nucleus Mall Maradu</li>
-                        <li>Ernakulam, Kerala - 682304</li>
-                    </ul>
-                </div>
-                <div class="outlet-contact">
-                    <p>
-                        <a href="">Land Line: +91 484 4859063</a>
-                    </p>
-                    <p>
-                        <a href="">Email: yumyumcloud0@gmail.com</a>
-                    </p>
-                </div>
-                <div class="margin-top1"></div>
-                <div class="margin-top2"></div>
-                <div class="margin-bottom1"></div>
-                <div class="margin-bottom2"></div>
-            </div>
+            {% endfor %}
     
         </div>
         

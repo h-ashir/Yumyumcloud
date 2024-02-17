@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from App.forms import ContactForm
 from django.contrib import messages
-from App.models import Photo
+from App.models import Photo, Outlet
 # Create your views here.
 def home(request):
     return render(request, 'App/index.html')
@@ -28,7 +28,10 @@ def menu(request):
     return render(request, 'App/menu.html')
 
 def outlets(request):
-    return render(request, 'App/outlets.html')
+    dict_outlet = {
+        'Outlets': Outlet.objects.all()
+    }
+    return render(request, 'App/outlets.html', dict_outlet)
 
 def contact(request):
     if request.method == 'POST':
