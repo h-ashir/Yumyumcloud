@@ -19,11 +19,11 @@ class Photo(models.Model):
 class Outlet(models.Model):
     outlet_main_title = models.CharField(max_length=20, null=False)
     outlet_name = models.CharField(max_length=50, null=False)
-    address_line_1 = models.CharField(max_length=50, null=False)
-    address_line_2 = models.CharField(max_length=50, null=False)
-    address_line_3 = models.CharField(max_length=50, null=False)
-    address_line_4 = models.CharField(max_length=50, null=True, blank=True)
-    address_line_5 = models.CharField(max_length=50, null=True, blank=True)
+    address_line_1 = models.CharField(max_length=70, null=False)
+    address_line_2 = models.CharField(max_length=70, null=False)
+    address_line_3 = models.CharField(max_length=70, null=False)
+    address_line_4 = models.CharField(max_length=70, null=True, blank=True)
+    address_line_5 = models.CharField(max_length=70, null=True, blank=True)
     outlet_landline = models.CharField(max_length=15, null=True, blank=True)
     outlet_email = models.CharField(max_length=50,null=True)
     def __str__(self):
