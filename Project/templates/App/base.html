@@ -232,6 +232,7 @@
         footer .grid-container .middle-grid .footer-link{
           display: flex;
           flex-direction: column;
+          align-items: center;
           gap: 10px;
         }
         footer .grid-container .middle-grid .footer-link a{
@@ -332,7 +333,7 @@
                   Services
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item {% if request.path == 'catering' %}active{% endif %}"><a class="dropdown-item" href="{% url 'home' %}">Catering</a></li>
+                    <li class="nav-item {% if request.path == 'catering' %}active{% endif %}"><a class="dropdown-item" href="{% url 'catering' %}">Catering</a></li>
                 </ul>
               </li>
               <li class="nav-item {% if request.path == 'menu' %}active{% endif %}">
@@ -386,6 +387,7 @@
               <a href="{% url 'home' %}">Home</a>
               <a href="{% url 'about-yumyum' %}">About</a>
               <a href="{% url 'menu' %}">Menu</a>
+              <a href="{% url 'catering' %}">Catering</a>
               <a href="{% url 'outlets' %}">Outlets</a>
               <a href="{% url 'contact-us' %}">Contact</a>
             </div>
@@ -393,15 +395,17 @@
 
           <div class="middle-grid">
             <div class="middle-heading">
-              <h3>Quick links</h3>
+              <h3>Menu</h3>
             </div>
             <div class="underline"></div>
             <div class="footer-link">
-              <a href="{% url 'home' %}">Home</a>
-              <a href="{% url 'home' %}">Home</a>
-              <a href="{% url 'home' %}">Home</a>
-              <a href="{% url 'home' %}">Home</a>
-              <a href="{% url 'home' %}">Home</a>
+              <a href="{% url 'menu' %}">Fresh Juice</a>
+              <a href="{% url 'menu' %}">Pasta</a>
+              <a href="{% url 'menu' %}">Burger</a>
+              <a href="{% url 'menu' %}">Waffles</a>
+              <a href="{% url 'menu' %}">Chicken</a>
+              <a href="{% url 'menu' %}">Fish</a>
+              <a href="{% url 'menu' %}#south-indian-food-header">South Indian Food</a>
             </div>
           </div>
 
