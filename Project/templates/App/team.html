@@ -1,0 +1,227 @@
+{% extends 'App/base.html' %}
+{% load static %}
+
+{% block title %}
+Team
+{% endblock %}
+
+{% block style %}
+<style>
+    #teambody{
+        background: rgb(17,17,17);
+        background: radial-gradient(circle, rgba(17,17,17,1) 0%, rgba(15,15,15,1) 50%, rgba(17,17,17,1) 100%);
+    }
+    .team-container .team-title{
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+    }
+    .team-container .team-title h1{
+        color: white;
+        font-size: 7rem;
+        text-shadow: 2px 2px 1px black;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-family: "Gabriela", serif;
+    }
+    .team .team-director{
+        margin-top: 30px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .team .team-director .first-two{
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+    .team .team-director .first-two .person{
+        background-color: rgb(36, 28, 28);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-radius: 5px 5px 2px 2px;
+        transition: .5s all linear;
+        box-shadow: 2px 2px 7px red;
+
+    }
+    .team .team-director .first-two .person:hover{
+        transform: scale(1.05);
+        box-shadow: 6px 6px 25px red;
+    }
+    .team .team-director .first-two .person img{
+        width: 430px;
+        height: 480px;
+        object-fit: cover;
+        border-radius: 5px 5px 2px 2px;
+    }
+    .team .team-director .first-two .person h1{
+        color: white;
+        font-size: 4.2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 1px black;
+        font-family: "Gabriela", serif;
+    }
+    .team .team-director .first-two .person h3{
+        font-family: 'Poppins', sans-serif;
+        color: orange;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        text-shadow: 1.5px 1.5px 1px black;
+    }
+
+    .team .team-director .last-two{
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+    .team .team-director .last-two .person{
+        background-color: rgb(36, 28, 28);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-radius: 5px 5px 2px 2px;
+        transition: .5s all linear;
+        box-shadow: 2px 2px 7px red;
+    }
+    .team .team-director .last-two .person:hover{
+        transform: scale(1.05);
+        box-shadow: 6px 6px 25px red;
+    }
+    .team .team-director .last-two .person img{
+        width: 430px;
+        height: 480px;
+        object-fit: cover;
+        border-radius: 5px 5px 2px 2px;
+    }
+    .team .team-director .last-two .person h1{
+        color: white;
+        font-size: 4.2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 1px black;
+        font-family: "Gabriela", serif;
+    }
+    .team .team-director .last-two .person h3{
+        font-family: 'Poppins', sans-serif;
+        color: orange;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        text-shadow: 1.5px 1.5px 1px black;
+    }
+
+    .team .team-employee{
+        margin: 80px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+    .team .team-employee .person{
+        background-color: rgb(36, 28, 28);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-radius: 5px 5px 2px 2px;
+        transition: .5s all linear;
+        box-shadow: 2px 2px 7px red;
+    }
+    .team .team-employee .person:hover{
+        transform: scale(1.05);
+        box-shadow: 6px 6px 25px red;
+    }
+    .team .team-employee .person img{
+        width: 330px;
+        height: 380px;
+        object-fit: cover;
+        border-radius: 5px 5px 2px 2px;
+
+    }
+    .team .team-employee .person h1{
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 1px black;
+        font-family: "Gabriela", serif;
+    }
+    .team .team-employee .person h3{
+        font-family: 'Poppins', sans-serif;
+        color: orange;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        text-shadow: 1.5px 1.5px 1px black;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+<body id="teambody">
+    <div class="team-container">
+        <div class="team-title">
+            <h1>Our Team</h1>
+        </div>
+        <div class="team">
+            <div class="team-director">
+                <div class="first-two">
+                    <div class="person">
+                        <img src="{% static '/images/Nishaf-Founder.jpg' %}" alt="">
+                        <h1>Nishaf</h1>
+                        <h3>Founder & CEO</h3>
+                    </div>
+                    <div class="person">
+                        <img src="{% static '/images/Fathima-ManagingDirector.jpg' %}" alt="">
+                        <h1>Fathima</h1>
+                        <h3>Managing Director</h3>
+                    </div>
+                </div>
+                <div class="last-two">
+                    <div class="person">
+                        <img src="{% static '/images/Abdul-Director.jpg' %}" alt="">
+                        <h1>Abdul Majeed</h1>
+                        <h3>Director</h3>
+                    </div>
+                    <div class="person">
+                        <img src="{% static '/images/Doulath-Director.jpg' %}" alt="">
+                        <h1>Doulath</h1>
+                        <h3>Director</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-employee">
+                <div class="person">
+                    <img src="{% static '/images/Nishaf-Founder.jpg' %}" alt="">
+                    <h1>Nishaf</h1>
+                    <h3>Founder & CEO</h3>
+                </div>
+                <div class="person">
+                    <img src="{% static '/images/Fathima-ManagingDirector.jpg' %}" alt="">
+                    <h1>Fathima</h1>
+                    <h3>Managing Director</h3>
+                </div>
+                <div class="person">
+                    <img src="{% static '/images/Abdul-Director.jpg' %}" alt="">
+                    <h1>Abdul Majeed</h1>
+                    <h3>Director</h3>
+                </div>
+                <div class="person">
+                    <img src="{% static '/images/Doulath-Director.jpg' %}" alt="">
+                    <h1>Doulath</h1>
+                    <h3>Director</h3>
+                </div>
+                <div class="person">
+                    <img src="{% static '/images/Doulath-Director.jpg' %}" alt="">
+                    <h1>Doulath</h1>
+                    <h3>Director</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

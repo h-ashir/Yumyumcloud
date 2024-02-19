@@ -262,6 +262,8 @@
         }
 
         footer .copyright{
+          padding: 10px;
+          background-color: rgba(31, 30, 30, 0.479);
           text-align: center;
         }
         footer .copyright p{
@@ -319,7 +321,7 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li class="nav-item {% if request.path == 'team' %}active{% endif %}">
-                        <a class="dropdown-item" href="{% url 'home' %}">Team</a>
+                        <a class="dropdown-item" href="{% url 'team' %}">Team</a>
                     </li>
                       <li class="nav-item {% if request.path == 'photo' %}active{% endif %}"><a class="dropdown-item" href="{% url 'photo' %}">Photo</a>
                     </li>
