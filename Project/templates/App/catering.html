@@ -1,0 +1,143 @@
+{% extends 'App/base.html' %}
+{% load static %}
+
+{% block title %}
+Yumyum Catering
+{% endblock %}
+
+{% block style %}
+<style>
+    #cateringbody{
+        background: rgb(19,19,19);
+        background: linear-gradient(145deg, rgb(14, 13, 13) 20%, rgb(31, 31, 31) 80%, rgb(31, 31, 31) 98%);
+    }
+    
+    #catering-contents{
+        padding: 70px;
+    }
+    #catering-contents .catering-intro-title{
+        margin-top: 120px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    #catering-contents .catering-intro-title .title{
+        font-family: "Gabriela", serif;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    #catering-contents .catering-intro-title .title h1{
+        font-size: 5.5rem;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 2px;
+    }
+    #catering-contents .catering-intro-title .title img{
+        width: 240px;
+    }
+    #catering-contents .intro-empty{
+        width: 70%;
+    }
+    #catering-contents .catering-para{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    #catering-contents .catering-para .para-empty{
+        width: 50%;
+    }
+    #catering-contents .catering-para .para{
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    #catering-contents .catering-para .para p{
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        font-size: 2rem;
+        line-height: 50px;
+        text-align: justify;
+    }
+    #catering-contents .catering-para .para img{
+        width: 160px;
+    }
+
+    .catering-header .catering-header-title{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .catering-header .catering-header-title img{
+        width: 250px;
+    }
+    .catering-header .catering-header-title p{
+        font-size: 2.5rem;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    .catering-header .catering-contact{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 120px;
+    }
+    .catering-header .catering-contact a button{
+        font-family: 'Poppins', sans-serif;
+        color: rgba(255, 255, 255, 0.884);
+        background: rgb(241,135,4);
+        background: linear-gradient(90deg, rgba(241,135,4,1) 25%, rgba(242,85,6,1) 75%);
+        border: none;
+        border-radius: 8px;
+        font-size: 2.3rem;
+        padding: 15px 30px;
+        transition: .5s all linear;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 1px black;
+        filter: brightness(90%);
+    }
+    .catering-header .catering-contact a button:hover{
+        background: rgb(242,85,6);
+        background: linear-gradient(90deg, rgba(242,85,6,1) 30%, rgba(241,135,4,1) 70%);
+        transform: scale(1.05);
+        color: white;
+        filter: brightness(110%);
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<body id="cateringbody">
+    
+    <section id="catering-contents">
+        <div class="catering-intro-title">
+            <div class="title">
+                <h1>Taste the Difference: <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering</h1>
+            </div>
+            <div class="intro-empty"></div>
+        </div>
+        <div class="catering-para">
+            <div class="para-empty"></div>
+            <div class="para">
+                <p>Welcome to <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering service, where exceptional food meets unmatched hospitality. Whether you're planning an intimate gathering, a corporate function, or a lavish celebration, our dedicated team is here to enhance your experience with delicious cuisine and impeccable service. From thougthfully crafted menus to personalized attention to detail, we take pride in suprassing expectations and creating memorable moments for you and your guests. Count on us to cater your every need, allowing you to relax and enjoy the occassion while we handle all the details.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="catering-header">
+        <div class="catering-header-title">
+            <img src="{% static '/images/yumyum-logo.png' %}" alt="">
+            <p>Caters</p>
+        </div>
+        <div class="catering-contact">
+            <a href="tel:+91 484 4859063">
+                <button>Enquire: +91 484 4859063</button>
+            </a>
+        </div>
+    </div>
+    
+</body>
+{% endblock %}
