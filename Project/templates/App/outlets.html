@@ -259,6 +259,17 @@ Outlets
                         <li class="line-1">{{o.address_line_1}}</li>
                         <li class="line-2">{{o.address_line_2}}</li>
                         <li class="line-3">{{o.address_line_3}}</li>
+                        {% if o.address_line_4 %}
+                            <li class="line-4">{{o.address_line_4}}</li>
+                        {% else %}
+                            <li class="line-4"></li>
+                        {% endif %}
+
+                        {% if o.address_line_5 %}
+                            <li class="line-5">{{o.address_line_5}}</li>
+                        {% else %}
+                            <li class="line-5"></li>
+                        {% endif %}
                     </ul>
                 </div>
                 <div class="outlet-contact">
