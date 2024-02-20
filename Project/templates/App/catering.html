@@ -11,9 +11,11 @@ Yumyum Catering
         background: rgb(19,19,19);
         background: linear-gradient(145deg, rgb(14, 13, 13) 20%, rgb(31, 31, 31) 80%, rgb(31, 31, 31) 98%);
     }
-    
     #catering-contents{
-        padding: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 150px;
     }
     #catering-contents .catering-intro-title{
         margin-top: 120px;
@@ -27,7 +29,7 @@ Yumyum Catering
         width: 100%;
     }
     #catering-contents .catering-intro-title .title h1{
-        font-size: 5.5rem;
+        font-size: 6rem;
         font-weight: bold;
         color: white;
         letter-spacing: 2px;
@@ -44,10 +46,13 @@ Yumyum Catering
         width: 100%;
     }
     #catering-contents .catering-para .para-empty{
-        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
     }
     #catering-contents .catering-para .para{
-        padding: 20px;
+        padding: 25px 50px;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -63,27 +68,27 @@ Yumyum Catering
         width: 160px;
     }
 
-    .catering-header .catering-header-title{
+    .catering-contact-container .catering-contact-container-title{
         margin-top: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .catering-header .catering-header-title img{
+    .catering-contact-container .catering-contact-container-title img{
         width: 250px;
     }
-    .catering-header .catering-header-title p{
+    .catering-contact-container .catering-contact-container-title p{
         font-size: 2.5rem;
         color: white;
         font-weight: bold;
         letter-spacing: 2px;
     }
-    .catering-header .catering-contact{
+    .catering-contact-container .catering-contact{
         display: flex;
         justify-content: center;
         margin-bottom: 120px;
     }
-    .catering-header .catering-contact a button{
+    .catering-contact-container .catering-contact a button{
         font-family: 'Poppins', sans-serif;
         color: rgba(255, 255, 255, 0.884);
         background: rgb(241,135,4);
@@ -98,7 +103,7 @@ Yumyum Catering
         text-shadow: 2px 2px 1px black;
         filter: brightness(90%);
     }
-    .catering-header .catering-contact a button:hover{
+    .catering-contact-container .catering-contact a button:hover{
         background: rgb(242,85,6);
         background: linear-gradient(90deg, rgba(242,85,6,1) 30%, rgba(241,135,4,1) 70%);
         transform: scale(1.05);
@@ -106,6 +111,35 @@ Yumyum Catering
         filter: brightness(110%);
     }
 
+    .badge-ribbon{
+        --size: 130px;
+        position: relative;
+        background: rgba(36, 36, 36);
+        height: var(--size);
+        width: var(--size);
+        border-radius: 70px;
+    }       
+    .badge-ribbon:before,
+    .badge-ribbon:after {
+        content: '';
+        position: absolute;
+        border-bottom: calc(var(--size) * 0.8) solid rgb(36, 36, 36);
+        border-left: calc(var(--size) * 0.4) solid transparent;
+        border-right: calc(var(--size) * 0.4) solid transparent;
+        top: calc(var(--size) * 0.7);
+        left: calc(var(--size) * -0.1);
+        transform: rotate(-140deg);
+    }
+    .badge-ribbon:after {
+        left: auto;
+        right: calc(var(--size) * -0.1);
+        transform: rotate(140deg);
+    }
+    #cateringbody .underline-catering{
+        border-top: 3px solid red;
+        width: 80%;
+        margin: auto;
+    }
 </style>
 {% endblock %}
 
@@ -120,15 +154,20 @@ Yumyum Catering
             <div class="intro-empty"></div>
         </div>
         <div class="catering-para">
-            <div class="para-empty"></div>
+            <div class="para-empty">
+                <!-- <div id="pacman"></div> -->
+                <div class="badge-ribbon"></div>
+            </div>
             <div class="para">
                 <p>Welcome to <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering service, where exceptional food meets unmatched hospitality. Whether you're planning an intimate gathering, a corporate function, or a lavish celebration, our dedicated team is here to enhance your experience with delicious cuisine and impeccable service. From thougthfully crafted menus to personalized attention to detail, we take pride in suprassing expectations and creating memorable moments for you and your guests. Count on us to cater your every need, allowing you to relax and enjoy the occassion while we handle all the details.</p>
             </div>
         </div>
     </section>
 
-    <div class="catering-header">
-        <div class="catering-header-title">
+    <div class="underline-catering"></div>
+
+    <div class="catering-contact-container">
+        <div class="catering-contact-container-title">
             <img src="{% static '/images/yumyum-logo.png' %}" alt="">
             <p>Caters</p>
         </div>
