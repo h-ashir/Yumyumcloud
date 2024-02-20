@@ -14,8 +14,6 @@ class Photo(models.Model):
     def __str__(self):
         return f"{self.image}"
 
-
-    
 class Outlet(models.Model):
     outlet_main_title = models.CharField(max_length=20, null=False)
     outlet_name = models.CharField(max_length=50, null=False)
@@ -28,3 +26,17 @@ class Outlet(models.Model):
     outlet_email = models.CharField(max_length=50,null=True)
     def __str__(self):
         return self.outlet_main_title
+    
+class Team_line_1(models.Model):
+    Member_image = models.ImageField(upload_to='team')
+    Member_name = models.CharField(max_length = 50)
+    Member_title = models.CharField(max_length = 50)
+    def __str__(self):
+        return f"{self.Member_name} - {self.Member_title}"
+    
+class Team_line_2(models.Model):
+    Member_image = models.ImageField(upload_to='team')
+    Member_name = models.CharField(max_length = 50)
+    Member_title = models.CharField(max_length = 50)
+    def __str__(self):
+        return f"{self.Member_name} - {self.Member_title}"

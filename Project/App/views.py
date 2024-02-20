@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from App.forms import ContactForm
 from django.contrib import messages
-from App.models import Photo, Outlet
+from App.models import Photo, Outlet, Team_line_1, Team_line_2
 # Create your views here.
 def home(request):
     return render(request, 'App/index.html')
@@ -19,7 +19,11 @@ def photo(request):
     return render(request, 'App/photo.html', dict_photo)
 
 def team(request):
-    return render(request, 'App/team.html')
+    dict_team = {
+        'team1': Team_line_1.objects.all(),
+        'team2': Team_line_2.objects.all()
+    }
+    return render(request, 'App/team.html', dict_team)
 
 def catering(request):
     return render(request, 'App/catering.html')
