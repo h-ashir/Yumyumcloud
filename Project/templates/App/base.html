@@ -309,11 +309,11 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Yumyumcloud
+                  YumYumcloud
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item {% if request.path == 'about-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'about-yumyum' %}">About Yumyumcloud</a></li>
-                    <li class="nav-item {% if request.path == '/why-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'why-yumyum' %}">Why Yumyumcloud</a></li>
+                    <li class="nav-item {% if request.path == '/about-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'about-yumyum' %}">About YumYumcloud</a></li>
+                    <li class="nav-item {% if request.path == '/why-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'why-yumyum' %}">Why YumYumcloud</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -321,10 +321,10 @@
                     Gallery
                   </a>
                   <ul class="dropdown-menu">
-                    <li class="nav-item {% if request.path == 'team' %}active{% endif %}">
+                    <li class="nav-item {% if request.path == '/team/' %}active{% endif %}">
                         <a class="dropdown-item" href="{% url 'team' %}">Team</a>
                     </li>
-                      <li class="nav-item {% if request.path == 'photo' %}active{% endif %}"><a class="dropdown-item" href="{% url 'photo' %}">Photo</a>
+                      <li class="nav-item {% if request.path == '/photo/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'photo' %}">Photo</a>
                     </li>
                   </ul>
               </li>
@@ -333,16 +333,16 @@
                   Services
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="nav-item {% if request.path == 'catering' %}active{% endif %}"><a class="dropdown-item" href="{% url 'catering' %}">Catering</a></li>
+                    <li class="nav-item {% if request.path == '/catering/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'catering' %}">Catering</a></li>
                 </ul>
               </li>
-              <li class="nav-item {% if request.path == 'menu' %}active{% endif %}">
+              <li class="nav-item {% if request.path == '/menu/' %}active{% endif %}">
                 <a class="nav-link " href="{% url 'menu' %}">Menu</a>
               </li>
-              <li class="nav-item {% if request.path == 'outlets' %}active{% endif %}">
+              <li class="nav-item {% if request.path == '/outlets/' %}active{% endif %}">
                 <a class="nav-link" href="{% url 'outlets' %}">Outlets</a>
               </li>
-              <li class="nav-item {% if request.path == 'contact' %}active{% endif %}">
+              <li class="nav-item {% if request.path == '/contact-us/' %}active{% endif %}">
                 <a class="nav-link" href="{% url 'contact-us' %}">Contact</a>
               </li>
             </ul>
