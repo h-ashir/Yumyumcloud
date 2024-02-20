@@ -17,59 +17,48 @@ Yumyum Catering
         gap: 30px;
         padding: 30px 150px;
     }
-    #catering-contents .catering-intro-title{
-        margin-top: 120px;
-        display: flex;
-        justify-content: flex-start;
-    }
-    #catering-contents .catering-intro-title .title{
+    #catering-contents .title{
+        margin-top: 140px;
         font-family: "Gabriela", serif;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         width: 100%;
     }
-    #catering-contents .catering-intro-title .title h1{
+    #catering-contents .title h1{
         font-size: 6rem;
         font-weight: bold;
         color: white;
         letter-spacing: 2px;
     }
-    #catering-contents .catering-intro-title .title img{
+    #catering-contents .title img{
         width: 240px;
     }
-    #catering-contents .intro-empty{
-        width: 70%;
+    #cateringbody .underline-title{
+        border-top: 3px solid red;
+        width: 30%;
+        margin: auto;
     }
-    #catering-contents .catering-para{
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-    }
-    #catering-contents .catering-para .para-empty{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 35%;
-    }
-    #catering-contents .catering-para .para{
-        padding: 25px 50px;
+    #catering-contents .para{
+        padding: 10px 50px;
         display: flex;
         justify-content: center;
         width: 100%;
     }
-    #catering-contents .catering-para .para p{
+    #catering-contents .para p{
         font-family: 'Poppins', sans-serif;
         color: white;
         font-size: 2rem;
         line-height: 50px;
         text-align: justify;
     }
-    #catering-contents .catering-para .para img{
+    #catering-contents .para img{
         width: 160px;
     }
 
     .catering-contact-container .catering-contact-container-title{
-        margin-top: 30px;
+        margin-top: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -147,24 +136,16 @@ Yumyum Catering
 <body id="cateringbody">
     
     <section id="catering-contents">
-        <div class="catering-intro-title">
-            <div class="title">
-                <h1>Taste the Difference: <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering</h1>
-            </div>
-            <div class="intro-empty"></div>
+        <div class="title">
+            <h1>Taste the Difference: <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering</h1><br><br><br>
+            <div class="underline-title"></div>
         </div>
-        <div class="catering-para">
-            <div class="para-empty">
-                <!-- <div id="pacman"></div> -->
-                <div class="badge-ribbon"></div>
-            </div>
-            <div class="para">
-                <p>Welcome to <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering service, where exceptional food meets unmatched hospitality. Whether you're planning an intimate gathering, a corporate function, or a lavish celebration, our dedicated team is here to enhance your experience with delicious cuisine and impeccable service. From thougthfully crafted menus to personalized attention to detail, we take pride in suprassing expectations and creating memorable moments for you and your guests. Count on us to cater your every need, allowing you to relax and enjoy the occassion while we handle all the details.</p>
-            </div>
+        <div class="para">
+            <p>Welcome to <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering service, where exceptional food meets unmatched hospitality. Whether you're planning an intimate gathering, a corporate function, or a lavish celebration, our dedicated team is here to enhance your experience with delicious cuisine and impeccable service. From thougthfully crafted menus to personalized attention to detail, we take pride in suprassing expectations and creating memorable moments for you and your guests. Count on us to cater your every need, allowing you to relax and enjoy the occassion while we handle all the details.</p>
         </div>
     </section>
 
-    <div class="underline-catering"></div>
+    <!-- <div class="underline-catering"></div> -->
 
     <div class="catering-contact-container">
         <div class="catering-contact-container-title">
