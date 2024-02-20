@@ -134,15 +134,35 @@
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
         }
-        footer .top-section .logo{
+        footer .top-section .glamortrend-logo{
+          margin-top: 20px;
+          grid-column: 1;
+        }
+        footer .top-section .glamortrend-logo a{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+        }
+        footer .top-section .glamortrend-logo span{
+          color: white;
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+        }
+        footer .top-section .glamortrend-logo img{
+          width: 250px;
+          height: 55px;
+        }
+        footer .top-section .yumyum-logo{
           margin-top: 20px;
           grid-column: 2;
           display: flex;
           justify-content: center;
         }
-        footer .top-section .logo img{
-          width: 280px;
-          height: 85px;
+        footer .top-section .yumyum-logo img{
+          width: 260px;
+          height: 80px;
         }
         footer .top-section .social-medias{
           margin-top: 40px;
@@ -361,7 +381,13 @@
     <footer id="footer">
       <div class="footer-card">
         <div class="top-section">
-          <div class="logo">
+          <div class="glamortrend-logo">
+            <a target="_blank" href="https://glamortrend.com">
+              <img src="{% static '/images/glamortrend-logo-removebg.png' %}" alt="">
+              <span>Family Beauty Salon</span>
+            </a>
+          </div>
+          <div class="yumyum-logo">
             <img src="{% static '/images/yumyum-logo.png' %}" alt="">
           </div>
           <div class="social-medias">
@@ -427,7 +453,7 @@
         </div>
         <div class="copyright">
           <p>
-          <script>document.write(new Date().getFullYear())</script> ©  Yumyumcloud - All Rights Reserved
+          <script>document.write(new Date().getFullYear())</script> ©  YumYumCloud - All Rights Reserved
         </p>
         </div>
       </div>
