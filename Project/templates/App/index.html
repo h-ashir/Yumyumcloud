@@ -224,7 +224,7 @@ Home
     #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn{
         border: 5px solid red;
         padding: 8px;
-        border-radius: 10px;
+        border-radius: 50%;
         cursor: pointer;
         transition: 1s;
     }
@@ -257,7 +257,7 @@ Home
     #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div{
         border: 5px solid red;
         padding: 8px;
-        border-radius: 10px;
+        border-radius: 50%;
         transition: 1s;
     }
     #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div:not(:last-child){
@@ -524,7 +524,7 @@ Home
         margin-bottom: 100px;
     }
     #signature-dishes .signature-dishes-contents .best-dishes-4 .slides{
-        width: 500%;
+        width: 510%;
         height: 570px;
         display: flex;
     }
@@ -636,6 +636,1487 @@ Home
         background: red;
     }
 
+    @media(max-width: 1200px){
+    #home-intro .home-title {
+        padding: 60px;
+    }
+    #home-intro .home-title .welcome{
+        margin-top: 100px;
+        font-size: 5rem;
+    }
+    #home-intro .home-title .animate-character{
+        font-size: 8rem;
+    }
+    #home-intro .home-title .kitchen{
+        font-size: 5rem;
+        color: white;
+    }
+    #home-intro .home-title .underline-title{
+        margin: 20px 0;
+        border: 1px solid gray;
+        width: 45%;
+    }
+    #home-intro .home-title .home-title-para h3{
+        font-size: 2.1rem;
+    }
+    
+    #home-about .home-about-grid{
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        padding: 60px 30px 30px 30px;
+    }
+    #home-about .home-about-grid .left-grid{
+        grid-column: 1;
+    }
+    #home-about .home-about-grid .left-grid img{
+        width: 80%;
+        height: 85%;
+        transform: perspective(1000px)
+        rotateX(5deg)
+        scale(.9);
+    }
+    #home-about .home-about-grid .right-grid{
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #home-about .home-about-grid .right-grid .home-about-title h1{
+        margin-top: 0px;
+        text-shadow: 1px 1px 1px gray;
+        font-size: 4rem;
+        letter-spacing: 1px;
+    }
+    #home-about .home-about-grid .right-grid .home-about-para p{
+        font-size: 1.7rem;
+        line-height: 35px;
+    }
+
+    #signature-dishes .signature-dishes-main-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #signature-dishes .signature-dishes-main-title h1{
+        margin-top: 80px;
+        text-shadow: 2px 2px 1px gray;
+        font-size: 8rem;
+    }
+    #signature-dishes .signature-dishes-contents{
+        margin-top: 100px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slider{
+        width: 400px;
+        height: 450px;
+        overflow: hidden;
+        margin-bottom: 70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slides{
+        width: 510%;
+        height: 450px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide img{
+        width: 400px;
+        height: 450px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text h4{
+        font-size: 4rem;
+        padding: 7px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual{
+        width: 400px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+     #food1radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food1radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food1radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+     #food1radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto{
+        width: 400px;
+        margin-top: 380px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slider{
+        width: 400px;
+        height: 450px;
+        overflow: hidden;
+        margin-bottom: 70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slides{
+        width: 510%;
+        height: 450px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide img{
+        width: 400px;
+        height: 450px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 4rem;
+        padding: 7px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual{
+        width: 400px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+   #food2radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food2radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food2radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food2radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto{
+        width: 400px;
+        margin-top: 380px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slider{
+        width: 400px;
+        height: 450px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slides{
+        width: 510%;
+        height: 450px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide img{
+        width: 400px;
+        height: 450px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 4rem;
+        padding: 7px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual{
+        width: 400px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #food3radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food3radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food3radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food3radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto{
+        width: 400px;
+        margin-top: 380px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slider{
+        width: 400px;
+        height: 450px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slides{
+        width: 510%;
+        height: 450px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide img{
+        width: 400px;
+        height: 470px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 4rem;
+        padding: 7px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual{
+        width: 400px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #food4radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food4radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food4radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food4radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto{
+        width: 400px;
+        margin-top: 380px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    }
+/*  */
+@media(max-width: 768px){
+    #home-intro{
+        height: 110vh;
+    }
+    #home-intro .home-title {
+        padding: 50px;
+    }
+    #home-intro .home-title .welcome{
+        margin-top: 90px;
+        font-size: 4rem;
+    }
+    #home-intro .home-title .animate-character{
+        font-size: 6rem;
+    }
+    #home-intro .home-title .kitchen{
+        font-size: 4rem;
+    }
+    #home-intro .home-title .underline-title{
+        border: 1px solid gray;
+        width: 45%;
+    }
+    #home-intro .home-title .home-title-para h3{
+        font-size: 1.9rem;
+    }
+    
+    #home-about .home-about-grid{
+        /* display: grid;
+        grid-template-columns: 1fr 1.2fr; */
+        display: flex;
+        flex-direction: column;
+        padding: 60px 30px;
+    }
+    #home-about .home-about-grid .left-grid{
+        display: none;
+    }
+    #home-about .home-about-grid .right-grid{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 20px;
+    }
+    #home-about .home-about-grid .right-grid .home-about-title h1{
+        margin-top: 0px;
+        text-shadow: 1px 1px 1px gray;
+        font-size: 3.4rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    #home-about .home-about-grid .right-grid .home-about-para p{
+        font-size: 1.6rem;
+        line-height: 35px;
+        text-align: justify;
+    }
+
+    #signature-dishes .signature-dishes-main-title h1{
+        margin-top: 40px;
+        text-shadow: 1px 1px 1px gray;
+        font-size: 6rem;
+    }
+    #signature-dishes .signature-dishes-contents{
+        margin-top: 60px;
+        gap: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text h4{
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+     #food1radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food1radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food1radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+     #food1radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+   #food2radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food2radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food2radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food2radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #food3radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food3radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food3radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food3radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text{
+        min-height: 25vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #food4radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food4radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food4radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food4radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    }
+
+    /*  */
+@media(max-width: 640px){
+    #home-intro{
+        height: 105vh;
+    }
+    #home-intro .home-title {
+        padding: 40px;
+    }
+    #home-intro .home-title .welcome{
+        margin-top: 90px;
+        font-size: 3.6rem;
+    }
+    #home-intro .home-title .animate-character{
+        font-size: 5.5rem;
+    }
+    #home-intro .home-title .kitchen{
+        font-size: 3.6rem;
+    }
+    #home-intro .home-title .underline-title{
+        width: 45%;
+    }
+    #home-intro .home-title .home-title-para h3{
+        font-size: 1.7rem;
+    }
+    
+    #home-about .home-about-grid{
+        display: flex;
+        flex-direction: column;
+        padding: 60px 30px;
+    }
+    #home-about .home-about-grid .right-grid{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 20px;
+    }
+    #home-about .home-about-grid .right-grid .home-about-title h1{
+        font-size: 3.3rem;
+    }
+    #home-about .home-about-grid .right-grid .home-about-para p{
+        font-size: 1.52rem;
+        line-height: 35px;
+    }
+
+    #signature-dishes .signature-dishes-main-title h1{
+        font-size: 5.4rem;
+    }
+    #signature-dishes .signature-dishes-contents{
+        margin-top: 40px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text{
+        min-height: 20vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text h4{
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+     #food1radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food1radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food1radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+     #food1radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text{
+        min-height: 20vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+   #food2radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food2radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food2radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food2radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text{
+        min-height: 20vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #food3radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food3radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food3radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food3radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slider{
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slides{
+        width: 510%;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide img{
+        width: 300px;
+        height: 350px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text{
+        min-height: 20vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 3rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual{
+        width: 300px;
+        margin-top: -70px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+    #food4radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food4radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food4radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food4radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto{
+        width: 300px;
+        margin-top: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    }
+    @media(max-width: 485px){
+        #home-intro{
+        height: 100vh;
+    }
+    #home-intro .home-title {
+        padding: 40px;
+    }
+    #home-intro .home-title .welcome{
+        margin-top: 120px;
+        font-size: 2.5rem;
+    }
+    #home-intro .home-title .animate-character{
+        font-size: 4rem;
+    }
+    #home-intro .home-title .kitchen{
+        font-size: 2.5rem;
+    }
+    #home-intro .home-title .underline-title{
+        width: 45%;
+    }
+    #home-intro .home-title .home-title-para h3{
+        font-size: 1.4rem;
+    }
+    
+    #home-about .home-about-grid{
+        display: flex;
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+    #home-about .home-about-grid .right-grid{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+    #home-about .home-about-grid .right-grid .home-about-title h1{
+        font-size: 2.5rem;
+    }
+    #home-about .home-about-grid .right-grid .home-about-para p{
+        font-size: 1.25rem;
+        line-height: 27px;
+        text-align: justify;
+    }
+
+    #signature-dishes .signature-dishes-main-title h1{
+        font-size: 4rem;
+    }
+    #signature-dishes .signature-dishes-contents{
+        margin-top: 25px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slider{
+        width: 230px;
+        height: 280px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slides{
+        width: 510%;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide img{
+        width: 230px;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text{
+        min-height: 15vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text h4{
+        font-size: 2.6rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual{
+        width: 230px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+     #food1radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food1radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food1radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+     #food1radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto{
+        width: 230px;
+        margin-top: 240px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slider{
+        width: 230px;
+        height: 280px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slides{
+        width: 510%;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide img{
+        width: 230px;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text{
+        min-height: 15vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 2.6rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual{
+        width: 230px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+   #food2radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food2radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food2radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food2radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto{
+        width: 230px;
+        margin-top: 240px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slider{
+        width: 230px;
+        height: 280px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slides{
+        width: 510%;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide img{
+        width: 230px;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text{
+        min-height: 15vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 2.6rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual{
+        width: 230px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+    #food3radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food3radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food3radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food3radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto{
+        width: 230px;
+        margin-top: 240px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slider{
+        width: 230px;
+        height: 280px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slides{
+        width: 510%;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide img{
+        width: 230px;
+        height: 280px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text{
+        min-height: 15vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 2.6rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual{
+        width: 230px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+    #food4radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food4radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food4radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food4radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto{
+        width: 230px;
+        margin-top: 240px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    }
+/*  */
+@media(max-width: 390px){
+        #home-intro{
+        height: 100vh;
+    }
+    #home-intro .home-title {
+        padding: 20px;
+    }
+    #home-intro .home-title .welcome{
+        margin-top: 140px;
+        font-size: 2rem;
+    }
+    #home-intro .home-title .animate-character{
+        font-size: 3.5rem;
+    }
+    #home-intro .home-title .kitchen{
+        font-size: 2rem;
+    }
+    #home-intro .home-title .underline-title{
+        width: 45%;
+    }
+    #home-intro .home-title .home-title-para h3{
+        font-size: 1.1rem;
+        text-shadow: .1px .1px .1px white;
+    }
+    #home-about .home-about-grid{
+        display: flex;
+        flex-direction: column;
+        padding: 45px 30px;
+    }
+    #home-about .home-about-grid .right-grid{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+    #home-about .home-about-grid .right-grid .home-about-title h1{
+        font-size: 2rem;
+    }
+    #home-about .home-about-grid .right-grid .home-about-para p{
+        font-size: 1.05rem;
+        line-height: 22px;
+    }
+
+    #signature-dishes .signature-dishes-main-title h1{
+        font-size: 3.4rem;
+    }
+    #signature-dishes .signature-dishes-contents{
+        margin-top: 20px;
+        gap: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slider{
+        width: 200px;
+        height: 250px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slides{
+        width: 510%;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .slide img{
+        width: 200px;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text{
+        min-height: 12vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .image-text h4{
+        font-size: 2.5rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual{
+        width: 200px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+     #food1radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food1radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food1radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+     #food1radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto{
+        width: 200px;
+        margin-top: 210px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-1 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slider{
+        width: 200px;
+        height: 250px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slides{
+        width: 510%;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .slide img{
+        width: 200px;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text{
+        min-height: 12vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 2.5rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual{
+        width: 200px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+   #food2radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food2radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food2radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food2radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto{
+        width: 200px;
+        margin-top: 210px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-2 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slider{
+        width: 200px;
+        height: 250px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slides{
+        width: 510%;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .slide img{
+        width: 200px;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text{
+        min-height: 12vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 2.5rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual{
+        width: 200px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+    #food3radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food3radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food3radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food3radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto{
+        width: 200px;
+        margin-top: 210px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-3 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slider{
+        width: 200px;
+        height: 250px;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slides{
+        width: 510%;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide{
+        width: 20%;
+        transition: 2s;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .slide img{
+        width: 200px;
+        height: 250px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text{
+        min-height: 12vh;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .image-text h4{
+        text-shadow: 1px 1px 1px red;
+        font-size: 2.5rem;
+        padding: 5px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual{
+        width: 200px;
+        margin-top: -40px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn:not(:last-child){
+        margin-right: 25px;
+    }
+    #food4radio1:checked ~ .first{
+        margin-left: 0px;
+    }
+    #food4radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #food4radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+    #food4radio4:checked ~ .first{
+        margin-left: -60%;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto{
+        width: 200px;
+        margin-top: 210px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-manual .manual-btn{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    #signature-dishes .signature-dishes-contents .best-dishes-4 .navigation-auto div{
+        border: 3px solid red;
+        padding: 6px;
+    }
+    }
 
 </style>
 {% endblock %}
@@ -663,7 +2144,7 @@ Home
             </div>
             <div class="right-grid">
                 <div class="home-about-title reveal">
-                    <h1>Experience the timeless flavors at YumYumCloud</h1>
+                    <h1>Experience timeless flavors at YumYumCloud</h1>
                 </div>
                 <div class="home-about-para reveal">
                     <p>YumYumCloud kitchen echoes a flavorful tradition, making us the preferred choice for food enthusiasts. In our expansive setting, we offer both vegetarian and non-vegetarian delicacies. We strongly uphold the belief that a restaurant's quality originates in its kitchen. Maintaining a hygenic atmosphere fosters systematic and leisurely culinary processes, resulting in exceptional flavors.
