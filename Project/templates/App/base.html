@@ -56,12 +56,6 @@
             box-sizing: border-box;
             transition: .2s linear;
         }
-        /* header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.5rem 7%;
-        } */
         .navbar{
             padding: 0.5rem 1%;
             background-color: transparent;
@@ -92,15 +86,11 @@
             transition: .5s all linear;
 
         }
-        /* .nav-item.active a{
-          color: rgb(73, 110, 149);
-        } */
-        .active a{
-          font-weight: bold;
-          color: rgb(15, 70, 129);
+        .navbar-toggler{
+          background-color: white;
         }
         .dropdown-menu{
-          background-color: rgba(38, 38, 38, 0.9);
+          background-color: rgba(0, 0, 0, 0.9);
         }
         .dropdown-menu a{
           color: white;
@@ -131,6 +121,7 @@
         footer .top-section{
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          margin-bottom: 30px;
         }
         footer .top-section .glamortrend-logo{
           margin-top: 20px;
@@ -156,6 +147,8 @@
           color: white;
           opacity: .8;
           transition: .5s all linear;
+          text-align: center;
+          margin-bottom: 10px;
         }
         footer .top-section .glamortrend-logo a .visit-text:hover{
           color: skyblue;
@@ -254,6 +247,7 @@
           gap: 10px;
         }
         footer .grid-container .left-grid .footer-link a{
+          opacity: .85;
           text-decoration: none;
           color: white;
           font-size: 1.8rem;
@@ -262,7 +256,6 @@
         footer .grid-container .left-grid .footer-link a:hover{
           color: red;
         }
-
 
         footer .grid-container .middle-grid{
           grid-column: 2;
@@ -281,6 +274,7 @@
           gap: 10px;
         }
         footer .grid-container .middle-grid .footer-link a{
+          opacity: .85;
           text-decoration: none;
           color: white;
           font-size: 1.8rem;
@@ -289,7 +283,6 @@
         footer .grid-container .middle-grid .footer-link a:hover{
           color: red;
         }
-
 
         footer .grid-container .right-grid{
           grid-column: 3;
@@ -305,6 +298,8 @@
           color: white;
           font-size: 1.9rem;
           line-height: 35px;
+          letter-spacing: .5px;
+          opacity: .8;
         }
 
         footer .copyright{
@@ -328,6 +323,520 @@
           opacity: 1;
         }
 
+        @media(max-width: 1200px){
+          .navbar{
+            padding: 0.5rem 1%;
+            background-color:  rgba(10, 10, 10, 0.768);
+        }
+          .navbar .navbar-brand img{
+            width: 220px;
+            margin-right: 0px;
+          }
+          .basenav{
+            gap: 22px;
+          }
+          .basenav a{
+            font-size: 1.4rem;
+            text-shadow: .8px .8px 1px black;
+        }
+        footer .top-section{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        footer .top-section .glamortrend-logo{
+          grid-column: 1;
+        }
+        footer .top-section .glamortrend-logo a .visit-text{
+          font-size: 1.8rem;
+        }
+        footer .top-section .glamortrend-logo .family-salon{
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+        }
+        footer .top-section .glamortrend-logo img{
+          width: 200px;
+          height: 40px;
+        }
+        footer .top-section .yumyum-logo{
+          margin-top: 20px;
+          grid-column: 2;
+        }
+        footer .top-section .yumyum-logo img{
+          width: 200px;
+          height: 60px;
+        }
+        footer .top-section .social-medias{
+          grid-column: 3;
+          display: flex;
+          gap: 10px;
+        }
+        footer .top-section .social-medias .footer-email a{
+          font-size: 1.8rem;
+          letter-spacing: .7px;
+        }
+        footer .top-section .social-medias .social-media-icons {
+          display: flex;
+          gap: 15px;
+        }
+        footer .top-section .social-medias .social-media-icons a{
+          text-decoration: none;
+          font-size: 4rem;
+        }
+        footer .grid-container{
+          padding: 15px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        footer .underline{
+          width: 50%;
+          margin: 12px 0px;
+          border: 1px solid red;
+        }
+        footer .grid-container .left-grid{
+          grid-column: 1;
+        }
+        footer .grid-container .left-grid .left-heading h3{
+          font-size: 2rem;
+        }
+        footer .grid-container .left-grid .footer-link{
+          gap: 8px;
+        }
+        footer .grid-container .left-grid .footer-link a{
+          font-size: 1.7rem;
+        }
+        footer .grid-container .middle-grid{
+          grid-column: 2;
+        }
+        footer .grid-container .middle-grid .middle-heading h3{
+          font-size: 2rem;
+        }
+        footer .grid-container .middle-grid .footer-link{
+          gap: 8px;
+        }
+        footer .grid-container .middle-grid .footer-link a{
+          font-size: 1.7rem;
+        }
+        footer .grid-container .right-grid{
+          grid-column: 3;
+        }
+        footer .grid-container .right-grid .corporate-office-heading h3{
+          font-size: 2rem;
+        }
+        footer .grid-container .right-grid .corporate-office-address p{
+          font-size: 1.7rem;
+          line-height: 35px;
+        }
+        footer .copyright p{
+          font-size: 1.6rem;
+        }
+        }
+        @media(max-width: 866px){
+          footer .top-section .glamortrend-logo a .visit-text{
+          font-size: 1.6rem;
+        }
+        footer .top-section .glamortrend-logo .family-salon{
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+        }
+        footer .top-section .glamortrend-logo img{
+          width: 180px;
+          height: 30px;
+        }
+        footer .top-section .yumyum-logo{
+          margin-top: 20px;
+        }
+        footer .top-section .yumyum-logo img{
+          width: 180px;
+          height: 50px;
+        }
+        footer .top-section .social-medias{
+          grid-column: 3;
+          gap: 10px;
+        }
+        footer .top-section .social-medias .footer-email a{
+          font-size: 1.8rem;
+          letter-spacing: .7px;
+        }
+        footer .top-section .social-medias .social-media-icons {
+          gap: 15px;
+        }
+        footer .top-section .social-medias .social-media-icons a{
+          font-size: 3.8rem;
+        }
+        footer .grid-container{
+          padding: 8px;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        footer .underline{
+          width: 50%;
+          margin: 12px 0px;
+          border: 1px solid red;
+        }
+        footer .grid-container .left-grid .left-heading h3{
+          font-size: 1.8rem;
+        }
+        footer .grid-container .left-grid .footer-link a{
+          font-size: 1.6rem;
+        }
+        footer .grid-container .middle-grid .middle-heading h3{
+          font-size: 1.9rem;
+        }
+        footer .grid-container .middle-grid .footer-link a{
+          font-size: 1.6rem;
+        }
+        footer .grid-container .right-grid .corporate-office-heading h3{
+          font-size: 1.8rem;
+        }
+        footer .grid-container .right-grid .corporate-office-address p{
+          font-size: 1.5rem;
+          line-height: 33px;
+        }
+        footer .copyright p{
+          font-size: 1.5rem;
+        }
+        }
+/*  */
+@media(max-width: 768px){
+          footer .top-section{
+            margin-bottom: 30px;
+          }
+
+          footer .top-section .glamortrend-logo a .visit-text{
+          font-size: 1.2rem;
+        }
+        footer .top-section .glamortrend-logo .family-salon{
+          font-size: 1rem;
+          letter-spacing: 1px;
+        }
+        footer .top-section .glamortrend-logo img{
+          width: 150px;
+          height: 30px;
+        }
+        footer .top-section .yumyum-logo{
+          margin-top: 20px;
+        }
+        footer .top-section .yumyum-logo img{
+          width: 150px;
+          height: 40px;
+        }
+        footer .top-section .social-medias{
+          gap: 10px;
+        }
+        footer .top-section .social-medias .footer-email a{
+          font-size: 1.2rem;
+          letter-spacing: .7px;
+        }
+        footer .top-section .social-medias .social-media-icons {
+          gap: 10px;
+        }
+        footer .top-section .social-medias .social-media-icons a{
+          font-size: 3rem;
+        }
+        footer .grid-container{
+          padding: 8px;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        footer .underline{
+          width: 50%;
+          margin: 7px 0px;
+        }
+        footer .grid-container .left-grid .left-heading h3{
+          font-size: 1.4rem;
+        }
+        footer .grid-container .left-grid .footer-link a{
+          font-size: 1.4rem;
+        }
+        footer .grid-container .middle-grid .middle-heading h3{
+          font-size: 1.4rem;
+        }
+        footer .grid-container .middle-grid .footer-link a{
+          font-size: 1.4rem;
+        }
+        footer .grid-container .right-grid .corporate-office-heading h3{
+          font-size: 1.4rem;
+        }
+        footer .grid-container .right-grid .corporate-office-address p{
+          font-size: 1.1rem;
+          line-height: 28px;
+        }
+        footer .copyright p{
+          font-size: 1.3rem;
+        }
+        }
+
+        /*  */ 
+    @media(max-width: 590px){
+          footer .top-section .glamortrend-logo a .visit-text{
+          font-size: 1rem;
+        }
+        footer .top-section .glamortrend-logo .family-salon{
+          font-size: .8rem;
+          letter-spacing: 1px;
+        }
+        footer .top-section .glamortrend-logo img{
+          width: 120px;
+          height: 25px;
+        }
+        footer .top-section .yumyum-logo{
+          margin-top: 20px;
+        }
+        footer .top-section .yumyum-logo img{
+          width: 130px;
+          height: 30px;
+        }
+        footer .top-section .social-medias{
+          gap: 10px;
+        }
+        footer .top-section .social-medias .footer-email a{
+          font-size: 1.05rem;
+          letter-spacing: .7px;
+        }
+        footer .top-section .social-medias .social-media-icons {
+          gap: 10px;
+        }
+        footer .top-section .social-medias .social-media-icons a{
+          font-size: 2.7rem;
+        }
+        footer .grid-container{
+          padding: 8px;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+        footer .underline{
+          width: 50%;
+          margin: 7px 0px;
+        }
+        footer .grid-container .left-grid{
+          grid-column: 1;
+          grid-row: 1;
+        }
+        footer .grid-container .middle-grid{
+          grid-column: 2;
+          grid-row: 1;
+        }
+        footer .grid-container .right-grid{
+          grid-column: span 2;
+          grid-row: 2;
+        }
+
+        footer .grid-container .left-grid .left-heading h3{
+          font-size: 1.2rem;
+        }
+        footer .grid-container .left-grid .footer-link{
+          gap: 5px;
+          align-items: start;
+        }
+        footer .grid-container .left-grid .footer-link a{
+          font-size: 1.1rem;
+        }
+        footer .grid-container .middle-grid .middle-heading h3{
+          font-size: 1.2rem;
+        }
+        footer .grid-container .middle-grid .footer-link{
+          gap: 5px;
+          align-items: end;
+        }
+        footer .grid-container .middle-grid .footer-link a{
+          font-size: 1.1rem;
+        }
+        footer .grid-container .right-grid .corporate-office-heading h3{
+          font-size: 1.1rem;
+        }
+        footer .grid-container .right-grid .corporate-office-address p{
+          font-size: 1rem;
+          line-height: 20px;
+        }
+        footer .copyright p{
+          font-size: 1.1rem;
+        }
+        }
+        /*  */
+        @media(max-width: 485px){
+          footer .top-section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin-bottom: 2px;
+            row-gap: 12px;
+          }
+          footer .top-section .glamortrend-logo{
+            grid-row: 1;
+            grid-column: span 2;
+          }
+          footer .top-section .glamortrend-logo a .visit-text{
+          font-size: 1rem;
+        }
+        footer .top-section .glamortrend-logo .family-salon{
+          font-size: .8rem;
+          letter-spacing: 1px;
+        }
+        footer .top-section .glamortrend-logo img{
+          width: 120px;
+          height: 25px;
+        }
+        footer .top-section .yumyum-logo{
+          grid-row: 2;
+          grid-column: 1;
+          margin-top: 0px;
+        }
+        footer .top-section .yumyum-logo img{
+          width: 120px;
+          height: 30px;
+        }
+        footer .top-section .social-medias{
+          grid-row: 2;
+          grid-column: 2;
+          gap: 10px;
+          margin-top: 0px;
+        }
+        footer .top-section .social-medias .footer-email a{
+          font-size: 1.05rem;
+          letter-spacing: .7px;
+        }
+        footer .top-section .social-medias .social-media-icons {
+          gap: 10px;
+        }
+        footer .top-section .social-medias .social-media-icons a{
+          font-size: 2.7rem;
+        }
+        footer .grid-container{
+          padding: 8px;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+        footer .underline{
+          width: 50%;
+          margin: 7px 0px;
+        }
+        footer .grid-container .left-grid{
+          grid-column: 1;
+          grid-row: 1;
+        }
+        footer .grid-container .middle-grid{
+          grid-column: 2;
+          grid-row: 1;
+        }
+        footer .grid-container .right-grid{
+          grid-column: span 2;
+          grid-row: 2;
+        }
+
+        footer .grid-container .left-grid .left-heading h3{
+          font-size: 1.1rem;
+        }
+        footer .grid-container .left-grid .footer-link a{
+          font-size: 1.05rem;
+        }
+        footer .grid-container .middle-grid .middle-heading h3{
+          font-size: 1.1rem;
+        }
+        footer .grid-container .middle-grid .footer-link a{
+          font-size: 1.05rem;
+        }
+        footer .grid-container .right-grid .corporate-office-heading h3{
+          font-size: 1.1rem;
+        }
+        footer .grid-container .right-grid .corporate-office-address p{
+          font-size: 1rem;
+          line-height: 18px;
+        }
+        footer .copyright p{
+          font-size: 1.1rem;
+        }
+        }
+        /*  */
+        @media(max-width: 390px){
+          footer .top-section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin-bottom: 2px;
+            row-gap: 12px;
+          }
+          footer .top-section .glamortrend-logo{
+            grid-row: 1;
+            grid-column: span 2;
+          }
+          footer .top-section .glamortrend-logo a .visit-text{
+          font-size: .95rem;
+        }
+        footer .top-section .glamortrend-logo .family-salon{
+          font-size: .8rem;
+          letter-spacing: 1px;
+        }
+        footer .top-section .glamortrend-logo img{
+          width: 105px;
+          height: 20px;
+        }
+        footer .top-section .yumyum-logo{
+          grid-row: 2;
+          grid-column: 1;
+          margin-top: 0px;
+        }
+        footer .top-section .yumyum-logo img{
+          width: 105px;
+          height: 25px;
+        }
+        footer .top-section .social-medias{
+          grid-row: 2;
+          grid-column: 2;
+          gap: 10px;
+          margin-top: 0px;
+        }
+        footer .top-section .social-medias .footer-email a{
+          font-size: .9rem;
+          letter-spacing: .4px;
+        }
+        footer .top-section .social-medias .social-media-icons {
+          gap: 10px;
+        }
+        footer .top-section .social-medias .social-media-icons a{
+          font-size: 2.4rem;
+        }
+        footer .grid-container{
+          padding: 2px;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+        footer .underline{
+          width: 50%;
+          margin: 7px 0px;
+        }
+        footer .grid-container .left-grid{
+          grid-column: 1;
+          grid-row: 1;
+        }
+        footer .grid-container .middle-grid{
+          grid-column: 2;
+          grid-row: 1;
+        }
+        footer .grid-container .right-grid{
+          grid-column: span 2;
+          grid-row: 2;
+        }
+        footer .grid-container .left-grid .left-heading h3{
+          font-size: 1rem;
+        }
+        footer .grid-container .left-grid .footer-link a{
+          font-size: 1.05rem;
+        }
+        footer .grid-container .middle-grid .middle-heading h3{
+          font-size: 1rem;
+        }
+        footer .grid-container .middle-grid .footer-link a{
+          font-size: 1.05rem;
+        }
+        footer .grid-container .right-grid .corporate-office-heading h3{
+          font-size: 1rem;
+        }
+        footer .grid-container .right-grid .corporate-office-address p{
+          font-size: .9rem;
+          line-height: 18px;
+        }
+        footer .copyright p{
+          font-size: .9rem;
+        }
+        }
 
 
     </style>
@@ -354,7 +863,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  YumYumcloud
+                  YumYumCloud
                 </a>
                 <ul class="dropdown-menu">
                     <li class="nav-item {% if request.path == '/about-yumyum/' %}active{% endif %}"><a class="dropdown-item" href="{% url 'about-yumyum' %}">About YumYumcloud</a></li>
@@ -452,12 +961,11 @@
             <div class="underline"></div>
             <div class="footer-link">
               <a href="{% url 'menu' %}">Fresh Juice</a>
-              <a href="{% url 'menu' %}">Pasta</a>
               <a href="{% url 'menu' %}">Burger</a>
               <a href="{% url 'menu' %}">Waffles</a>
               <a href="{% url 'menu' %}">Chicken</a>
               <a href="{% url 'menu' %}">Fish</a>
-              <a href="{% url 'menu' %}#south-indian-food-header">South Indian Food</a>
+              <a href="{% url 'menu' %}#south-indian-food-header">South Indian</a>
             </div>
           </div>
 
@@ -527,7 +1035,7 @@
 
       if (prevScrollPos > currentScrollPos) {
           document.querySelector('.navbar').style.top = '0';
-          document.querySelector('.navbar').style.backgroundColor = 'rgb(49, 49, 49, 0.9)';
+          document.querySelector('.navbar').style.backgroundColor = 'rgb(10, 10, 10, 0.7)';
           if (scrolled === 0) {
             document.querySelector('.navbar').style.backgroundColor = 'transparent';
           }
