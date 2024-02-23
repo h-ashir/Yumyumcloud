@@ -496,11 +496,19 @@
         }
         }
 /*  */
-@media(max-width: 768px){
+      @media(max-width: 768px){
+          .navbar .navbar-brand img{
+            width: 180px;
+          }
+          .basenav{
+            gap: 20px;
+          }
+          .basenav a{
+            font-size: 1.4rem;
+          }
           footer .top-section{
             margin-bottom: 30px;
           }
-
           footer .top-section .glamortrend-logo a .visit-text{
           font-size: 1.2rem;
         }
@@ -746,18 +754,16 @@
         }
         /*  */
         @media(max-width: 390px){
-          footer .top-section{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            margin-bottom: 2px;
-            row-gap: 12px;
-          }
-          footer .top-section .glamortrend-logo{
-            grid-row: 1;
-            grid-column: span 2;
-          }
-          footer .top-section .glamortrend-logo a .visit-text{
+        .navbar .navbar-brand img{
+          width: 150px;
+        }
+        .basenav{
+          gap: 17px;
+        }
+        .basenav a{
+          font-size: 1.3rem;
+        }
+        footer .top-section .glamortrend-logo a .visit-text{
           font-size: .95rem;
         }
         footer .top-section .glamortrend-logo .family-salon{
@@ -768,20 +774,12 @@
           width: 105px;
           height: 20px;
         }
-        footer .top-section .yumyum-logo{
-          grid-row: 2;
-          grid-column: 1;
-          margin-top: 0px;
-        }
         footer .top-section .yumyum-logo img{
           width: 105px;
           height: 25px;
         }
         footer .top-section .social-medias{
-          grid-row: 2;
-          grid-column: 2;
           gap: 10px;
-          margin-top: 0px;
         }
         footer .top-section .social-medias .footer-email a{
           font-size: .9rem;
@@ -795,24 +793,9 @@
         }
         footer .grid-container{
           padding: 2px;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
         }
         footer .underline{
-          width: 50%;
           margin: 7px 0px;
-        }
-        footer .grid-container .left-grid{
-          grid-column: 1;
-          grid-row: 1;
-        }
-        footer .grid-container .middle-grid{
-          grid-column: 2;
-          grid-row: 1;
-        }
-        footer .grid-container .right-grid{
-          grid-column: span 2;
-          grid-row: 2;
         }
         footer .grid-container .left-grid .left-heading h3{
           font-size: 1rem;
