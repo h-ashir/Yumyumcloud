@@ -73,7 +73,6 @@ Contact Us
         letter-spacing: .4px;
         word-spacing: 1.5px;
         text-align: center;
-        /* padding: 20px; */
     }
     #contact-section .display-message .candidate-message p{
         font-size: 2.4rem;
@@ -82,7 +81,6 @@ Contact Us
         letter-spacing: .4px;
         word-spacing: 1.5px;
         text-align: center;
-        /* padding: 20px; */
     }
 
 
@@ -107,7 +105,6 @@ Contact Us
         border-right-style: double;
         border-bottom-right-radius: 12%;
         border-bottom-left-radius: 4%;
-
         transform: perspective(1000px)
         scale(.97)
         rotateY(5deg);
@@ -134,7 +131,7 @@ Contact Us
         display: flex;
         flex-direction: column;
         padding: 40px;
-        gap: 50px;
+        gap: 40px;
     }
     #contact-section .contact-container .contact-form form label{
         color: white;
@@ -174,7 +171,274 @@ Contact Us
     #input-field::placeholder{
         font-size: 1.7rem;
     }
+    /*  */
+    @media(max-width: 1200px){
+    #contact-header{
+        height: 120vh;
+    }
+    #contact-header .contact-title h1{
+        margin-top: 250px;
+        font-size: 10rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #contact-section .display-message{
+        gap: 20px;
+        padding: 50px 40px;
+    }
+    #contact-section .display-message .customer-message p{
+        font-size: 2.1rem;
+        text-shadow: 2px 2px 1px black;
+        letter-spacing: .4px;
+        word-spacing: 1.2px;
+    }
+    #contact-section .display-message .candidate-message p{
+        font-size: 2.1rem;
+        text-shadow: 2px 2px 1px black;
+        letter-spacing: .4px;
+        word-spacing: 1.2px;
+    }
 
+    #contact-section .contact-container{
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        padding: 40px;
+    }
+    #contact-section .contact-container .contact-image img{
+        width: 100%;
+        height: 70rem;
+    }
+    #contact-section .contact-container .contact-form{
+        grid-column: 2;
+    }
+    #contact-section .contact-container .contact-form .form-title h1{
+        color: white;
+        text-shadow: 1px 1px 1px red;
+        text-align: center;
+        font-size: 4.5rem;
+    }
+    #contact-section .contact-container .contact-form form{
+        padding: 20px;
+        gap: 25px;
+    }
+    #contact-section .contact-container .contact-form form label{
+        font-size: 2.1rem;
+    }
+    #contact-section .contact-container .contact-form button{
+        padding: 10px;
+        text-shadow: 2px 2px 1px black;
+        font-size: 2.7rem;
+    }
+    #input-field{
+        border-radius: 5px;
+        padding: 8px;
+        font-size: 1.9rem;
+    }
+    #input-field::placeholder{
+        font-size: 1.65rem;
+    }
+    }
+
+    /*  */
+    @media(max-width: 768px){
+    #contact-header{
+        height: 100vh;
+    }
+    #contact-header .contact-title h1{
+        margin-top: 250px;
+        font-size: 8rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #contact-section .display-message{
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    #contact-section .display-message .customer-message p{
+        font-size: 1.9rem;
+        text-shadow: 2px 2px 1px black;
+        letter-spacing: .4px;
+        word-spacing: 1px;
+    }
+    #contact-section .display-message .candidate-message p{
+        font-size: 1.9rem;
+        text-shadow: 2px 2px 1px black;
+        letter-spacing: .4px;
+        word-spacing: 1px;
+    }
+
+    #contact-section .contact-container{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+    }
+    #contact-section .contact-container .contact-image{
+        display: none;
+    }
+    #contact-section .contact-container .contact-image img{
+        display: none;
+    }
+    #contact-section .contact-container .contact-form .form-title h1{
+        text-shadow: .8px .8px .5px red;
+        font-size: 4rem;
+    }
+    #contact-section .contact-container .contact-form form{
+        padding: 15px;
+        gap: 25px;
+    }
+    #contact-section .contact-container .contact-form form label{
+        font-size: 2rem;
+    }
+    #contact-section .contact-container .contact-form button{
+        padding: 10px;
+        text-shadow: 1.4px 1.4px 1px black;
+        font-size: 2.4rem;
+    }
+    #input-field{
+        padding: 7px;
+        font-size: 1.8rem;
+    }
+    #input-field::placeholder{
+        font-size: 1.6rem;
+    }
+    }
+    /*  */
+    @media(max-width: 640px){
+    #contact-header{
+        height: 100vh;
+    }
+    #contact-header .contact-title h1{
+        margin-top: 250px;
+        font-size: 7rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #contact-section .display-message{
+        gap: 15px;
+        padding: 30px 20px;
+    }
+    #contact-section .display-message .customer-message p{
+        font-size: 1.8rem;
+    }
+    #contact-section .display-message .candidate-message p{
+        font-size: 1.8rem;
+    }
+    #contact-section .contact-container{
+        padding: 30px;
+    }
+    #contact-section .contact-container .contact-form .form-title h1{
+        text-shadow: .8px .8px .5px red;
+        font-size: 3.6rem;
+    }
+    #contact-section .contact-container .contact-form form{
+        padding: 10px;
+        gap: 22px;
+    }
+    #contact-section .contact-container .contact-form form label{
+        font-size: 1.9rem;
+    }
+    #contact-section .contact-container .contact-form button{
+        padding: 10px;
+        text-shadow: 1.4px 1.4px 1px black;
+        font-size: 2.4rem;
+    }
+    #input-field{
+        padding: 7px;
+        font-size: 1.8rem;
+    }
+    #input-field::placeholder{
+        font-size: 1.6rem;
+    }
+    }
+    @media(max-width: 485px){
+    #contact-header{
+        height: 100vh;
+    }
+    #contact-header .contact-title h1{
+        margin-top: 250px;
+        font-size: 5rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #contact-section .display-message{
+        gap: 15px;
+        padding: 30px 20px;
+    }
+    #contact-section .display-message .customer-message p{
+        font-size: 1.3rem;
+    }
+    #contact-section .display-message .candidate-message p{
+        font-size: 1.3rem;
+    }
+    #contact-section .contact-container{
+        padding: 20px;
+    }
+    #contact-section .contact-container .contact-form .form-title h1{
+        text-shadow: .8px .8px .5px red;
+        font-size: 2.8rem;
+    }
+    #contact-section .contact-container .contact-form form{
+        padding: 10px;
+        gap: 22px;
+    }
+    #contact-section .contact-container .contact-form form label{
+        font-size: 1.7rem;
+    }
+    #contact-section .contact-container .contact-form button{
+        padding: 10px;
+        text-shadow: 1.4px 1.4px 1px black;
+        font-size: 2rem;
+    }
+    #input-field{
+        padding: 7px;
+        font-size: 1.4rem;
+    }
+    #input-field::placeholder{
+        font-size: 1.3rem;
+    }
+    }
+
+    @media(max-width: 390px){
+    #contact-header{
+        height: 100vh;
+    }
+    #contact-header .contact-title h1{
+        margin-top: 250px;
+        font-size: 4.4rem;
+        text-shadow: 2px 2px 1px black;
+    }
+    #contact-section .display-message{
+        gap: 15px;
+        padding: 25px 15px;
+    }
+    #contact-section .display-message .customer-message p{
+        font-size: 1.1rem;
+    }
+    #contact-section .display-message .candidate-message p{
+        font-size: 1.1rem;
+    }
+    #contact-section .contact-container{
+        padding: 15px;
+    }
+    #contact-section .contact-container .contact-form .form-title h1{
+        text-shadow: .8px .8px .5px red;
+        font-size: 2.5rem;
+    }
+    #contact-section .contact-container .contact-form form{
+        padding: 5px;
+        gap: 15px;
+    }
+    #contact-section .contact-container .contact-form form label{
+        font-size: 1.5rem;
+    }
+    #contact-section .contact-container .contact-form button{
+        padding: 8px;
+        font-size: 1.8rem;
+    }
+    #input-field{
+        padding: 7px;
+        font-size: 1.2rem;
+    }
+    #input-field::placeholder{
+        font-size: 1.1rem;
+    }
+    }
 
 </style>
 {% endblock %}
