@@ -100,35 +100,246 @@ Yumyum Catering
         color: white;
         filter: brightness(110%);
     }
-
-    .badge-ribbon{
-        --size: 130px;
-        position: relative;
-        background: rgba(36, 36, 36);
-        height: var(--size);
-        width: var(--size);
-        border-radius: 70px;
-    }       
-    .badge-ribbon:before,
-    .badge-ribbon:after {
-        content: '';
-        position: absolute;
-        border-bottom: calc(var(--size) * 0.8) solid rgb(36, 36, 36);
-        border-left: calc(var(--size) * 0.4) solid transparent;
-        border-right: calc(var(--size) * 0.4) solid transparent;
-        top: calc(var(--size) * 0.7);
-        left: calc(var(--size) * -0.1);
-        transform: rotate(-140deg);
+    /*  */
+    @media(max-width: 1200px){
+    #catering-contents{
+        gap: 30px;
+        padding: 20px 80px;
     }
-    .badge-ribbon:after {
-        left: auto;
-        right: calc(var(--size) * -0.1);
-        transform: rotate(140deg);
+    #catering-contents .title{
+        margin-top: 140px;
     }
-    #cateringbody .underline-catering{
+    #catering-contents .title h1{
+        font-size: 5rem;
+        letter-spacing: 1.7px;
+    }
+    #catering-contents .title img{
+        width: 240px;
+    }
+    #cateringbody .underline-title{
         border-top: 3px solid red;
-        width: 80%;
-        margin: auto;
+        width: 30%;
+    }
+    #catering-contents .para{
+        padding: 10px 15px;
+    }
+    #catering-contents .para p{
+        font-size: 2rem;
+        line-height: 47px;
+    }
+    #catering-contents .para img{
+        width: 160px;
+    }
+    .catering-contact-container .catering-contact-container-title{
+        margin-top: 80px;
+    }
+    .catering-contact-container .catering-contact-container-title img{
+        width: 240px;
+    }
+    .catering-contact-container .catering-contact-container-title p{
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    .catering-contact-container .catering-contact{
+        margin-bottom: 100px;
+    }
+    .catering-contact-container .catering-contact a button{
+        font-size: 2.2rem;
+        padding: 15px 30px;
+        text-shadow: 2px 2px 1px black;
+    }
+    }
+    
+    @media(max-width: 768px){
+    #catering-contents{
+        gap: 20px;
+        padding: 20px 30px;
+    }
+    #catering-contents .title{
+        margin-top: 110px;
+    }
+    #catering-contents .title h1{
+        font-size: 4rem;
+        letter-spacing: 1.5px;
+    }
+    #catering-contents .title img{
+        width: 210px;
+    }
+    #cateringbody .underline-title{
+        border-top: 2px solid red;
+        width: 30%;
+    }
+    #catering-contents .para{
+        padding: 10px 10px;
+    }
+    #catering-contents .para p{
+        font-size: 1.8rem;
+        line-height: 38px;
+    }
+    #catering-contents .para img{
+        width: 130px;
+    }
+    .catering-contact-container .catering-contact-container-title{
+        margin-top: 20px;
+    }
+    .catering-contact-container .catering-contact-container-title img{
+        width: 200px;
+    }
+    .catering-contact-container .catering-contact-container-title p{
+        font-size: 2.1rem;
+        letter-spacing: 2px;
+    }
+    .catering-contact-container .catering-contact{
+        margin-bottom: 70px;
+    }
+    .catering-contact-container .catering-contact a button{
+        font-size: 2rem;
+        padding: 15px 30px;
+        text-shadow: 1.4px 1.4px 1px black;
+    }
+    }
+    @media(max-width: 640px){
+    #catering-contents{
+        gap: 20px;
+        padding: 20px 15px;
+    }
+    #catering-contents .title{
+        margin-top: 110px;
+    }
+    #catering-contents .title h1{
+        font-size: 3.2rem;
+        letter-spacing: 1.5px;
+    }
+    #catering-contents .title img{
+        width: 180px;
+    }
+    #cateringbody .underline-title{
+        border-top: 2px solid red;
+        width: 30%;
+        margin: -20px 0;
+    }
+    #catering-contents .para{
+        padding: 15px 10px;
+    }
+    #catering-contents .para p{
+        font-size: 1.6rem;
+        line-height: 35px;
+    }
+    #catering-contents .para img{
+        width: 115px;
+    }
+    .catering-contact-container .catering-contact-container-title{
+        margin-top: 20px;
+    }
+    .catering-contact-container .catering-contact-container-title img{
+        width: 180px;
+    }
+    .catering-contact-container .catering-contact-container-title p{
+        font-size: 2rem;
+        letter-spacing: 1.7px;
+    }
+    .catering-contact-container .catering-contact{
+        margin-bottom: 70px;
+    }
+    .catering-contact-container .catering-contact a button{
+        font-size: 2rem;
+        padding: 15px 30px;
+    }
+    }
+
+    @media(max-width: 485px){
+    #catering-contents{
+        gap: 20px;
+        padding: 20px 10px;
+    }
+    #catering-contents .title{
+        margin-top: 110px;
+    }
+    #catering-contents .title h1{
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+    }
+    #catering-contents .title img{
+        width: 150px;
+    }
+    #cateringbody .underline-title{
+        width: 30%;
+    }
+    #catering-contents .para{
+        padding: 17px 10px;
+    }
+    #catering-contents .para p{
+        font-size: 1.4rem;
+        line-height: 30px;
+    }
+    #catering-contents .para img{
+        width: 90px;
+    }
+    .catering-contact-container .catering-contact-container-title{
+        margin-top: 0px;
+    }
+    .catering-contact-container .catering-contact-container-title img{
+        width: 160px;
+    }
+    .catering-contact-container .catering-contact-container-title p{
+        font-size: 1.7rem;
+        letter-spacing: 1.7px;
+    }
+    .catering-contact-container .catering-contact{
+        margin-bottom: 70px;
+    }
+    .catering-contact-container .catering-contact a button{
+        font-size: 1.7rem;
+        padding: 10px 25px;
+        letter-spacing: .4px;
+    }
+    }
+
+    @media(max-width: 390px){
+    #catering-contents{
+        gap: 20px;
+        padding: 20px 10px;
+    }
+    #catering-contents .title{
+        margin-top: 110px;
+    }
+    #catering-contents .title h1{
+        font-size: 2.2rem;
+        letter-spacing: 1.5px;
+    }
+    #catering-contents .title img{
+        width: 140px;
+    }
+    #cateringbody .underline-title{
+        width: 30%;
+    }
+    #catering-contents .para{
+        padding: 17px 10px;
+    }
+    #catering-contents .para p{
+        font-size: 1.2rem;
+        line-height: 25px;
+    }
+    #catering-contents .para img{
+        width: 80px;
+    }
+    .catering-contact-container .catering-contact-container-title{
+        margin-top: 0px;
+    }
+    .catering-contact-container .catering-contact-container-title img{
+        width: 130px;
+    }
+    .catering-contact-container .catering-contact-container-title p{
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+    }
+    .catering-contact-container .catering-contact{
+        margin-bottom: 70px;
+    }
+    .catering-contact-container .catering-contact a button{
+        font-size: 1.5rem;
+        padding: 10px 25px;
+    }
     }
 </style>
 {% endblock %}
@@ -142,11 +353,9 @@ Yumyum Catering
             <div class="underline-title"></div>
         </div>
         <div class="para">
-            <p>Welcome to <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering service, where exceptional food meets unmatched hospitality. Whether you're planning an intimate gathering, a corporate function, or a lavish celebration, our dedicated team is here to enhance your experience with delicious cuisine and impeccable service. From thougthfully crafted menus to personalized attention to detail, we take pride in suprassing expectations and creating memorable moments for you and your guests. Count on us to cater your every need, allowing you to relax and enjoy the occassion while we handle all the details.</p>
+            <p>Welcome to <span><img src="{% static '/images/yumyum-logo.png' %}" alt=""></span> Catering service, where exceptional food meets unmatched hospitality. Whether you're planning an intimate gathering, a corporate function, or a lavish celebration, our dedicated team is here to enhance your experience with delicious cuisine and impeccable service. From thougthfully crafted menus to personalized attention to detail, we take pride in suprassing expectations and creating memorable moments for you and your guests. Count on us to cater your every need, allowing you to relax and enjoy the occasion while we handle all the details.</p>
         </div>
     </section>
-
-    <!-- <div class="underline-catering"></div> -->
 
     <div class="catering-contact-container">
         <div class="catering-contact-container-title">
