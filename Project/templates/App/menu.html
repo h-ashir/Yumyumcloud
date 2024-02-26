@@ -20,7 +20,6 @@ Menu
         margin: 80px 0px;
         border: 2px solid red;
     }
-
     #menu-header .menu-title-container{
         display: flex;
         flex-direction: column;
@@ -79,7 +78,7 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
-    #menu-section #starter .image{
+    #menu-section .image{
         background: fixed;
         background-size: contain;
         background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/starter-bg.jpg' %}");
@@ -88,14 +87,14 @@ Menu
         justify-content: center;
         align-items: center;
     }
-    #menu-section #starter .image h1{
+    #menu-section .image h1{
         font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
     }
 
-    #menu-section #starter .content{
+    #menu-section .content{
         background: rgb(27,27,26);
         background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
         grid-column: 2;
@@ -104,19 +103,19 @@ Menu
         padding: 40px 25px;
         position: relative;
     }
-    #menu-section #starter .content .content-para p{
+    #menu-section .content .content-para p{
         font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
     }
-    #menu-section #starter .content ul{
+    #menu-section .content ul{
         margin: 35px 0;
         display: flex;
         flex-direction: column;
         gap: 25px;
     }
-    #menu-section #starter .content ul li{
+    #menu-section .content ul li{
         font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
@@ -127,7 +126,7 @@ Menu
         background-size: 25px;
         background-position: left center;
     }
-    #menu-section #starter .round{
+    #menu-section .round{
         width: 120px;
         height: 120px;
         background-color: rgba(112, 109, 109, 0.226); 
@@ -157,59 +156,6 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
-    #menu-section #burger .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/burger-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #burger .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #burger .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #burger .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #burger .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #burger .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #burger .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
-    }
     #menu-section #burger .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -228,64 +174,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* sandwich */    
     #menu-section #sandwich{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #sandwich .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/sandwich-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #sandwich .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #sandwich .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #sandwich .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #sandwich .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #sandwich .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #sandwich .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #sandwich .round-1{
         border-top-left-radius: 50%;
@@ -305,65 +197,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* wrap */
-    
     #menu-section #wrap{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #wrap .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/wrap-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #wrap .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #wrap .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #wrap .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #wrap .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #wrap .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #wrap .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #wrap .round-1{
         border-top-left-radius: 50%;
@@ -383,65 +220,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* pasta */
-    
     #menu-section #pasta{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #pasta .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/pasta-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #pasta .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #pasta .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #pasta .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #pasta .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #pasta .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #pasta .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #pasta .round-1{
         border-top-left-radius: 50%;
@@ -461,64 +243,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
-    /* sundae */    
+    /* sundae */
     #menu-section #sundae{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #sundae .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/sundae-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #sundae .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #sundae .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #sundae .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #sundae .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #sundae .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #sundae .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #sundae .round-1{
         border-top-left-radius: 50%;
@@ -538,64 +266,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* falooda */
     #menu-section #falooda{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #falooda .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/falooda-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #falooda .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #falooda .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #falooda .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #falooda .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #falooda .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #falooda .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #falooda .round-1{
         border-top-left-radius: 50%;
@@ -615,65 +289,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* freak-shake */
-    
     #menu-section #freak-shake{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #freak-shake .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/oreo-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #freak-shake .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #freak-shake .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #freak-shake .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #freak-shake .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #freak-shake .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #freak-shake .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #freak-shake .round-1{
         border-top-left-radius: 50%;
@@ -693,64 +312,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* mojito */
     #menu-section #mojito{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #mojito .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/mojito-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #mojito .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #mojito .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #mojito .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #mojito .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #mojito .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #mojito .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #mojito .round-1{
         border-top-left-radius: 50%;
@@ -770,65 +335,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* fresh-juice */
-    
     #menu-section #fresh-juice{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #menu-section #fresh-juice .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/fresh-juice-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-section #fresh-juice .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #menu-section #fresh-juice .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #menu-section #fresh-juice .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #menu-section #fresh-juice .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #menu-section #fresh-juice .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #menu-section #fresh-juice .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #menu-section #fresh-juice .round-1{
         border-top-left-radius: 50%;
@@ -848,13 +358,11 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-    
     /* South indian food */
     #south-indian-food-section .underline{
         margin: 80px 0px;
         border: 2px solid red;
     }
-
     #south-indian-food-header{
         background: fixed;
         background-size: cover;
@@ -910,7 +418,7 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
-    #south-indian-food-section #biriyani .image{
+    #south-indian-food-section .image{
         background: fixed;
         background-size: contain;
         background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/biriyani-bg.jpg' %}");
@@ -919,14 +427,13 @@ Menu
         justify-content: center;
         align-items: center;
     }
-    #south-indian-food-section #biriyani .image h1{
+    #south-indian-food-section .image h1{
         font-size: 10rem;
         color: yellow;
         font-family: "Gabriela", serif;
         text-shadow: 3px 3px 1px black;
     }
-
-    #south-indian-food-section #biriyani .content{
+    #south-indian-food-section .content{
         background: rgb(27,27,26);
         background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
         grid-column: 2;
@@ -935,19 +442,19 @@ Menu
         padding: 40px 25px;
         position: relative;
     }
-    #south-indian-food-section #biriyani .content .content-para p{
+    #south-indian-food-section .content .content-para p{
         font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
         line-height: 50px;
     }
-    #south-indian-food-section #biriyani .content ul{
+    #south-indian-food-section .content ul{
         margin: 35px 0;
         display: flex;
         flex-direction: column;
         gap: 25px;
     }
-    #south-indian-food-section #biriyani .content ul li{
+    #south-indian-food-section .content ul li{
         font-size: 2.2rem;
         color: white;
         text-shadow: 2px 2px 1px black;
@@ -958,7 +465,7 @@ Menu
         background-size: 25px;
         background-position: left center;
     }
-    #south-indian-food-section #biriyani .round{
+    #south-indian-food-section .round{
         width: 120px;
         height: 120px;
         background-color: rgba(112, 109, 109, 0.226); 
@@ -987,59 +494,6 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
-    #south-indian-food-section #bread .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/bread-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #south-indian-food-section #bread .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #south-indian-food-section #bread .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #south-indian-food-section #bread .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #south-indian-food-section #bread .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #south-indian-food-section #bread .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #south-indian-food-section #bread .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
-    }
     #south-indian-food-section #bread .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -1064,59 +518,6 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
-    #south-indian-food-section #beef .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/beef-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #south-indian-food-section #beef .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #south-indian-food-section #beef .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #south-indian-food-section #beef .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #south-indian-food-section #beef .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #south-indian-food-section #beef .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #south-indian-food-section #beef .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
-    }
     #south-indian-food-section #beef .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -1135,64 +536,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* chicken */
     #south-indian-food-section #chicken{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #south-indian-food-section #chicken .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/chicken-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #south-indian-food-section #chicken .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #south-indian-food-section #chicken .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #south-indian-food-section #chicken .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #south-indian-food-section #chicken .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #south-indian-food-section #chicken .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #south-indian-food-section #chicken .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #south-indian-food-section #chicken .round-1{
         border-top-left-radius: 50%;
@@ -1212,64 +559,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* fish */
     #south-indian-food-section #fish{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #south-indian-food-section #fish .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/fish-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #south-indian-food-section #fish .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #south-indian-food-section #fish .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #south-indian-food-section #fish .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #south-indian-food-section #fish .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #south-indian-food-section #fish .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #south-indian-food-section #fish .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #south-indian-food-section #fish .round-1{
         border-top-left-radius: 50%;
@@ -1289,64 +582,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* vegetarian */
     #south-indian-food-section #vegetarian{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #south-indian-food-section #vegetarian .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/vegetarian-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #south-indian-food-section #vegetarian .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #south-indian-food-section #vegetarian .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #south-indian-food-section #vegetarian .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #south-indian-food-section #vegetarian .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #south-indian-food-section #vegetarian .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #south-indian-food-section #vegetarian .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #south-indian-food-section #vegetarian .round-1{
         border-top-left-radius: 50%;
@@ -1366,64 +605,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* waffle */
     #south-indian-food-section #waffle{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #south-indian-food-section #waffle .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/waffle-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #south-indian-food-section #waffle .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #south-indian-food-section #waffle .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #south-indian-food-section #waffle .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #south-indian-food-section #waffle .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #south-indian-food-section #waffle .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #south-indian-food-section #waffle .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #south-indian-food-section #waffle .round-1{
         border-top-left-radius: 50%;
@@ -1443,64 +628,10 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* beverage */
     #south-indian-food-section #beverage{
         display: grid;
         grid-template-columns: .85fr 1fr;
-    }
-    #south-indian-food-section #beverage .image{
-        background: fixed;
-        background-size: contain;
-        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/beverage-bg.jpg' %}");
-        grid-column: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #south-indian-food-section #beverage .image h1{
-        font-size: 10rem;
-        color: yellow;
-        font-family: "Gabriela", serif;
-        text-shadow: 3px 3px 1px black;
-    }
-
-    #south-indian-food-section #beverage .content{
-        background: rgb(27,27,26);
-        background: linear-gradient(125deg, rgba(27,27,26,1) 30%, rgba(38,38,38,1) 67%);
-        grid-column: 2;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans-serif;
-        padding: 40px 25px;
-        position: relative;
-    }
-    #south-indian-food-section #beverage .content .content-para p{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        line-height: 50px;
-    }
-    #south-indian-food-section #beverage .content ul{
-        margin: 35px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    #south-indian-food-section #beverage .content ul li{
-        font-size: 2.2rem;
-        color: white;
-        text-shadow: 2px 2px 1px black;
-        list-style: none;
-        padding-left: 40px;
-        background-image: url("{% static '/images/food-icon.png' %}");
-        background-repeat: no-repeat;
-        background-size: 25px;
-        background-position: left center;
-    }
-    #south-indian-food-section #beverage .round{
-        width: 120px;
-        height: 120px;
-        background-color: rgba(112, 109, 109, 0.226); 
     }
     #south-indian-food-section #beverage .round-1{
         border-top-left-radius: 50%;
