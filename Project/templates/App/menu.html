@@ -53,7 +53,7 @@ Menu
     #menu-header #display-menu .menu-item{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         gap: 80px;
     }
@@ -78,7 +78,7 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
-    #menu-section .image{
+    #menu-section #starter .image{
         background: fixed;
         background-size: contain;
         background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/starter-bg.jpg' %}");
@@ -149,12 +149,19 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
     /* burger */
-    
     #menu-section #burger{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #burger .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/burger-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #menu-section #burger .round-1{
         border-top-left-radius: 50%;
@@ -179,6 +186,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #menu-section #sandwich .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/sandwich-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #menu-section #sandwich .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -201,6 +217,15 @@ Menu
     #menu-section #wrap{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #wrap .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/wrap-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #menu-section #wrap .round-1{
         border-top-left-radius: 50%;
@@ -225,6 +250,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #menu-section #pasta .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/pasta-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #menu-section #pasta .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -247,6 +281,15 @@ Menu
     #menu-section #sundae{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #sundae .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/sundae-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #menu-section #sundae .round-1{
         border-top-left-radius: 50%;
@@ -271,6 +314,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #menu-section #falooda .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/falooda-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #menu-section #falooda .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -293,6 +345,15 @@ Menu
     #menu-section #freak-shake{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #freak-shake .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/oreo-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #menu-section #freak-shake .round-1{
         border-top-left-radius: 50%;
@@ -317,6 +378,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #menu-section #mojito .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/mojito-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #menu-section #mojito .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -339,6 +409,15 @@ Menu
     #menu-section #fresh-juice{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #fresh-juice .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/fresh-juice-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #menu-section #fresh-juice .round-1{
         border-top-left-radius: 50%;
@@ -381,6 +460,7 @@ Menu
         color: white;
         text-shadow: 5px 5px 1px black;
         font-family: "Dancing Script", cursive;
+        text-align: center;
     }
     #south-indian-food-header #display-south-indian-menu{
         margin-top: 350px;
@@ -392,7 +472,7 @@ Menu
         margin-bottom: 100px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         gap: 80px;
     }
@@ -412,13 +492,12 @@ Menu
     #south-indian-food-header #display-south-indian-menu .menu-item a:hover{
         color: orangered;
     }
-
     /* biriyani */
     #south-indian-food-section #biriyani{
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
-    #south-indian-food-section .image{
+    #south-indian-food-section #biriyani .image{
         background: fixed;
         background-size: contain;
         background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/biriyani-bg.jpg' %}");
@@ -488,11 +567,19 @@ Menu
         right: 5%;
         transform: translate(-50%, -50%);
     }
-
         /* bread */
     #south-indian-food-section #bread{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #bread .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/bread-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #south-indian-food-section #bread .round-1{
         border-top-left-radius: 50%;
@@ -518,6 +605,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #south-indian-food-section #beef .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/beef-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #south-indian-food-section #beef .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -540,6 +636,15 @@ Menu
     #south-indian-food-section #chicken{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #chicken .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/chicken-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #south-indian-food-section #chicken .round-1{
         border-top-left-radius: 50%;
@@ -564,6 +669,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #south-indian-food-section #fish .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/fish-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #south-indian-food-section #fish .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -586,6 +700,15 @@ Menu
     #south-indian-food-section #vegetarian{
         display: grid;
         grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #vegetarian .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/vegetarian-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #south-indian-food-section #vegetarian .round-1{
         border-top-left-radius: 50%;
@@ -610,6 +733,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #south-indian-food-section #waffle .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/waffle-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #south-indian-food-section #waffle .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -633,6 +765,15 @@ Menu
         display: grid;
         grid-template-columns: .85fr 1fr;
     }
+    #south-indian-food-section #beverage .image{
+        background: fixed;
+        background-size: contain;
+        background-image: linear-gradient(45deg,rgba(17, 17, 17, 0.300), rgba(0, 0, 0, 0.300)),url("{% static '/images/beverage-bg.jpg' %}");
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #south-indian-food-section #beverage .round-1{
         border-top-left-radius: 50%;
         border-top-right-radius: 90%;
@@ -650,6 +791,1241 @@ Menu
         top: 35%;
         right: 5%;
         transform: translate(-50%, -50%);
+    }
+    @media(max-width: 1200px){
+    #menu-section .underline{
+        margin: 80px 0px;
+        border: 2px solid red;
+    }
+    #menu-header .menu-title-container{
+        gap: 100px;
+    }
+    #menu-header .menu-title-container .menu-title h1{
+        margin-top: 200px;
+        font-size: 10rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #menu-header .menu-title-container .menu-quote p{
+        font-size: 4rem;
+        text-shadow: 2px 2px 1px black;
+        letter-spacing: 1.5px;
+    }
+    #menu-header #display-menu{
+        margin-top: 250px;
+        padding: 20px;
+    }
+    #menu-header #display-menu .menu-item{
+        gap: 50px;
+    }
+    #menu-header #display-menu .menu-item li{
+        border-right: 3px solid red;
+        padding-right: 70px;
+    }
+    #menu-header #display-menu .menu-item a{
+        font-size: 3.5rem;
+    }
+    #menu-section #starter{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section .image h1{
+        font-size: 8.4rem;
+    }
+    #menu-section .content{
+        padding: 40px 20px;
+    }
+    #menu-section .content .content-para p{
+        font-size: 2rem;
+        text-shadow: 2px 2px 1px black;
+        line-height: 42px;
+    }
+    #menu-section .content ul{
+        margin: 30px 0;
+        gap: 20px;
+    }
+    #menu-section .content ul li{
+        font-size: 2rem;
+        padding-left: 35px;
+        background-size: 24px;
+    }
+    #menu-section .round{
+        width: 120px;
+        height: 120px;
+    }
+    #menu-section #starter .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #starter .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* burger */    
+    #menu-section #burger{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #burger .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #burger .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* sandwich */    
+    #menu-section #sandwich{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #sandwich .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #sandwich .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* wrap */
+    #menu-section #wrap{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #wrap .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #wrap .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* pasta */
+    #menu-section #pasta{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #pasta .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #pasta .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* sundae */
+    #menu-section #sundae{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #sundae .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #sundae .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* falooda */
+    #menu-section #falooda{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #falooda .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #falooda .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* freak-shake */
+    #menu-section #freak-shake{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #freak-shake .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #freak-shake .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* mojito */
+    #menu-section #mojito{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #mojito .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #mojito .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* fresh-juice */
+    #menu-section #fresh-juice{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #menu-section #fresh-juice .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #menu-section #fresh-juice .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* South indian food */
+    #south-indian-food-section .underline{
+        margin: 80px 0px;
+        border: 2px solid red;
+    }
+    #south-indian-food-header .title-container h1{
+        margin-top: 250px;
+        font-size: 13rem;
+        text-shadow: 5px 5px 1px black;
+    }
+    #south-indian-food-header #display-south-indian-menu{
+        margin-top: 350px;
+        padding: 50px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item{
+        margin-bottom: 100px;
+        justify-content: space-evenly;
+        gap: 80px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li{
+        border-right: 4px solid red;
+        padding-right: 70px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a{
+        font-size: 4rem;
+    }
+    /* biriyani */
+    #south-indian-food-section .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section .image h1{
+        font-size: 10rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #south-indian-food-section .content{
+        padding: 40px 25px;
+    }
+    #south-indian-food-section .content .content-para p{
+        font-size: 2.2rem;
+        text-shadow: 2px 2px 1px black;
+        line-height: 50px;
+    }
+    #south-indian-food-section .content ul{
+        margin: 35px 0;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #south-indian-food-section .content ul li{
+        font-size: 2.2rem;
+        text-shadow: 2px 2px 1px black;
+        padding-left: 40px;
+        background-size: 25px;
+    }
+    #south-indian-food-section .round{
+        width: 120px;
+        height: 120px;
+        background-color: rgba(112, 109, 109, 0.226); 
+    }
+    #south-indian-food-section #biriyani{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #biriyani .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #biriyani .round-2{
+        top: 35%;
+        right: 5%;
+    }
+        /* bread */
+    #south-indian-food-section #bread{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #bread .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #bread .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* beef */
+    #south-indian-food-section #beef{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #beef .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #beef .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* chicken */
+    #south-indian-food-section #chicken{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #chicken .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #chicken .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* fish */
+    #south-indian-food-section #fish{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #fish .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #fish .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* vegetarian */
+    #south-indian-food-section #vegetarian{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #vegetarian .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #vegetarian .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* waffle */
+    #south-indian-food-section #waffle{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #waffle .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #waffle .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    /* beverage */
+    #south-indian-food-section #beverage{
+        display: grid;
+        grid-template-columns: .85fr 1fr;
+    }
+    #south-indian-food-section #beverage .round-1{
+        top: 80%;
+        left: 50%;
+    }
+    #south-indian-food-section #beverage .round-2{
+        top: 35%;
+        right: 5%;
+    }
+    }
+
+    @media(max-width: 875px){
+    #menu-header .menu-title-container{
+        gap: 100px;
+    }
+    #menu-header .menu-title-container .menu-title h1{
+        margin-top: 200px;
+        font-size: 8rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #menu-header .menu-title-container .menu-quote p{
+        font-size: 3.6rem;
+    }
+    #menu-header #display-menu{
+        margin-top: 250px;
+        padding: 0px;
+    }
+    #menu-header #display-menu .menu-item{
+        gap: 40px;
+    }
+    #menu-header #display-menu .menu-item li{
+        padding-right: 40px;
+    }
+    #menu-header #display-menu .menu-item a{
+        font-size: 3.2rem;
+    }
+    #menu-section #starter{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #starter .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    #menu-section .image h1{
+        font-size: 8rem;
+    }
+    #menu-section .content{
+        padding: 40px 100px;
+    }
+    #menu-section .content .content-para p{
+        font-size: 2rem;
+        line-height: 42px;
+        text-align: justify;
+    }
+    #menu-section .content ul{
+        margin: 25px 0;
+        gap: 20px;
+    }
+    #menu-section .content ul li{
+        font-size: 2rem;
+        padding-left: 35px;
+        background-size: 24px;
+    }
+    /* burger */    
+    #menu-section #burger{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #burger .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* sandwich */    
+    #menu-section #sandwich{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #sandwich .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* wrap */
+    #menu-section #wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #wrap .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* pasta */
+    #menu-section #pasta{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #pasta .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* sundae */
+    #menu-section #sundae{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #sundae .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* falooda */
+    #menu-section #falooda{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #falooda .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* freak-shake */
+    #menu-section #freak-shake{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #freak-shake .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* mojito */
+    #menu-section #mojito{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #mojito .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* fresh-juice */
+    #menu-section #fresh-juice{
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-section #fresh-juice .image{
+        height: 70vh;
+        background-size: cover;
+    }
+    /* South indian food */
+    #south-indian-food-section .underline{
+        margin: 80px 0px;
+        border: 2px solid red;
+    }
+    #south-indian-food-header .title-container h1{
+        margin-top: 250px;
+        font-size: 8rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #south-indian-food-header #display-south-indian-menu{
+        margin-top: 250px;
+        padding: 0px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item{
+        margin-bottom: 0px;
+        justify-content: space-evenly;
+        gap: 40px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li{
+        border-right: 3px solid red;
+        padding-right: 70px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a{
+        font-size: 3.2rem;
+    }
+    /* biriyani */
+    #south-indian-food-section .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #south-indian-food-section .image h1{
+        font-size: 8rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #south-indian-food-section .content{
+        padding: 40px 100px;
+    }
+    #south-indian-food-section .content .content-para p{
+        font-size: 2rem;
+        line-height: 42px;
+        text-align: justify;
+    }
+    #south-indian-food-section .content ul{
+        margin: 30px 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #south-indian-food-section .content ul li{
+        font-size: 2rem;
+        text-shadow: 2px 2px 1px black;
+        padding-left: 40px;
+        background-size: 24px;
+    }
+    #south-indian-food-section #biriyani{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #biriyani .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    /* bread */
+    #south-indian-food-section #bread{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #bread .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    /* beef */
+    #south-indian-food-section #beef{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #beef .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    /* chicken */
+    #south-indian-food-section #chicken{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #chicken .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    /* fish */
+    #south-indian-food-section #fish{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #fish .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    /* vegetarian */
+    #south-indian-food-section #vegetarian{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #vegetarian .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    /* waffle */
+    #south-indian-food-section #waffle{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #waffle .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    /* beverage */
+    #south-indian-food-section #beverage{
+        display: flex;
+        flex-direction: column;
+    }
+    #south-indian-food-section #beverage .image{
+        background-size: cover;
+        height: 75vh;
+    }
+    }
+
+    @media(max-width: 768px){
+    #menu-header .menu-title-container{
+        gap: 100px;
+    }
+    #menu-header .menu-title-container .menu-title h1{
+        margin-top: 200px;
+        font-size: 7rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #menu-header .menu-title-container .menu-quote p{
+        font-size: 3.2rem;
+    }
+    #menu-header #display-menu{
+        margin-top: 200px;
+        padding: 0px;
+    }
+    #menu-header #display-menu .menu-item{
+        gap: 20px;
+    }
+    #menu-header #display-menu .menu-item li{
+        padding-right: 20px;
+    }
+    #menu-header #display-menu .menu-item a{
+        font-size: 2.6rem;
+    }
+    #menu-section #starter .image{
+        height: 65vh;
+        background-position: center;
+    }
+    #menu-section .image h1{
+        font-size: 7rem;
+    }
+    #menu-section .content{
+        padding: 40px 60px;
+    }
+    #menu-section .content .content-para p{
+        font-size: 1.85rem;
+        line-height: 38px;
+    }
+    #menu-section .content ul{
+        margin: 25px 0;
+        gap: 15px;
+    }
+    #menu-section .content ul li{
+        font-size: 1.85rem;
+        padding-left: 35px;
+        background-size: 22px;
+    }
+    /* burger */    
+    #menu-section #burger .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* sandwich */    
+    #menu-section #sandwich .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* wrap */
+    #menu-section #wrap .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* pasta */
+    #menu-section #pasta .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* sundae */
+    #menu-section #sundae .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* falooda */
+    #menu-section #falooda .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* freak-shake */
+    #menu-section #freak-shake .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* mojito */
+    #menu-section #mojito .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* fresh-juice */
+    #menu-section #fresh-juice .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* South indian food */
+    #south-indian-food-section .underline{
+        margin: 60px 0px;
+        border: 2px solid red;
+    }
+    #south-indian-food-header .title-container h1{
+        margin-top: 250px;
+        font-size: 7rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #south-indian-food-header #display-south-indian-menu{
+        margin-top: 200px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item{
+        margin-bottom: 0px;
+        gap: 20px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li{
+        border-right: 3px solid red;
+        padding-right: 40px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a{
+        font-size: 3.2rem;
+    }
+    /* biriyani */
+    #south-indian-food-section .image h1{
+        font-size: 7rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #south-indian-food-section .content{
+        padding: 40px 60px;
+    }
+    #south-indian-food-section .content .content-para p{
+        font-size: 2rem;
+        line-height: 38px;
+    }
+    #south-indian-food-section .content ul{
+        margin: 25px 0;
+        gap: 15px;
+    }
+    #south-indian-food-section .content ul li{
+        font-size: 1.85rem;
+        text-shadow: 2px 2px 1px black;
+        padding-left: 35px;
+        background-size: 22px;
+    }
+    #south-indian-food-section #biriyani .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* bread */
+    #south-indian-food-section #bread .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* beef */
+    #south-indian-food-section #beef .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* chicken */
+    #south-indian-food-section #chicken .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* fish */
+    #south-indian-food-section #fish .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* vegetarian */
+    #south-indian-food-section #vegetarian .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* waffle */
+    #south-indian-food-section #waffle .image{
+        height: 65vh;
+        background-position: center;
+    }
+    /* beverage */
+    #south-indian-food-section #beverage .image{
+        height: 65vh;
+        background-position: center;
+    }
+    }
+
+    @media(max-width: 648px){
+    #menu-header .menu-title-container{
+        gap: 100px;
+    }
+    #menu-header .menu-title-container .menu-title h1{
+        margin-top: 200px;
+        font-size: 5.5rem;
+    }
+    #menu-header .menu-title-container .menu-quote p{
+        font-size: 3rem;
+    }
+    #menu-header #display-menu{
+        margin-top: 230px;
+    }
+    #menu-header #display-menu .menu-item{
+        gap: 20px;
+    }
+    #menu-header #display-menu .menu-item li{
+        padding-right: 18px;
+    }
+    #menu-header #display-menu .menu-item a{
+        font-size: 2.4rem;
+    }
+    #menu-section .underline{
+        margin: 50px 0;
+    }
+    #menu-section #starter .image{
+        height: 65vh;
+    }
+    #menu-section .image h1{
+        font-size: 6rem;
+    }
+    #menu-section .content{
+        padding: 30px 30px;
+    }
+    #menu-section .content .content-para p{
+        font-size: 1.7rem;
+        line-height: 35px;
+    }
+    #menu-section .content ul{
+        margin: 25px 0;
+        gap: 15px;
+    }
+    #menu-section .content ul li{
+        font-size: 1.7rem;
+        padding-left: 35px;
+        background-size: 20px;
+    }
+    /* burger */    
+    #menu-section #burger .image{
+        height: 65vh;
+    }
+    /* sandwich */    
+    #menu-section #sandwich .image{
+        height: 65vh;
+    }
+    /* wrap */
+    #menu-section #wrap .image{
+        height: 65vh;
+    }
+    /* pasta */
+    #menu-section #pasta .image{
+        height: 65vh;
+    }
+    /* sundae */
+    #menu-section #sundae .image{
+        height: 65vh;
+    }
+    /* falooda */
+    #menu-section #falooda .image{
+        height: 65vh;
+    }
+    /* freak-shake */
+    #menu-section #freak-shake .image{
+        height: 65vh;
+    }
+    /* mojito */
+    #menu-section #mojito .image{
+        height: 65vh;
+    }
+    /* fresh-juice */
+    #menu-section #fresh-juice .image{
+        height: 65vh;
+    }
+    /* South indian food */
+    #south-indian-food-section .underline{
+        margin: 60px 0px;
+        border: 2px solid red;
+    }
+    #south-indian-food-header .title-container h1{
+        margin-top: 250px;
+        font-size: 5.5rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #south-indian-food-header #display-south-indian-menu{
+        margin-top: 200px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item{
+        margin-bottom: 0px;
+        gap: 20px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li{
+        border-right: 3px solid red;
+        padding-right: 18px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a{
+        font-size: 2.4rem;
+    }
+    #south-indian-food-section .image h1{
+        font-size: 6rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #south-indian-food-section .content{
+        padding: 30px 30px;
+    }
+    #south-indian-food-section .content .content-para p{
+        font-size: 1.7rem;
+        line-height: 35px;
+    }
+    #south-indian-food-section .content ul{
+        margin: 25px 0;
+        gap: 15px;
+    }
+    #south-indian-food-section .content ul li{
+        font-size: 1.7rem;
+        text-shadow: 2px 2px 1px black;
+        padding-left: 35px;
+        background-size: 22px;
+    }
+    #south-indian-food-section #biriyani .image{
+        height: 65vh;
+    }
+    #south-indian-food-section #bread .image{
+        height: 65vh;
+    }
+    #south-indian-food-section #beef .image{
+        height: 65vh;
+    }
+    #south-indian-food-section #chicken .image{
+        height: 65vh;
+    }
+    #south-indian-food-section #fish .image{
+        height: 65vh;
+    }
+    #south-indian-food-section #vegetarian .image{
+        height: 65vh;
+    }
+    #south-indian-food-section #waffle .image{
+        height: 65vh;
+    }
+    #south-indian-food-section #beverage .image{
+        height: 65vh;
+    }
+    }
+
+    @media(max-width: 485px){
+    #menu-header .menu-title-container{
+        gap: 100px;
+    }
+    #menu-section .underline{
+        margin: 40px 0;
+    }
+    #menu-header .menu-title-container .menu-title h1{
+        margin-top: 200px;
+        font-size: 5rem;
+    }
+    #menu-header .menu-title-container .menu-quote p{
+        font-size: 2.5rem;
+    }
+    #menu-header #display-menu{
+        margin-top: 230px;
+    }
+    #menu-header #display-menu .menu-item{
+        gap: 25px;
+    }
+    #menu-header #display-menu .menu-item li{
+        padding-right: 20px;
+    }
+    #menu-header #display-menu .menu-item a{
+        font-size: 2rem;
+    }
+    #menu-section #starter .image{
+        height: 60vh;
+    }
+    #menu-section .image h1{
+        font-size: 5.5rem;
+    }
+    #menu-section .content{
+        padding: 25px 25px;
+    }
+    #menu-section .content .content-para p{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    #menu-section .content ul{
+        gap: 10px;
+    }
+    #menu-section .content ul li{
+        font-size: 1.5rem;
+        padding-left: 35px;
+        background-size: 20px;
+    }
+    #menu-section #burger .image{
+        height: 60vh;
+    }
+    #menu-section #sandwich .image{
+        height: 60vh;
+    }
+    #menu-section #wrap .image{
+        height: 60vh;
+    }
+    #menu-section #pasta .image{
+        height: 60vh;
+    }
+    #menu-section #sundae .image{
+        height: 60vh;
+    }
+    #menu-section #falooda .image{
+        height: 60vh;
+    }
+    #menu-section #freak-shake .image{
+        height: 60vh;
+    }
+    #menu-section #mojito .image{
+        height: 60vh;
+    }
+    #menu-section #fresh-juice .image{
+        height: 60vh;
+    }
+    /* South indian food */
+    #south-indian-food-section .underline{
+        margin: 40px 0px;
+        border: 2px solid red;
+    }
+    #south-indian-food-header .title-container h1{
+        margin-top: 250px;
+        font-size: 7rem;
+        text-shadow: 4px 4px 1px black;
+    }
+    #south-indian-food-header #display-south-indian-menu{
+        margin-top: 200px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item{
+        margin-bottom: 0px;
+        gap: 20px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li{
+        border-right: 3px solid red;
+        padding-right: 18px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a{
+        font-size: 2rem;
+    }
+    #south-indian-food-section .image h1{
+        font-size: 5rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #south-indian-food-section .content{
+        padding: 25px 25px;
+    }
+    #south-indian-food-section .content .content-para p{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    #south-indian-food-section .content ul{
+        margin: 25px 0;
+        gap: 10px;
+    }
+    #south-indian-food-section .content ul li{
+        font-size: 1.5rem;
+        padding-left: 35px;
+        background-size: 20px;
+    }
+    #south-indian-food-section #biriyani .image{
+        height: 60vh;
+    }
+    #south-indian-food-section #bread .image{
+        height: 60vh;
+    }
+    #south-indian-food-section #beef .image{
+        height: 60vh;
+    }
+    #south-indian-food-section #chicken .image{
+        height: 60vh;
+    }
+    #south-indian-food-section #fish .image{
+        height: 60vh;
+    }
+    #south-indian-food-section #vegetarian .image{
+        height: 60vh;
+    }
+    #south-indian-food-section #waffle .image{
+        height: 60vh;
+    }
+    #south-indian-food-section #beverage .image{
+        height: 60vh;
+    }
+    }
+
+    @media(max-width: 390px){
+    #menu-header .menu-title-container{
+        gap: 100px;
+    }
+    #menu-section .underline{
+        margin: 30px 0;
+    }
+    #menu-header .menu-title-container .menu-title h1{
+        margin-top: 230px;
+        font-size: 4.2rem;
+    }
+    #menu-header .menu-title-container .menu-quote p{
+        font-size: 2.2rem;
+    }
+    #menu-header #display-menu{
+        margin-top: 230px;
+    }
+    #menu-header #display-menu .menu-item{
+        gap: 26px;
+    }
+    #menu-header #display-menu .menu-item li{
+        padding-right: 20px;
+    }
+    #menu-header #display-menu .menu-item a{
+        font-size: 1.85rem;
+    }
+    #menu-section #starter .image{
+        height: 50vh;
+    }
+    #menu-section .image h1{
+        font-size: 5.1rem;
+    }
+    #menu-section .content{
+        padding: 25px 20px;
+    }
+    #menu-section .content .content-para p{
+        font-size: 1.35rem;
+        line-height: 27px;
+    }
+    #menu-section .content ul{
+        gap: 6px;
+    }
+    #menu-section .content ul li{
+        font-size: 1.3rem;
+        padding-left: 35px;
+        background-size: 15px;
+    }
+    #menu-section #burger .image{
+        height: 50vh;
+    }
+    #menu-section #sandwich .image{
+        height: 50vh;
+    }
+    #menu-section #wrap .image{
+        height: 50vh;
+    }
+    #menu-section #pasta .image{
+        height: 50vh;
+    }
+    #menu-section #sundae .image{
+        height: 50vh;
+    }
+    #menu-section #falooda .image{
+        height: 50vh;
+    }
+    #menu-section #freak-shake .image{
+        height: 50vh;
+    }
+    #menu-section #mojito .image{
+        height: 50vh;
+    }
+    #menu-section #fresh-juice .image{
+        height: 50vh;
+    }
+    /* South indian food */
+    #south-indian-food-section .underline{
+        margin: 30px 0px;
+    }
+    #south-indian-food-header .title-container h1{
+        margin-top: 250px;
+        font-size: 5.5rem;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item{
+        margin-bottom: 0px;
+        gap: 24px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item li{
+        padding-right: 18px;
+    }
+    #south-indian-food-header #display-south-indian-menu .menu-item a{
+        font-size: 1.85rem;
+    }
+    /* biriyani */
+    #south-indian-food-section .image h1{
+        font-size: 5rem;
+        text-shadow: 3px 3px 1px black;
+    }
+    #south-indian-food-section .content{
+        padding: 25px 25px;
+    }
+    #south-indian-food-section .content .content-para p{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    #south-indian-food-section .content ul{
+        margin: 25px 0;
+        gap: 10px;
+    }
+    #south-indian-food-section .content ul li{
+        font-size: 1.5rem;
+        background-size: 20px;
+    }
+    #south-indian-food-section #biriyani .image{
+        height: 50vh;
+    }
+    /* bread */
+    #south-indian-food-section #bread .image{
+        height: 50vh;
+    }
+    /* beef */
+    #south-indian-food-section #beef .image{
+        height: 50vh;
+    }
+    /* chicken */
+    #south-indian-food-section #chicken .image{
+        height: 50vh;
+    }
+    /* fish */
+    #south-indian-food-section #fish .image{
+        height: 50vh;
+    }
+    /* vegetarian */
+    #south-indian-food-section #vegetarian .image{
+        height: 50vh;
+    }
+    /* waffle */
+    #south-indian-food-section #waffle .image{
+        height: 50vh;
+    }
+    /* beverage */
+    #south-indian-food-section #beverage .image{
+        height: 50vh;
+    }
     }
 </style>
 {% endblock %}
