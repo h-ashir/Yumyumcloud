@@ -11,7 +11,6 @@ Photos
 #photobody{
     background-color: black;
 }
-
 #photobody #photo-head{
     background: fixed;
     background-size: cover;
@@ -74,6 +73,7 @@ Photos
     color: white;
     text-shadow: 1px 1px 1px black;
     line-height: 55px;
+    text-align: justify;
 }
 #photo-head .photo-para-container .photo-para .top-1{
     position: absolute;
@@ -108,13 +108,6 @@ Photos
     height: 100px;
     background-color: red;
 }
-
-
-
-
-
-
-
 #photobody .gallery-container{
     background: rgb(24, 24, 24);
     background: linear-gradient(125deg, rgb(22, 22, 22) 30%, rgb(15, 15, 15) 67%);
@@ -124,10 +117,9 @@ Photos
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
-    /* padding-bottom: 100px; */
+    padding-bottom: 100px;
 }
 #photobody .gallery-item{
-    /* margin-top: 100px; */
     height: 550px;
     width: 350px;
     border: 7px solid #860000;
@@ -192,7 +184,176 @@ Photos
 .lightbox-next{
     right: 0;
 }
+@media(max-width:1210px){
+    #photo-head .photo-title-container .photo-title-empty{
+        width: 70%;
+    }
+    #photo-head .photo-title-container .photo-title h1{
+        font-size: 5rem;
+    }
+    #photo-head .photo-para-container .photo-para p{
+        font-size: 1.8rem;
+        line-height: 45px;
+    }
+    #photobody .gallery-item{
+        flex-basis: 35.7%;
+    }
+    }
+@media(max-width: 900px){
+    #photo-head .photo-title-container .photo-title-empty{
+        width: 48%;
+    }
+    #photobody .gallery-item{
+        flex-basis: 70%;
+    }
+}
+@media(max-width:768px){
+    #photobody #photo-head{
+        padding: 120px 10px;
+    }
+    #photo-head .photo-title-container .photo-title{
+        justify-content: flex-start;
+    }
+    #photo-head .photo-title-container .photo-title-empty{
+        display: none;
+    }
+    #photo-head .photo-title-container .photo-title h1{
+        font-size: 4.5rem;
+    }
+    #photo-head .photo-para-container .photo-para p{
+        font-size: 1.6rem;
+        line-height: 40px;
+    }
+    #photobody .gallery-item{
+        flex-basis: 75%;
+    }
+    #photobody .gallery-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+    .lightbox-content img{
+        margin-top: 150px;
+        border: 6px solid #860000;
+    }
+    .lightbox-prev,
+    .lightbox-next{
+        top: 65%;
+    }
+    .lightbox-content{
+        width: 80%;
+        height: 60%;
+        margin: 15px auto;
+    }
+    .lightbox-content img{
+        margin-top: 25px;
+        width: 100%;
+        height: 50rem;
+    }
 
+}
+@media(max-width:580px){
+    #photo-head .photo-title-container .photo-title h1{
+        font-size: 4rem;
+    }
+    #photo-head .photo-para-container .photo-para p{
+        font-size: 1.4rem;
+        line-height: 31px;
+    }
+    #photo-head .photo-para-container .photo-para-empty{
+        width: 0%;
+    }
+    #photo-head .photo-para-container .photo-para{
+        width: 100%;
+    }
+    .lightbox-content{
+        width: 90%;
+    }
+    #photobody .gallery-container{
+        padding: 15px;
+    }
+
+    #photobody .gallery-item{
+        flex-basis: 100%;
+        margin-bottom: 6px;
+    }
+    #photobody .gallery-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+    /* lightbox */
+    .lightbox{
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+    }
+    .lightbox-content{
+        width: 83%;
+        height: 44%;
+        margin-top: 150px;
+    }
+    .lightbox-content img{
+        margin-top: 0px;
+        width: 100%;
+        height: 43rem;
+    }
+    .lightbox-prev,
+    .lightbox-next{
+        top: 70%;
+    }
+}
+    @media(max-width:470px){
+    #photo-head .photo-title-container .photo-title h1{
+        font-size: 3.5rem;
+    }
+    #photo-head .photo-para-container .photo-para p{
+        font-size: 1.3rem;
+        line-height: 27px;
+    }
+    #photobody .gallery-item{
+        width: 40rem;
+        height: 40rem;
+    }
+    .lightbox-content img{
+        margin-top: 0px;
+        width: 100%;
+        height: 35rem;
+    }
+    .lightbox-content{
+        width: 90%;
+        height: 35%;
+    }
+    .lightbox-prev,
+    .lightbox-next{
+        top: 65%;
+    }
+}
+    @media(max-width:390px){
+    #photo-head .photo-title-container .photo-title h1{
+        font-size: 2.8rem;
+    } 
+    #photo-head .photo-para-container .photo-para p{
+        font-size: 1.15rem;
+        line-height: 25px;
+    }
+    #photobody .gallery-item{
+        width: 30rem;
+        height: 30rem;
+    }
+    .lightbox-content img{
+        margin-top: 0px;
+        width: 100%;
+        height: 33rem;
+    }
+    .lightbox-prev,
+    .lightbox-next{
+        top: 65%;
+    }
+}
 </style>
 {%endblock%}
 
