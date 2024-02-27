@@ -8,111 +8,288 @@ About YumYumCloud
 
 {% block style %}
 <style>
-#aboutbody{
-    background-color: black;
-}
-#about-yumyum-head{
-    background: fixed;
-    background-size: cover;
-    background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.493)),url("{% static '/images/home-title-bg.jpg' %}");
-    height: 110vh;
-}
-#about-yumyum-head .about-yumyum-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#about-yumyum-head .about-yumyum-title .about h1{
-    margin-top: 200px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 11rem; 
-    color: white;
-}
-#about-yumyum-head .about-yumyum-title .yumyum h1{
-    font-family: 'Gabriela', serif;
-        font-size: 11rem;
-        background-image: linear-gradient(
-          -225deg,
-          #f3b610 0%,
-          #faba09 29%,
-          #ff5613 67%,
-          #ff8800 100%
-        );
-        background-size: auto auto;
-        background-clip: border-box;
-        background-size: 200% auto;
-        color: #fff;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textclip 2s linear infinite;
-        display: inline-block;
-}
-@keyframes textclip {
-    to {
-        background-position: 200% center;
-     }
+    #aboutbody{
+        background-color: black;
     }
-#about-yumyum{
-    background: rgb(17,17,17);
-    background: radial-gradient(circle, rgba(17,17,17,1) 0%, rgba(15,15,15,1) 50%, rgba(17,17,17,1) 100%);
-    /* background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.900), rgba(0, 0, 0, 0.900)),url("{% static '/images/about-bg.jpg' %}"); */
-    position: relative;
+    #about-yumyum-head{
+        background: fixed;
+        background-size: cover;
+        background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.493)),url("{% static '/images/home-title-bg.jpg' %}");
+        height: 110vh;
+    }
+    #about-yumyum-head .about-yumyum-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-yumyum-head .about-yumyum-title .about h1{
+        margin-top: 200px;
+        font-family: 'Dancing Script', cursive;
+        font-size: 11rem; 
+        color: white;
+    }
+    #about-yumyum-head .about-yumyum-title .yumyum h1{
+        font-family: 'Gabriela', serif;
+            font-size: 11rem;
+            background-image: linear-gradient(
+              -225deg,
+              #f3b610 0%,
+              #faba09 29%,
+              #ff5613 67%,
+              #ff8800 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+    }
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+         }
+        }
+    #about-yumyum{
+        background: rgb(17,17,17);
+        background: radial-gradient(circle, rgba(17,17,17,1) 0%, rgba(15,15,15,1) 50%, rgba(17,17,17,1) 100%);
+        position: relative;
+    }
+    #about-yumyum .underline{
+        border: 2px solid red;
+    }
+    
+    #about-yumyum .about-desc{
+        padding: 20px 120px ;
+    }
+    #about-yumyum .about-desc p{
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        text-shadow: .5px .5px .7px black;
+        font-size: 2rem;
+        line-height: 50px;
+        margin-top: 30px;
+        word-spacing: 1.5px;
+        letter-spacing: .4px;
+    }
+    #about-yumyum .about-grid{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 35px;
+        padding: 50px;
+    }
+    #about-yumyum .about-grid .food-image img{
+        width: 60rem;
+        height: 65rem;
+        object-fit: cover;
+        border-radius: 8px;
+        border-left: 25px solid red;
+        border-left-style: double;
+        border-top: 15px solid red;
+        border-top-style: double;
+        clip-path: circle(65%);
+        transition: .8s all linear; 
+        transform: perspective(1000px)
+        rotateX(10deg)
+        scale(.9);
+    }
+    #about-yumyum .about-grid .food-image img:hover{
+        transform: scale(.95);
+    }
+    
+    #about-yumyum .about-grid .food-para p{
+        margin-top: 70px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        text-shadow: .5px .5px .7px rgb(0, 0, 0);
+        font-size: 2rem;
+        line-height: 50px;
+        word-spacing: 1.5px;
+    }
+    #about-yumyum .about-grid span img{
+        width: 16rem;
+    }
+@media(max-width:1200px){
+    #about-yumyum-head .about-yumyum-title .about h1{
+        font-size: 8rem; 
+    }
+    #about-yumyum-head .about-yumyum-title .yumyum h1{
+        font-size: 8.5rem;
+    }
+    #about-yumyum .about-desc{
+        padding: 20px 50px;
+    }
+    #about-yumyum .about-desc p{
+        font-size: 1.75rem;
+        line-height: 38px;
+        text-align: justify;
+    }
+    #about-yumyum .about-grid{
+        padding: 45px;
+    }
+    #about-yumyum .about-grid .food-image img{
+        width: 50rem;
+        height: 50rem;
+    }
+    #about-yumyum .about-grid .food-para p{
+        margin-top: 30px;
+        font-size: 1.75rem;
+        line-height: 38px;
+        text-align: justify;
+    }
+    #about-yumyum .about-grid span img{
+        width: 13rem;
+    }
 }
-#about-yumyum .underline{
-    border: 2px solid red;
+@media(max-width:992px){
+    #about-yumyum .about-desc{
+        padding: 20px 40px ;
+    }
+    #about-yumyum .about-grid{
+        padding: 40px;
+        gap: 20px;
+    }
+    #about-yumyum .about-grid .food-image img{
+        width: 40rem;
+        height: 45rem;
+    }
 }
-
-#about-yumyum .about-desc{
-    padding: 20px 120px ;
+@media(max-width:768px){
+    #about-yumyum-head{
+        height: 100vh;
+    }
+    #about-yumyum-head .about-yumyum-title .about h1{
+        font-size: 5.5rem; 
+    }
+    #about-yumyum-head .about-yumyum-title .yumyum h1{
+        font-size: 6.5rem; 
+    }
+    #about-yumyum .about-desc p{
+        font-size: 1.6rem;
+        line-height: 34px;
+    }
+    #about-yumyum .about-grid{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        gap: 10px;
+        text-align: center;
+    }
+    #about-yumyum .about-grid .food-para p{
+        font-size: 1.6rem;
+        line-height: 34px;
+    }
+    #about-yumyum .about-grid .food-image img{
+        width: 100%;
+    }
 }
-#about-yumyum .about-desc p{
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    text-shadow: .5px .5px .7px black;
-    font-size: 2rem;
-    line-height: 50px;
-    margin-top: 30px;
-    word-spacing: 1.5px;
-    letter-spacing: .4px;
+@media(max-width: 640px){
+    #about-yumyum-head{ 
+        height: 100vh;
+    } 
+    #about-yumyum-head .about-yumyum-title .about h1{
+        font-size: 4.3rem; 
+    }
+    #about-yumyum-head .about-yumyum-title .yumyum h1{
+        font-size: 5.3rem; 
+    }
+    #about-yumyum .about-desc{
+        padding: 20px 25px ;
+    }
+    #about-yumyum .about-desc p{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    #about-yumyum .about-grid{
+        padding: 25px;
+        gap: 0px;
+    }
+    #about-yumyum .about-grid .food-para p{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    #about-yumyum .about-grid .food-image img{
+        width: 100%;
+    }
+    #about-yumyum .about-grid span img{
+        width: 12rem;
+    }
 }
-#about-yumyum .about-grid{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 35px;
-    padding: 50px;
+@media(max-width: 485px){
+    #about-yumyum-head{ 
+        height: 100vh;
+    } 
+    #about-yumyum-head .about-yumyum-title .about h1{
+        font-size: 3.5rem; 
+    }
+    #about-yumyum-head .about-yumyum-title .yumyum h1{
+        font-size: 4.2rem; 
+    }
+    #about-yumyum .about-desc{
+        padding: 20px 20px ;
+    }
+    #about-yumyum .about-desc p{
+        font-size: 1.35rem;
+        line-height: 27px;
+    }
+    #about-yumyum .about-grid{
+        padding: 0px 20px;
+    }
+    #about-yumyum .about-grid .food-image img{
+        display: none;
+    }
+    #about-yumyum .about-grid .food-para p{
+        margin-top: 0;
+        font-size: 1.35rem;
+        line-height: 27px;
+    }
+    #about-yumyum .about-grid span img{
+        width: 9rem;
+    }
 }
-#about-yumyum .about-grid .food-image img{
-    width: 100%;
-    height: 65rem;
-    object-fit: cover;
-    border-radius: 8px;
-    border-left: 25px solid red;
-    border-left-style: double;
-    border-top: 15px solid red;
-    border-top-style: double;
-    clip-path: circle(65%);
-    transition: .8s all linear; 
-    transform: perspective(1000px)
-    rotateX(10deg)
-    scale(.9);
+@media(max-width:390px){
+    #about-yumyum-head{ 
+        height: 100vh;
+    } 
+    #about-yumyum-head .about-yumyum-title .about h1{
+        font-size: 3rem;
+    }
+    #about-yumyum-head .about-yumyum-title .yumyum h1{
+        font-size: 3.5rem; 
+    }
+    #about-yumyum .about-desc p{
+        font-size: 1.1rem;
+        line-height: 23px;
+    }
+    #about-yumyum .about-grid .food-image img{
+        width: 25rem;
+        height: 20rem;
+    }
+    #about-yumyum .about-grid .food-para p{
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+    #about-yumyum .about-grid span img{
+        width: 7.5rem;
+    }
 }
-#about-yumyum .about-grid .food-image img:hover{
-    transform: scale(.95);
-}
-
-#about-yumyum .about-grid .food-para p{
-    margin-top: 70px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    text-shadow: .5px .5px .7px blue;
-    font-size: 2rem;
-    line-height: 50px;
-    word-spacing: 1.5px;
-}
-#about-yumyum .about-grid span img{
-    width: 20%;
+@media(max-width: 310px){
+    #about-yumyum-head{ 
+        height: 95vh;
+    } 
+    #about-yumyum-head .about-yumyum-title .yumyum h1{
+        font-size: 3.3rem; 
+    }
+    #about-yumyum .about-desc{
+        padding: 20px 8px ;
+    }
+    #about-yumyum .about-grid{
+        padding: 8px;
+    }
 }
 </style>
 {% endblock %}
