@@ -117,7 +117,6 @@ Why YumYumCloud
         font-size: 5.5rem;
         padding: 50px;
     }
-
     #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2{
         display: flex;
         justify-content: flex-end;
@@ -133,7 +132,6 @@ Why YumYumCloud
         font-size: 5.5rem;
         padding: 50px;
     }
-
     #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3{
         display: flex;
         justify-content: flex-start;
@@ -204,31 +202,16 @@ Why YumYumCloud
         padding: 80px;
         font-family: "Dancing Script", cursive;
     }
-    #why-section .why-yumyum-container .ambience-points .point-1 h1{
-        font-size: 6rem;
-        font-weight: bold;
-        text-shadow: 2px 2px 1px red;
-        color: white;
-    }
-    #why-section .why-yumyum-container .ambience-points .point-2 h1{
-        font-size: 6rem;
-        font-weight: bold;
-        text-shadow: 2px 2px 1px red;
-        color: white;
-    }
-    #why-section .why-yumyum-container .ambience-points .point-3 h1{
-        font-size: 6rem;
-        font-weight: bold;
-        text-shadow: 2px 2px 1px red;
-        color: white;
-    }
+    #why-section .why-yumyum-container .ambience-points .point-1 h1,
+    #why-section .why-yumyum-container .ambience-points .point-2 h1,
+    #why-section .why-yumyum-container .ambience-points .point-3 h1,
     #why-section .why-yumyum-container .ambience-points .point-4 h1{
         font-size: 6rem;
         font-weight: bold;
         text-shadow: 2px 2px 1px red;
         color: white;
+        text-align: center;
     }
-
     #why-section .why-yumyum-container .unique-menu{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -276,22 +259,13 @@ Why YumYumCloud
         font-family: "Dancing Script", cursive;
         padding: 40px;
     }
-    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1{
-        font-size: 4.3rem;
-        color: black;
-        text-shadow: .6px .6px 1px red;
-    }
-    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1{
-        font-size: 4.3rem;
-        color: black;
-        text-shadow: .6px .6px 1px red;
-    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1,
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1,
     #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-3 h1{
         font-size: 4.3rem;
         color: black;
         text-shadow: .6px .6px 1px red;
     }
-
     #why-section .why-yumyum-container .family-friendly{
         display: grid;
         grid-template-columns: 1fr 1.12fr;
@@ -338,31 +312,15 @@ Why YumYumCloud
         font-family: "Dancing Script", cursive;
         padding: 60px 20px;
     }
-    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1{
-        font-size: 3.2rem;
-        color: black;
-        text-shadow: .5px .5px 1px red;
-        font-weight: bold;
-    }
-    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1{
-        font-size: 3.2rem;
-        color: black;
-        text-shadow: .5px .5px 1px red;
-        font-weight: bold;
-    }
-    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1{
-        font-size: 3.2rem;
-        color: black;
-        text-shadow: .5px .5px 1px red;
-        font-weight: bold;
-    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1,
     #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-4 h1{
         font-size: 3.2rem;
         color: black;
         text-shadow: .5px .5px 1px red;
         font-weight: bold;
     }
-
     #why-section .why-yumyum-container .community-engagement{
         display: flex;
         flex-direction: column;
@@ -393,13 +351,607 @@ Why YumYumCloud
         margin-top: 80px;
         margin-bottom: 20px;
     }
-
-
+@media(max-width: 1200px){
+    #why-yumyum{
+        height: 115vh;
+    }
+    #why-yumyum .why-yumyum-title .why h1{
+        margin-top: 200px;
+        font-size: 8rem;
+    }
+    #why-yumyum .why-yumyum-title .yumyum h1{
+        font-size: 8.5rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence{
+        gap: 30px;
+        padding: 50px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-title h1{
+        font-size: 4.5rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-para p{
+        font-size: 1.75rem;
+        letter-spacing: .7px;
+        line-height: 35px;
+        margin-bottom: 15px;
+        word-spacing: .7px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container{
+        padding: 50px 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1 h3{
+        text-shadow: 1.5px 1.5px 1px red;
+        font-size: 4rem;
+        padding: 40px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2 h3{
+        text-shadow: 1.5px 1.5px 1px red;
+        font-size: 4rem;
+        padding: 40px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3 h3{
+        text-shadow: 1.5px 1.5px 1px red;
+        font-size: 4rem;
+        padding: 40px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4 h3{
+        text-shadow: 1.5px 1.5px 1px red;
+        font-size: 4rem;
+        padding: 40px;
+    }
+    #why-section .why-yumyum-container .ambience{
+        padding: 60px;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-title h1{
+        font-size: 4.5rem;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-para p{
+        margin-top: 15px;
+        font-size: 1.75rem;
+        letter-spacing: .7px;
+        line-height: 35px;
+        word-spacing: .7px;
+    }
+    #why-section .why-yumyum-container .ambience-points{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        padding: 70px 10px;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-1 h1,
+    #why-section .why-yumyum-container .ambience-points .point-2 h1,
+    #why-section .why-yumyum-container .ambience-points .point-3 h1,
+    #why-section .why-yumyum-container .ambience-points .point-4 h1{
+        font-size: 4rem;
+        text-shadow: 1.5px 1.5px 1px red;
+    }
+    #why-section .why-yumyum-container .unique-menu{
+        gap: 30px;
+        padding: 40px;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-title h1{
+        font-size: 4.5rem;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-para p{
+        font-size: 1.75rem;
+        letter-spacing: .7px;
+        line-height: 35px;
+        margin-bottom: 15px;
+        word-spacing: .7px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container{
+        padding: 30px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points{
+        gap: 45px;
+        padding: 40px 20px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-3 h1{
+        font-size: 3rem;
+        text-shadow: .5px .5px 1px red;
+    }
     
+    #why-section .why-yumyum-container .family-friendly{
+        grid-template-columns: 1fr 1.12fr;
+        padding: 40px;
+        gap: 15px;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-title h1{
+        font-size: 4.5rem;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-para p{
+        margin-top: 10px;
+        font-size: 1.75rem;
+        letter-spacing: .7px;
+        line-height: 35px;
+        margin-bottom: 15px;
+        word-spacing: .7px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 60px 10px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1,#why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-4 h1{
+        font-size: 2.6rem;
+    }
+    #why-section .why-yumyum-container .community-engagement{
+        padding: 40px;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-title h1{
+        font-size: 4.5rem;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-para p{
+        margin-top: 30px;
+        font-size: 1.8rem;
+        letter-spacing: .7px;
+        line-height: 35px;
+        word-spacing: .7px;
+    }
+}
+@media(max-width: 768px){
+    #why-yumyum{
+        height: 100vh;
+    }
+    #why-yumyum .why-yumyum-title .why h1{
+        margin-top: 200px;
+        font-size: 5.5rem;
+    }
+    #why-yumyum .why-yumyum-title .yumyum h1{
+        font-size: 6.5rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-title h1{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-para p{
+        font-size: 1.6rem;
+        letter-spacing: .5px;
+        line-height: 32px;
+        margin-bottom: 10px;
+        word-spacing: .5px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container{
+        padding: 40px 20px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4 h3{
+        font-size: 3rem;
+        padding: 30px;
+    }
+    #why-section .why-yumyum-container .ambience{
+        padding: 30px;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-title h1{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-para p{
+        margin-top: 10px;
+        font-size: 1.6rem;
+        letter-spacing: .5px;
+        line-height: 32px;
+        word-spacing: .5px;
+    }
+    #why-section .why-yumyum-container .ambience-points{
+        gap: 30px;
+        padding: 70px 10px;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-1 h1,
+    #why-section .why-yumyum-container .ambience-points .point-2 h1,
+    #why-section .why-yumyum-container .ambience-points .point-3 h1,
+    #why-section .why-yumyum-container .ambience-points .point-4 h1{
+        font-size: 3rem;
+    }
+    #why-section .why-yumyum-container .unique-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-title h1{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-para p{
+        font-size: 1.6rem;
+        letter-spacing: .5px;
+        line-height: 32px;
+        margin-bottom: 10px;
+        word-spacing: .5px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container{
+        padding: 15px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points{
+        gap: 30px;
+        padding: 40px 10px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-3 h1{
+        font-size: 3rem;
+        text-shadow: .5px .5px 1px red;
+    }
+    
+    #why-section .why-yumyum-container .family-friendly{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap: 15px;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-title h1{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-para p{
+        margin-top: 10px;
+        font-size: 1.6rem;
+        letter-spacing: .5px;
+        line-height: 32px;
+        margin-bottom: 10px;
+        word-spacing: .5px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points{
+        justify-content: space-between;
+        gap: 10px;
+        padding: 40px 10px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1,#why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-4 h1{
+        font-size: 2.6rem;
+    }
+    #why-section .why-yumyum-container .community-engagement{
+        padding: 30px;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-title h1{
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-para p{
+        margin-top: 15px;
+        font-size: 1.6rem;
+        letter-spacing: .5px;
+        line-height: 32px;
+        word-spacing: .5px;
+    }
+}
+@media(max-width: 640px){
+    #why-yumyum{
+        height: 100vh;
+    }
+    #why-yumyum .why-yumyum-title .why h1{
+        margin-top: 200px;
+        font-size: 4.3rem;
+    }
+    #why-yumyum .why-yumyum-title .yumyum h1{
+        font-size: 5.3rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence{
+        gap: 10px;
+        padding: 20px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-title h1{
+        font-size: 2.4rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-para p{
+        font-size: 1.5rem;
+        letter-spacing: .5px;
+        line-height: 28px;
+        word-spacing: .3px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container{
+        padding: 40px 10px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4 h3{
+        font-size: 2.2rem;
+        padding: 20px;
+    }
+    #why-section .why-yumyum-container .ambience{
+        padding: 20px;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-title h1{
+        font-size: 2.4rem;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-para p{
+        font-size: 1.5rem;
+        line-height: 28px;
+        word-spacing: .3px;
+    }
+    #why-section .why-yumyum-container .ambience-points{
+        gap: 15px;
+        padding: 60px 10px;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-1 h1,
+    #why-section .why-yumyum-container .ambience-points .point-2 h1,
+    #why-section .why-yumyum-container .ambience-points .point-3 h1,
+    #why-section .why-yumyum-container .ambience-points .point-4 h1{
+        font-size: 2.5rem;
+    }
+    #why-section .why-yumyum-container .unique-menu{
+        gap: 10px;
+        padding: 20px;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-title h1{
+        font-size: 2.4rem;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-para p{
+        font-size: 1.5rem;
+        line-height: 28px;
+        word-spacing: .3px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container{
+        padding: 15px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points{
+        gap: 10px;
+        padding: 40px 10px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-3 h1{
+        font-size: 2.13rem;
+    }
+    
+    #why-section .why-yumyum-container .family-friendly{
+        padding: 20px;
+        gap: 10px;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-title h1{
+        font-size: 2.4rem;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-para p{
+        font-size: 1.5rem;
+        line-height: 28px;
+        margin-bottom: 10px;
+        word-spacing: .3px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points{
+        gap: 10px;
+        padding: 40px 10px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1,#why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-4 h1{
+        font-size: 2.2rem;
+    }
+    #why-section .why-yumyum-container .community-engagement{
+        padding: 20px;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-title h1{
+        font-size: 2.4rem;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-para p{
+        margin-top: 10px;
+        font-size: 1.5rem;
+        line-height: 28px;
+        word-spacing: .3px;
+    }
+}
 
+@media(max-width: 485px){
+    #why-yumyum{
+        height: 100vh;
+    }
+    #why-yumyum .why-yumyum-title .why h1{
+        margin-top: 200px;
+        font-size: 3.5rem;
+    }
+    #why-yumyum .why-yumyum-title .yumyum h1{
+        font-size: 4.2rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence{
+        gap: 10px;
+        padding: 15px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-title h1{
+        font-size: 2rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-para p{
+        font-size: 1.35rem;
+        line-height: 26px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container{
+        padding: 30px 10px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4 h3{
+        font-size: 2rem;
+        padding: 18px;
+    }
+    #why-section .why-yumyum-container .ambience{
+        padding: 15px;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-title h1{
+        font-size: 2rem;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-para p{
+        font-size: 1.3rem;
+        line-height: 26px;
+    }
+    #why-section .why-yumyum-container .ambience-points{
+        gap: 5px;
+        padding: 50px 5px;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-1 h1,
+    #why-section .why-yumyum-container .ambience-points .point-2 h1,
+    #why-section .why-yumyum-container .ambience-points .point-3 h1,
+    #why-section .why-yumyum-container .ambience-points .point-4 h1{
+        font-size: 2rem;
+    }
+    #why-section .why-yumyum-container .unique-menu{
+        gap: 10px;
+        padding: 15px;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-title h1{
+        font-size: 2rem;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-para p{
+        font-size: 1.3rem;
+        line-height: 26px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container{
+        padding: 10px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points{
+        gap: 10px;
+        padding: 40px 7px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-3 h1{
+        font-size: 1.7rem;
+    }
+    
+    #why-section .why-yumyum-container .family-friendly{
+        padding: 15px;
+        gap: 10px;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-title h1{
+        font-size: 2rem;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-para p{
+        font-size: 1.3rem;
+        line-height: 26px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points{
+        gap: 10px;
+        padding: 40px 7px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1,#why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-4 h1{
+        font-size: 1.72rem;
+    }
+    #why-section .why-yumyum-container .community-engagement{
+        padding: 15px;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-title h1{
+        font-size: 2rem;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-para p{
+        font-size: 1.3rem;
+        line-height: 26px;
+    }
+}
 
-
-
+@media(max-width: 390px){
+    #why-yumyum{
+        height: 100vh;
+    }
+    #why-yumyum .why-yumyum-title .why h1{
+        margin-top: 200px;
+        font-size: 3rem;
+    }
+    #why-yumyum .why-yumyum-title .yumyum h1{
+        font-size: 3.5rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-title h1{
+        font-size: 1.8rem;
+    }
+    #why-section .why-yumyum-container .cooking-excellence .why-para p{
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container{
+        padding: 30px 10px;
+    }
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point1 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point2 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point3 h3,
+    #why-section .why-yumyum-container .cooking-excellence-points .points-container .point4 h3{
+        font-size: 1.7rem;
+        padding: 13px;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-title h1{
+        font-size: 1.8rem;
+    }
+    #why-section .why-yumyum-container .ambience .ambience-para p{
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+    #why-section .why-yumyum-container .ambience-points{
+        gap: 7px;
+        padding: 50px 5px;
+    }
+    #why-section .why-yumyum-container .ambience-points .point-1 h1,
+    #why-section .why-yumyum-container .ambience-points .point-2 h1,
+    #why-section .why-yumyum-container .ambience-points .point-3 h1,
+    #why-section .why-yumyum-container .ambience-points .point-4 h1{
+        font-size: 1.55rem;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-title h1{
+        font-size: 1.8rem;
+    }
+    #why-section .why-yumyum-container .unique-menu .unique-menu-para p{
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container{
+        padding: 10px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points{
+        gap: 8px;
+        padding: 25px 5px;
+    }
+    #why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-1 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-2 h1,#why-section .why-yumyum-container .unique-menu-points-container .unique-menu-points .point-3 h1{
+        font-size: 1.4rem;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-title h1{
+        font-size: 1.8rem;
+    }
+    #why-section .why-yumyum-container .family-friendly .family-friendly-contents .family-friendly-para p{
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points{
+        gap: 7px;
+        padding: 25px 7px;
+    }
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-1 h1,#why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-2 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-3 h1,
+    #why-section .why-yumyum-container .family-friendly-points-container .family-friendly-points .point-4 h1{
+        font-size: 1.4rem;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-title h1{
+        font-size: 1.8rem;
+    }
+    #why-section .why-yumyum-container .community-engagement .community-engagement-para p{
+        font-size: 1.1rem;
+        line-height: 22px;
+    }
+}
 </style>
 {% endblock %}
 
